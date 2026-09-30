@@ -1,0 +1,15 @@
+/* Faceted fantasy UI, coordinated with the supplied cel-shaded reference. */
+:root{--ink:#f4ecda;--muted:#b5c3b0;--gold:#efa54b;--line:#546556}
+body{background:#1e2d2b;font-family:'DM Sans',sans-serif}
+.brand,h1,h2,h3,.hero-info strong,.guide strong,.wave-banner strong{font-family:'Trebuchet MS','DM Sans',sans-serif;font-weight:800}
+.brand{letter-spacing:.6px}.brand-sigil{color:#efa54b}
+button{border:2px solid #536458;border-radius:6px;background:#32473c;font-weight:700}
+button:hover:not(:disabled){background:#405c47;border-color:#acbd84}
+.battlefield{border:3px solid #667954;border-radius:12px;background:#547247;box-shadow:0 5px 0 #112723}
+.hero-card{background:linear-gradient(135deg,#3c5141,#2a3b32);border:2px solid #607352;border-radius:8px;box-shadow:0 3px 0 #112620;min-height:83px;margin-bottom:10px}
+.hero-card.active{border-color:#f3b460;background:#4a5940}.hero-info strong{font-size:18px}.hero-info small{font-size:11px}.cost{font-weight:800;color:#f4b964}
+.portrait{width:60px;height:62px;background:radial-gradient(ellipse,#80927155,#182d2811);border:0;border-radius:6px;overflow:visible}.portrait img{object-fit:contain}
+.primary{background:linear-gradient(#ffc574,#e5a044);border:2px solid #f9d5a2;box-shadow:0 3px 0 #88572a;border-radius:8px;color:#26372b;font-weight:800}.primary:hover:not(:disabled){background:#ffd291;border-color:#ffebc3}
+.selected-head{background:#374b3c;border:2px solid #607354}.path-heading{background:#344932;font-weight:700}.upgrade-path{border:2px solid #536b4c}.upgrade-option{background:#293e2d}.upgrade-detail{background:#405536}.upgrade-detail p{color:#e1e9ca}
+.modal-card{background:linear-gradient(135deg,#486044,#253b30);border:3px solid #93a573;border-radius:14px}.menu-card h1{font-size:44px;text-shadow:0 3px 0 #182d23}.guide{background:#f1d59d;border:2px solid #ffedc3;border-radius:12px}.guide strong{font-size:15px}.wave-banner{border:2px solid #b5a26d;background:#243e2ef5}.overlay{background:#102821b8}
+.ability{border-radius:7px}.tag{border:1px solid #879b69}.map-label{color:#fff4d8}.map-sub{color:#dce7c8}.map-bottom{background:linear-gradient(transparent,#233e29df)}#save-indicator{color:#c7d5b4}

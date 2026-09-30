@@ -1,0 +1,16 @@
+/* Rough storybook ink, leather-red accents, and warm parchment. */
+:root{--ink:#eee2c6;--muted:#c0b496;--gold:#d7a46e;--line:#71644b}
+body{background:#302c23;font-family:Georgia,'Times New Roman',serif}
+.brand,h1,h2,h3,.hero-info strong,.guide strong,.wave-banner strong{font-family:Georgia,'Times New Roman',serif;font-weight:700}
+button{background:#534632;border:2px solid #211d16;border-radius:4px;color:#ead9b7;box-shadow:inset 0 0 0 1px #82714c}
+button:hover:not(:disabled){background:#6b5438;border-color:#b89864}
+.topbar,footer{border-color:#726348}.brand-sigil,.coin,.cost{color:#d4a16b}.location{border-color:#716248}
+.battlefield{border:3px solid #211f16;border-radius:8px 13px 9px 6px;background:#8a8159;box-shadow:0 0 0 2px #83704b,0 5px 0 #15160e}
+.hero-card{background:linear-gradient(115deg,#5a4a32,#413829);border:2px solid #1b1b12;border-radius:4px 9px 4px 7px;box-shadow:inset 0 0 0 1px #82724f,0 3px 0 #1a1912}.hero-card.active{border-color:#d0ac78;background:#77543a}.hero-info small{color:#c6b797}.portrait{background:radial-gradient(ellipse,#b18c5344,transparent)}
+.primary{background:linear-gradient(#b96a4b,#8a4232);border:2px solid #281d17;box-shadow:inset 0 0 0 1px #d59f73,0 3px 0 #201d15;color:#ffedc7}.primary:hover:not(:disabled){background:#bd7450;border-color:#d7b182}
+.map-label{color:#f6e9c8;text-shadow:1px 2px #332919}.map-sub{color:#e9ddba}.map-bottom{background:linear-gradient(transparent,#403b24e8);color:#f1e5c2}#save-indicator{color:#d8cfaf}
+.side-intro,.field-notes p{color:#c6b99a}.note-title{color:#d6a578}.side-footer{color:#b4a586}.tag{border-color:#8b7750;background:#423b2a;color:#d8c69d}
+.selected-head{background:#534631;border:2px solid #29261a}.selected-head p{color:#cabb9a}.path-heading{background:#5a4b32}.upgrade-path{border:2px solid #252218;border-radius:5px}.upgrade-option{background:#413a28}.upgrade-detail{background:#665236}.upgrade-detail p{color:#ecdebb}.locked-label{color:#b3a587}.target-select{background:#4b402c;border-color:#8b7750}.stats{border-color:#746342}.stats div{color:#d8b181}
+.modal-card{background:linear-gradient(120deg,#665236,#3d3526);border:3px solid #252319;box-shadow:0 0 0 2px #978058,0 15px 50px #15161088;border-radius:8px 16px 7px 12px}.modal-card p{color:#d4c5a3}.menu-card h1{color:#f5e4be;text-shadow:2px 3px #211d15}.overlay{background:#272416bb}
+.guide{background:#d8bc89;border:3px solid #3b2d1b;border-radius:5px 10px 4px 8px;color:#352818}.guide button{color:#392b19;background:#e9cea0;border-color:#665032}.wave-banner{background:#51452ef5;border:2px solid #b19764}.wave-banner span{color:#e4d6b5}.placement{background:#493d27f5;border-color:#b89e6d}#toast{background:#58462df7;border-color:#be9c68;color:#ffedc4}
+.ability.ready{color:#e6bf8e}#speeds button.active{background:#86503c;border-color:#bc9767;color:#f9e7bd}.empty-abilities{color:#bcae90}

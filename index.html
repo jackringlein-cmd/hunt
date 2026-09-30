@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Hunt for the Necromancer</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="heroic.css"><link rel="stylesheet" href="inked.css"><link rel="stylesheet" href="drawing.css"><link rel="stylesheet" href="upgrade-viewer.css"></head>
+<body>
+<div id="app">
+ <header class="topbar">
+  <a class="brand" href="#" id="brand"><span class="brand-sigil">♜</span><span>THE HUNT <small>FOR THE NECROMANCER</small></span></a>
+  <div class="location"><span class="tiny">CHAPTER I</span><strong>The Whispering Woods</strong></div>
+  <div class="resources"><div><span class="resource-icon people">♟</span><span><strong id="villagers">100</strong><small>VILLAGERS</small></span></div><div><span class="resource-icon coin">◈</span><span><strong id="money">200</strong><small>GOLD COINS</small></span></div><div class="wave-stat"><span><strong id="wave">0 <em>/ 100</em></strong><small>WAVE</small></span></div></div>
+  <button id="settings-button" class="square" aria-label="Open settings" title="Settings">⚙</button>
+ </header>
+ <main>
+  <section class="battlefield" aria-label="Forest battlefield">
+   <canvas id="game" width="1100" height="720" aria-label="Place heroes beside the winding forest path"></canvas>
+   <div class="map-label"><span class="live-dot"></span> WHISPERING WOODS <span class="map-sub">Protect the last light.</span></div>
+   <div id="wave-banner" class="wave-banner"></div>
+   <div id="guide" class="guide hidden"></div>
+   <div id="placement" class="placement hidden"></div>
+   <div class="map-bottom"><span id="status">The forest is quiet. Build your defense.</span><span id="save-indicator">Saves after every wave</span></div>
+  </section>
+  <aside id="sidebar"></aside>
+ </main>
+ <footer><div class="ability-area"><span class="tiny">HERO ABILITIES</span><div id="abilities"><span class="empty-abilities">Reach upgrade 6 to unlock powerful abilities.</span></div></div><div class="wave-controls"><div id="speeds" aria-label="Game speed"></div><button id="start-wave" class="primary">Start wave 1 <span>▶</span></button></div></footer>
+</div>
+<div id="toast" role="status"></div>
+<div id="modal" class="overlay hidden"></div>
+<script src="data.js"></script><script src="engine.js"></script><script src="audio.js"></script><script src="upgrade-looks.js"></script><script src="boss-art.js"></script><script src="undead-art.js"></script><script src="skull-screecher-art.js"></script><script src="hellhound-art.js"></script><script src="shadow-art.js"></script><script src="headless-art.js"></script><script src="fusion-art.js"></script><script src="werewolf-art.js"></script><script src="nightmare-patterns.js"></script><script src="nightmare-art.js"></script><script src="marsh-art.js"></script><script src="drawing-art.js"></script><script src="battle-visuals.js"></script><script src="ability-visuals.js"></script><script src="upgrade-viewer.js"></script><script src="game.js"></script>
+</body></html>
