@@ -123,6 +123,9 @@
   c.restore();
  }
  function hero(c,h,{time=0,selected=false,ghost=false,attack=0,windup=0,active=false,facing=0,shouting=false}={}){
+  if(h.type==='pirate'){PirateArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
+  if(h.type==='toolmaker'){ToolmakerArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
+  if(h.type==='serpent'){SerpentArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
   const t=h.type,tier=Math.max(...h.u),path=h.u.indexOf(tier),pulse=Math.sin(attack*Math.PI),bob=Math.sin(time*2+h.id)*.4;
   const shirts={leader:'#130c4b',knight:'#727d8e',archer:'#394e23',rogue:'#4b244c',mage:'#24366c'};
   c.save();c.translate(h.x,h.y+bob);c.rotate(t==='leader'?(active?Math.sin(time*3)*.025:0):pulse*.065-windup*.035);if(ghost)c.globalAlpha=.65;

@@ -1,0 +1,12 @@
+node_modules/
+*-preview.png
+*.log
+*-test-results.txt
+/.openai/
+/published-game/
+# Generated screenshots and animation renders; source art is kept in assets/ and references/.
+/*.png
+/*.gif
+/*-preview/
+/previews/
+**/test-results.txt

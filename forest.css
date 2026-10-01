@@ -1,0 +1,18 @@
+/* Restrained leather, metal and parchment colors for the painted forest. */
+:root{--ink:#ece6d5;--muted:#acb6a3;--gold:#d0b47b;--line:#4a594a}
+body{background:#192423;font-family:'DM Sans',sans-serif}
+button{border-radius:7px;background:#2e4235;border-color:#53634d}
+button:hover:not(:disabled){background:#425640;border-color:#9aab80}
+.brand,.hero-info strong,h1,h2,h3,.wave-banner strong,.guide strong{font-family:'Cinzel',Georgia,serif}
+.brand{font-size:21px}.brand-sigil{color:#d0b47b}
+.battlefield{border:2px solid #617151;border-radius:10px;background:#405b43;box-shadow:0 8px 30px #091c1a66}
+.hero-card{background:linear-gradient(120deg,#303d37,#232f2c);border:1px solid #4c584c;box-shadow:0 2px 5px #071a1822;border-radius:4px}
+.portrait{width:60px;height:60px;background:#202e2c;border:1px solid #65705c;border-radius:3px;overflow:hidden}.portrait img{object-fit:contain}
+.primary{background:linear-gradient(#dfc796,#bda16b);border-color:#e4d5af;color:#263827;border-radius:7px;box-shadow:0 3px 0 #766346}
+.modal-card{background:linear-gradient(140deg,#3b503e,#20382e);border-color:#80906b;border-radius:12px}.menu-card h1{text-shadow:0 3px 6px #152a22}
+.wave-banner{background:#263c2df5;border-color:#a49468}.guide{background:#e3d5b0;border:1px solid #fff0cb;border-radius:9px}
+.selected-head{background:#304737}.path-heading{background:#354b36}.upgrade-option{background:#283e2e}.upgrade-detail{background:#3b5138}.upgrade-detail p{color:#d9e1c8}
+.map-sub{color:#d0d6b9}.map-bottom{background:linear-gradient(transparent,#1f392bd9)}#save-indicator{color:#bdc7ac}
+.overlay{background:#0f241ebc}#toast{background:#314b35;border-color:#c2ab7a}
+.selected-head{border-radius:4px;background:#2a3931}.hero-card.active{background:#3f4937;border-color:#c1ac7b}
+.tag,.ability,.upgrade-path{border-radius:4px}.map-label{letter-spacing:1.7px}.resources strong{font-weight:500}

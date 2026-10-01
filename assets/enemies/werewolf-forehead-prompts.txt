@@ -1,0 +1,3 @@
+Tool: built-in image_gen
+Outputs: werewolf-walk-marked.png and werewolf-poses-marked.png
+Prompt for each input sheet: Preserve exact 4x2 layout, transparent background, sprite position, size, outlines and all poses. Change only the forehead: add a large pale gray (#c4c4c4) irregular patch on the viewer-right upper forehead, above the right eye toward the outer spike. Keep the other side medium gray, black silhouette and green eyes unchanged. Apply consistently across all eight frames.

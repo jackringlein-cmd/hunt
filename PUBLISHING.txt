@@ -1,0 +1,10 @@
+Published game: https://hunt-for-the-necromancer.andrew595321.chatgpt.site
+Audience: public. Jack requested unrestricted access on September 29, 2026. Anyone with the link can play. Preserve public access on future publishes.
+Sites project: appgprj_6abc60facb74819194918d12ea2c35d8
+Publishing checkout: published-game/
+Playable files: published-game/dist/
+The root .openai/hosting.json identifies the same site. Use the published-game checkout for Sites operations. Copy changed runtime files into its dist directory before republishing; do not publish reference drawings, prompts, tests or design documents as public assets.
+First publish: c513fd55d5d5ff28be275181f9630eacfc7e8d88
+Local packaging helper failed on Windows; the source-only saved version deployed successfully using remote build fallback.
+Saves remain in each player's browser. Localhost saves do not automatically move to the public URL.
+

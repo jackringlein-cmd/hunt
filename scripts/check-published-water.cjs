@@ -1,0 +1,2 @@
+const {chromium}=require('C:/Users/angel/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});const p=await b.newPage();let errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('file:///C:/Users/angel/OneDrive/Desktop/Hunt%20For%20the%20Necromancer/published-game/dist/index.html');await p.waitForTimeout(1000);console.log(JSON.stringify({title:await p.title(),errors}));await b.close();if(errors.length)process.exitCode=1;})();

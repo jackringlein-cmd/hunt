@@ -1,0 +1,81 @@
+// Optional browser check. Set PLAYWRIGHT_MODULE to the installed Playwright package.
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {Game}=require('../engine.js');
+const KEY='necromancer-jack-save-v1';
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL||'msedge'});
+ const page=await browser.newPage({viewport:{width:1440,height:960}}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:4173');
+ await page.click('#menu-settings');
+ await page.uncheck('#guide-setting');
+ await page.locator('#volume-setting').fill('20');
+ await page.click('#close-settings');
+ await page.click('#new-game');
+ assert.equal(await page.locator('#guide').isVisible(),false);
+ async function mapClick(x,y){const p=await page.locator('#game').boundingBox(),s=Math.min(p.width/1100,p.height/720);await page.mouse.click(p.x+(p.width-1100*s)/2+x*s,p.y+(p.height-720*s)/2+y*s);}
+ await page.click('[data-hero="knight"]');await mapClick(190,230);
+ assert.equal((await page.evaluate(()=>inspectGame())).state.heroes.length,1);
+ await page.click('[data-path="0"]');await page.click('[data-buy="0"]');
+ assert.equal((await page.evaluate(()=>inspectGame())).state.money,85);
+ await page.click('#start-wave');
+ await page.waitForTimeout(450);
+ await page.click('#settings-button');
+ let paused=await page.evaluate(()=>inspectGame());
+ await page.waitForTimeout(300);
+ assert.equal((await page.evaluate(()=>inspectGame())).state.time,paused.state.time);
+ await page.click('#save-exit');
+ await page.reload();await page.click('#continue');
+ let resumed=await page.evaluate(()=>inspectGame());
+ assert.equal(resumed.state.heroes[0].u[0],1);
+ assert.equal(resumed.state.active,true);
+ assert.ok(resumed.state.time>=paused.state.time);
+ assert.equal(resumed.prefs.guide,false);
+ const audioState=await page.evaluate(()=>({state:audio.ctx.state,volume:audio.volume,scene:audio.scene}));
+ assert.equal(audioState.state,'running');assert.equal(audioState.volume,.2);assert.equal(audioState.scene,'battle');
+ await page.screenshot({path:'play-preview.png'});
+ // Load a rich test save to exercise locked paths, abilities and an active boss wave.
+ const g=new Game();g.s.money=50000;g.s.trees=[];
+ for(const [type,x,y,u] of [['knight',190,230,[2,6,0,0]],['archer',535,250,[0,6,2,0]],['mage',550,390,[6,0,0,2]],['rogue',340,450,[0,0,6,2]],['leader',555,300,[0,0,6,2]]]){const h=g.addHero(type,x,y);assert.ok(h,type);h.u=u;}
+ g.s.wave=99;g.s.nextWave=g.generateWave(100);
+ await page.click('#settings-button');await page.click('#save-exit');
+ await page.evaluate(([key,save])=>localStorage.setItem(key,save),[KEY,JSON.stringify(g.save())]);
+ await page.reload();await page.click('#continue');
+ await mapClick(190,230);
+ assert.equal(await page.locator('.locked-label').count(),4);
+ assert.equal(await page.locator('[data-ability]').count(),5);
+ await page.click('#start-wave');
+ await page.waitForTimeout(350);
+ await page.locator('[data-ability]').filter({hasText:'Explosion Time'}).click();
+ assert.ok((await page.evaluate(()=>inspectGame())).state.heroes.find(h=>h.type==='archer').cooldown>0);
+ await page.locator('[data-ability]').filter({hasText:'Meteor Shower'}).click();await mapClick(500,200);
+ await page.waitForTimeout(500);
+ assert.ok((await page.evaluate(()=>inspectGame())).state.zones.some(z=>z.kind==='meteor'));
+ await page.screenshot({path:'boss-preview.png'});
+ // Finish milestone waves in the test world and verify permanent unlocks.
+ await page.evaluate(()=>{aiming=null;game.s.wave=50;game.s.enemies=[];game.s.queue=[];game.s.pending=[];game.tick(.02);events();});
+ assert.equal((await page.evaluate(()=>inspectGame())).prefs.maxSpeed,3);
+ await page.evaluate(()=>{game.s.wave=75;game.s.active=true;game.tick(.02);events();});
+ assert.equal((await page.evaluate(()=>inspectGame())).prefs.maxSpeed,4);
+ await page.evaluate(()=>{game.s.wave=100;game.s.active=true;game.tick(.02);events();});
+ assert.equal((await page.evaluate(()=>inspectGame())).prefs.maxSpeed,5);
+ assert.ok(await page.locator('#keep-playing').isVisible());
+ await page.click('#keep-playing');
+ assert.equal((await page.evaluate(()=>inspectGame())).state.endless,true);
+ await page.click('#settings-button');await page.click('#save-exit');
+ await page.click('#new-game');await page.click('#cancel-new');
+ assert.ok(await page.locator('#continue').isVisible());
+ await page.click('#new-game');await page.click('#confirm-new');
+ assert.equal((await page.evaluate(()=>inspectGame())).prefs.maxSpeed,5);
+ assert.equal((await page.evaluate(()=>inspectGame())).state.money,200);
+ // Smaller screens must keep the menus usable, without a horizontal overflow.
+ await page.setViewportSize({width:600,height:900});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth));
+ await page.click('#settings-button');assert.ok(await page.locator('#save-exit').isVisible());
+ await page.screenshot({path:'small-screen-preview.png',fullPage:true});
+ assert.deepEqual(errors,[]);
+ console.log('Browser checks passed: placement, upgrades, pause, save/resume, settings, audio, ability controls, boss wave, small-screen layout.');
+ await browser.close();
+})().catch(error=>{console.error(error);process.exit(1);});

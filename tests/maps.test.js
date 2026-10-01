@@ -1,0 +1,14 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {Game}=require('../engine.js');
+const D=require('../data.js');
+test('maps have independent routes and obstacle sets',()=>{const f=new Game(),m=new Game(undefined,'marsh');assert.notDeepEqual(f.position(0),m.position(0));assert.deepEqual(m.s.trees,D.maps.marsh.trees);assert.equal(m.nearest(...D.maps.marsh.points[8]).distance,0);assert.equal(m.canPlace(...D.maps.marsh.points[8]),false);assert.deepEqual(f.position(0),{x:D.points[0][0],y:D.points[0][1]});assert.equal(m.s.trees.length,0);assert.equal(m.map.graves.length,0);assert.ok(f.s.trees.length);assert.ok(f.map.graves.length);});
+test('marsh saves restore route and old saves use forest',()=>{const m=new Game(undefined,'marsh');const e=m.spawn('skeleton',false,300);const loaded=new Game(m.save());assert.equal(loaded.s.mapId,'marsh');assert.deepEqual(loaded.position(e.p),{x:e.x,y:e.y});const old=new Game().save();delete old.mapId;assert.equal(new Game(old).s.mapId,'forest');});
+test('marsh monsters move and escape on their own path',()=>{const m=new Game(undefined,'marsh');m.s.active=true;m.s.queue=[];const e=m.spawn('skeleton');m.tick(.1);assert.ok(e.p>0);assert.deepEqual({x:e.x,y:e.y},m.position(e.p));e.p=m.length-1;m.tick(.1);assert.equal(m.s.villagers,99);});
+test('marsh rogue traps follow the marsh path',()=>{const m=new Game(undefined,'marsh');const spots=m.trapSpot({type:'rogue',x:240,y:510,u:[0,0,0,0]});assert.ok(spots.length);for(const p of spots)assert.ok(m.nearest(p.x,p.y).distance<.001);});
+
+test('old marsh saves clear trees and move monsters to the new route',()=>{const s=new Game(undefined,'marsh').save();delete s.marshRouteVersion;s.trees=[{id:1,x:90,y:450}];s.enemies=[{type:'skeleton',p:800,x:1,y:2,effects:[]}];const g=new Game(s);assert.equal(g.s.trees.length,0);assert.ok(g.nearest(g.s.enemies[0].x,g.s.enemies[0].y).distance<.001);assert.ok(g.s.enemies[0].speed>0);});
+
+test('drawing map is rotated clockwise and pools block placement',()=>{const g=new Game(undefined,'marsh');assert.ok(g.position(0).x<0);assert.ok(g.position(g.length).x>1100);assert.ok(g.position(0).y>650);assert.equal(g.inWater(930,170),true);assert.equal(g.canPlace(930,170),false);const old=g.save();old.marshRouteVersion=2;old.enemies=[{type:'skeleton',p:200,x:0,y:0,effects:[],hp:10,maxHp:10}];const restored=new Game(old);assert.equal(restored.s.marshRouteVersion,4);assert.ok(restored.nearest(restored.s.enemies[0].x,restored.s.enemies[0].y).distance<.001);});
+
+test('reversed marsh preserves saved enemy positions while changing direction',()=>{const g=new Game(undefined,'marsh'),s=g.save();s.marshRouteVersion=3;s.enemies=[{type:'skeleton',p:500,x:0,y:0,effects:[],hp:10,maxHp:10}];const loaded=new Game(s);assert.equal(loaded.s.enemies[0].p,loaded.length-500);assert.deepEqual({x:loaded.s.enemies[0].x,y:loaded.s.enemies[0].y},loaded.position(loaded.length-500));});
