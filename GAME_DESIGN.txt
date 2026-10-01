@@ -805,3 +805,6 @@ Tool Maker balance nerf: all owned damage, including melee, double-rangs, traps,
 
 
 Pirate: eighth hero, 150 gold, water-only including flooded path sections. Base physical rock deals 14 damage every 1.2 seconds within 220 reach, with normal hero bonuses. Four paths: Ironclad Charge (animated boat ram; metal and sharpened prow), Razor Reef (22/32/48/72/105/150 damage, 2/3/5/8/12/18 pierce), Broadside Inferno (1/1/2/2/3/4 fire cannons; 5/5.5/6/6.5/7/7.5-second reload), Captain’s Comeback (returning hat; stuns increasingly large enemies, obeying immunities, effect blocks and lifetime control limits). Hats must return before another throw. Stunned pirates cannot attack; selling removes owned attacks, and round completion clears them. Tier-6 primary abilities only; existing crosspath and tier limits apply. Sources: pirate-mechanics.js, pirate-art.js; tests/pirate.test.js.
+
+
+Moonlit Marsh life reward: completing rounds 30, 60, 90 and every further multiple of 30 restores 50 villagers for free. This applies only to the second map (marsh), includes endless rounds, and can raise lives above 100. It is awarded once on successful round completion, before the round-end save; loading a completed round does not award it again. The forest map and lost games receive no reward.
