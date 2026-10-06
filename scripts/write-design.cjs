@@ -27,7 +27,7 @@ Survive **100 waves** to win the current game. Jack originally said difficulty w
 
 - Start with **100 villagers** and **200 money** (called gold coins in the current screen).
 - Each enemy that reaches the village removes its listed number of villagers. A basic skeleton removes 1. The Bone Dragon removes 50.
-- At **50 villagers or fewer**, money gained is reduced by **50%**. Round fractional money **up**. A basic skeleton normally gives 5, but gives 3 under the penalty.
+- Gold income is independent of villager population. Enemy rewards, bonus gold and round-completion income remain full even at 50 villagers or fewer. A basic skeleton always gives 5 base gold.
 - At **0 villagers**, the player loses. Villagers do not regenerate over time or at fixed round milestones. On every map, completing a round that introduces at least one previously unseen enemy type restores up to 10 villagers, capped at 101. Multiple new types in the same round award only one bonus. Spawned enemy types also count. Pending rewards persist through saves and pay only on successful round completion; they never reduce an existing population above 101. Gravestones are decorative and clicking them does nothing; villagers cannot be purchased through graves.
 - Completing a wave gives **20 extra money**, reduced to **10** under the penalty.
 - Sell heroes for **70% of the money actually spent on the hero and upgrades**. Discounts therefore reduce the eventual refund. The prototype rounds sale refunds down.
