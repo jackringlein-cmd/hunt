@@ -65,14 +65,15 @@ window.SerpentArt=(()=>{
   c.save();const dive=active?h.serpentDive:null,progress=dive?Math.min(1,(time-dive.start)/2):0;
   const lurking=h.u?.[1]>0&&h.serpentLurk&&!ghost;let x=lurking?h.serpentLurk.x:h.x,y=lurking?h.serpentLurk.y:h.y;if(dive){x=dive.x;y=dive.y;}
   c.translate(x,y);if(ghost)c.globalAlpha=.55;ripple(c,0,8,time);if(selected){c.strokeStyle='#efdba0';c.beginPath();c.ellipse(0,9,32,12,0,0,7);c.stroke();}
-  const surfaced=!active||(dive?progress<.22:(h.serpentSurfaceUntil||0)>time||(h.serpentAction?.end||0)>time);
+  if(dive){for(let i=0;i<9;i++){const a=time*5+i*2.4,r=12+(i%3)*7;c.beginPath();c.ellipse(Math.cos(a)*r,5+Math.sin(a)*r*.35,2,2.8,0,0,7);c.fillStyle='#c6f5ed';c.fill();}for(let i=0;i<3;i++){c.beginPath();c.ellipse(0,7,17+i*9+Math.sin(time*8+i)*3,6+i*3,0,.2+time*3,4.7+time*3);c.strokeStyle='#a5e9e5aa';c.lineWidth=2;c.stroke();}}
+  const surfaced=!active||(dive?progress<.6:(h.serpentSurfaceUntil||0)>time||(h.serpentAction?.end||0)>time);
   if(lurking&&!surfaced){c.fillStyle='#16445455';c.beginPath();c.ellipse(0,5,20,5,0,0,7);c.fill();c.restore();return;}
-  if(dive){const height=Math.max(.05,1-progress/.22);c.globalAlpha=.5+.5*height;c.scale(1,height);}
+  if(dive){c.beginPath();c.rect(-180,-220,360,238);c.clip();const plunge=Math.max(0,(progress-.1)/.5);c.translate(Math.sin(progress*Math.PI*2)*18,-Math.sin(Math.min(1,progress/.2)*Math.PI)*14+plunge*130);c.rotate(Math.sin(Math.min(1,plunge)*Math.PI*.8)*1.1);}
   const u=h.u||[0,0,0,0],tier=Math.max(...u),dir=Math.cos(facing)<-.1?-1:1;c.scale(dir,1);
   const sway=Math.sin(time*2.5)*3,reach=attack*8,throwing=h.serpentAction&&time<h.serpentAction.end;
   const lift=throwing?Math.sin((time-h.serpentAction.start)/.9*Math.PI)*22:0;
   // A broad trunk flows into a tapering, swaying tail instead of a round coil.
-  const tailWave=Math.sin(time*2.1)*4,bodyColor=['#4faaa9','#48a4b0','#4098ad','#337f9e','#2d7495','#28658c','#20597f'][u[1]];
+  const tailWave=Math.sin(time*(dive?12:2.1))*(dive?14:4),bodyColor=['#4faaa9','#48a4b0','#4098ad','#337f9e','#2d7495','#28658c','#20597f'][u[1]];
   c.lineCap='round';c.lineJoin='round';c.beginPath();
   c.moveTo(8+sway,-44-lift);
   c.bezierCurveTo(-14,-44-lift,-30,-19,-17,-1);
@@ -90,7 +91,7 @@ window.SerpentArt=(()=>{
   for(let i=0;i<10;i++){const p=i/9,px=30-p*72,py=24+Math.sin(p*Math.PI)*8-p*8+tailWave*p*.4;c.beginPath();c.arc(px,py,3-p*2,.15,2.7);c.stroke();}
   for(let i=0;i<5;i++){c.beginPath();c.moveTo(-17,-9-i*4);c.quadraticCurveTo(-12,-6-i*4,-7,-10-i*4);c.strokeStyle='#b5e2ca';c.lineWidth=2;c.stroke();}
   upgrades(c,u,time);
-  c.translate(9+sway+reach,-37-lift);
+  c.translate(9+sway+reach,-37-lift);if(dive)c.rotate(Math.sin(progress*Math.PI)*.8);
   // Swept horns and a ribbed cheek fin give the head a sea-dragon silhouette.
   for(const offset of [-7,7]){c.beginPath();c.moveTo(offset,-7);c.quadraticCurveTo(offset-15,-22,offset-8,-32-tier);c.quadraticCurveTo(offset-3,-18,offset+7,-9);c.fillStyle='#e1d8af';c.fill();c.strokeStyle=ink;c.lineWidth=2;c.stroke();}
   c.beginPath();c.moveTo(-10,-5);c.lineTo(-29,-15);c.quadraticCurveTo(-21,-1,-29,12);c.lineTo(-10,9);c.closePath();c.fillStyle='#419ab6';c.fill();c.stroke();for(let i=0;i<3;i++){c.beginPath();c.moveTo(-10,1);c.lineTo(-25,-9+i*8);c.lineWidth=1;c.stroke();}
@@ -109,7 +110,7 @@ window.SerpentArt=(()=>{
   upgrades(c,u,time,true);
   c.restore();
  }
- function submerged(c,e,time){c.save();ripple(c,e.x,e.y,time,20);c.fillStyle='#254f6866';c.beginPath();c.ellipse(e.x,e.y,15,8,0,0,7);c.fill();c.restore();}
+ function submerged(c,e,time){c.save();ripple(c,e.x,e.y,time,20);c.fillStyle='#254f6866';c.beginPath();c.ellipse(e.x,e.y,15,8,0,0,7);c.fill();const age=Math.max(0,time-(e.serpentDive?.start??time));if(age<.75&&window.CartoonArt){c.translate(e.x,e.y);c.beginPath();c.rect(-90,-160,180,174);c.clip();c.translate(Math.sin(age*14)*3,-Math.sin(Math.min(1,age/.3)*Math.PI)*10+Math.max(0,age-.15)*135);c.rotate(Math.sin(age*7)*.2);CartoonArt.enemy(c,{...e,x:0,y:0},time);}c.restore();}
  function field(c,game){water(c,game);for(const h of game.s.heroes){const sections=game.floodSections(h);c.save();c.beginPath();c.arc(h.x,h.y,game.range(h),0,Math.PI*2);c.clip();for(const pts of sections){const near=pts.reduce((a,b)=>Math.hypot(a.x-h.x,a.y-h.y)<Math.hypot(b.x-h.x,b.y-h.y)?a:b);const bridge=[];for(let i=0;i<=12;i++){const p=i/12;bridge.push({x:h.x+(near.x-h.x)*p+Math.sin(p*Math.PI)*10,y:h.y+(near.y-h.y)*p});}stream(c,bridge,22,game.s.time);stream(c,pts,43,game.s.time);}c.restore();}}
  function goose(c,x,y,t){c.save();c.translate(x,y+Math.sin(t*2));oval(c,0,0,12,7,'#ede7d0');c.beginPath();c.moveTo(7,-2);c.quadraticCurveTo(14,-9,11,-17);c.strokeStyle=ink;c.lineWidth=8;c.stroke();c.strokeStyle='#ede7d0';c.lineWidth=5;c.stroke();oval(c,11,-18,5,4,'#ede7d0');c.fillStyle='#d2a65b';c.beginPath();c.moveTo(15,-20);c.lineTo(23,-17);c.lineTo(15,-16);c.fill();oval(c,12,-19,1,1,ink);c.restore();}
  function geese(c,game){for(const g of game.s.geese||[])goose(c,g.x,g.y,game.s.time);for(const h of game.s.heroes)if((h.gooseBurstUntil||0)>game.s.time)for(let i=0;i<6;i++){const a=i*Math.PI/3;goose(c,h.x+Math.cos(a)*55,h.y+Math.sin(a)*35,game.s.time);}}
