@@ -10,4 +10,4 @@ for(const hero of Object.values(D.heroes)){
  }
 }
 fs.writeFileSync(path.join(__dirname,'..','ABILITY_GUIDE.md'),text,'utf8');
-console.log('Updated ABILITY_GUIDE.md for all 32 paths.');
+console.log('Updated ABILITY_GUIDE.md for all 36 paths.');

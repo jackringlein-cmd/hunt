@@ -135,7 +135,7 @@ Attacking heroes can aim at: **closest to the village**, **farthest from the vil
 
 ## 8. Complete hero upgrade catalogue
 
-All **192 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
+All **216 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
 `;
 const notes = {
  'Mighty Sword':'A target can take damage from the sword, the ground slam, and the traveling wave. Earthshaker is a passive upgrade, not a button ability.',
@@ -278,7 +278,7 @@ Current local address: **http://127.0.0.1:4173/**.
 | File | Purpose |
 |---|---|
 | index.html | Game screen and script/style loading |
-| data.js | All hero/enemy definitions, 192 upgrade names/descriptions/prices, path points, tree positions |
+| data.js | All hero/enemy definitions, 216 upgrade names/descriptions/prices, path points, tree positions |
 | engine.js | Combat, waves, damage, effects, abilities, economy, upgrade limits, serializable game state |
 | game.js | Menus, controls, rendering loop, saved preferences, guide, UI, game events |
 | drawing-art.js | Current art: map, enemies, heroes, and portraits based on Jack’s person drawing |
@@ -376,3 +376,5 @@ for(const filename of ["GAME_DESIGN.md","GAME_DESIGN.txt"])fs.appendFileSync(pat
 for(const filename of ['GAME_DESIGN.md','GAME_DESIGN.txt'])fs.appendFileSync(path.join(__dirname,'..',filename),'\n\nMoonlit Marsh life reward: completing rounds 30, 60, 90 and every further multiple of 30 restores 50 villagers for free. This applies only to the second map (marsh), includes endless rounds, and can raise lives above 100. It is awarded once on successful round completion, before the round-end save; loading a completed round does not award it again. The forest map and lost games receive no reward.\n');
 
 for(const filename of ['GAME_DESIGN.md','GAME_DESIGN.txt'])fs.appendFileSync(path.join(__dirname,'..',filename),'\n\nThird map — Volcanic Ruins: an independent saved adventure with an ash-brown curling road on grey rocky ground, following Jack’s drawing, a broad orange lava shoreline and southwest lava pool (not buildable), three blue fresh-water pools for Water Serpants and Pirates, no cleric graves, and a southern outpost. Uses the existing enemy waves, prices and starting resources. Road movement, water placement and trap placement use this map’s own geometry. One decorative burning trunk without branches or leaves. Smooth lava and water shorelines are shared by placement and drawing. Existing enemy progress is migrated to the reshaped route. No removable trees. The 50-life reward remains exclusive to Moonlit Marsh. Canvas scenery: volcano-art.js.\n');
+
+for(const filename of ['GAME_DESIGN.md','GAME_DESIGN.txt'])fs.appendFileSync(path.join(__dirname,'..',filename),'\n\nTurtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps above the path, lands with capped area damage, rolls home and wears its shell again; Shellstorm packs eligible enemy groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or selecting Submerged releases passengers safely. Sunken Treasure unlocks Submerged in the targeting menu: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.\n');

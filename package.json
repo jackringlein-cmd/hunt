@@ -2,5 +2,5 @@
   "name": "the-hunt-for-the-necromancer",
   "version": "0.1.0",
   "private": true,
-  "scripts": { "start": "node server.js", "test": "node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js" }
+  "scripts": { "start": "node server.js", "test": "node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js" }
 }

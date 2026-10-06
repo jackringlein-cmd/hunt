@@ -273,3 +273,37 @@ Abilities unlock only at tier 6. There are no secondary abilities. Original tier
 | Tier | Effect |
 |---|---|
 | 6 | Throw an empowered returning hat for 187.5 damage and 2.5-second stuns of any size enemy. Normal immunity and control limits apply. Base wait: 40 seconds. |
+
+## Turtle
+
+### Blazing Jaws
+
+**Primary: Feeding Frenzy**
+
+| Tier | Effect |
+|---|---|
+| 6 | For 8 seconds, bite 2.25 times as fast. Cannot attack while submerged. Base wait: 40 seconds. |
+
+### Tidal Body Slam
+
+**Primary: Oceanquake**
+
+| Tier | Effect |
+|---|---|
+| 6 | Leap onto the path for 1250 damage to up to 35 enemies within 120 units, then roll home. Base wait: 44 seconds. |
+
+### Shellstorm
+
+**Primary: Carapace Cyclone**
+
+| Tier | Effect |
+|---|---|
+| 6 | Throw an explosive shell for 875 collision damage, 30 pierce per leg, a 625-damage burst and 16 shards at 150 damage each. Submerge for 1 second to regrow the shell. Base wait: 48 seconds. |
+
+### Sunken Treasure
+
+**Primary: Treasure Tide**
+
+| Tier | Effect |
+|---|---|
+| 6 | Submerge and earn 2.25 times normal treasure income for 10 seconds. Attacking stays disabled while submerged. Base wait: 48 seconds. |

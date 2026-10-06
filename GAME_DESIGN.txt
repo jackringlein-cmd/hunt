@@ -131,7 +131,7 @@ Attacking heroes can aim at: **closest to the village**, **farthest from the vil
 
 ## 8. Complete hero upgrade catalogue
 
-All **192 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
+All **216 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
 
 ### Knight
 
@@ -565,6 +565,60 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
 
+### Turtle
+
+#### Blazing Jaws
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Quick Snap | 45 | Bites every 1.05 seconds for 24 damage. |
+| 2 | Double-Time Jaws | 95 | Bites every 0.8 seconds for 30 damage. |
+| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. |
+| 4 | Furnace Fangs | 600 | 60 fire damage every 0.5 seconds; burn rises to 10 per second. |
+| 5 | Inferno Snapper | 1,500 | 85 fire damage every 0.4 seconds; burn rises to 16 per second. |
+| 6 | Volcanic Maw | 4,300 | 120 fire damage every 0.3 seconds; burn rises to 24 per second. Feeding Frenzy: For 8 seconds, bite 2.25 times as fast. Cannot attack while submerged. Base wait: 40 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Tidal Body Slam
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Belly Flop | 60 | Leaves its shell, leaps onto the path, slams up to 4 enemies for 60 damage within 45 units, rolls home and puts its shell on. Starts every 6 seconds within 230 reach. |
+| 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. |
+| 3 | Crashing Tides | 300 | 170 damage, 65 radius, up to 9 enemies. Starts every 5 seconds. |
+| 4 | Breaker Belly | 750 | 280 damage, 75 radius, up to 12 enemies. |
+| 5 | Tidal Colossus | 1,800 | 450 damage, 85 radius, up to 18 enemies. Starts every 4 seconds. |
+| 6 | Oceanfall | 5,000 | 700 damage, 100 radius, up to 25 enemies. Oceanquake: Leap onto the path for 1250 damage to up to 35 enemies within 120 units, then roll home. Base wait: 44 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Shellstorm
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Shell Courier | 70 | Packs one enemy group of up to 200 base HP per member into its shell, then throws it out and back. 45 collision damage, 3 pierce per leg, 230 reach, 7-second wait. Captured enemies take 45 damage when released at their original path position. Control immunities and limits apply; can throw an empty shell if no enemy can be packed. |
+| 2 | Packed Shell | 135 | Packs 2 groups of up to 500 base HP. 80 damage, 5 pierce per leg. |
+| 3 | Ricochet Carapace | 340 | Packs 3 groups of up to 1500 base HP. 140 damage, 8 pierce. Throws every 6 seconds. |
+| 4 | Splinter Shell | 850 | Packs 4 groups of up to 2500 base HP. 220 damage, 12 pierce. Shell now explodes at the far end instead of returning, for 160 physical damage in 90 units, spraying 8 shards for 45 damage each. Turtle submerges for 1 second and resurfaces wearing a new shell. |
+| 5 | Shrapnel Squall | 2,100 | Packs 5 groups of up to 15000 base HP. 350 damage, 16 pierce; explosion 260 damage in 110 units, 12 shards at 70 damage. Throws every 5 seconds. |
+| 6 | Shell Cataclysm | 5,600 | Packs 6 groups of up to 15000 base HP. 520 damage, 22 pierce; explosion 420 damage in 130 units, 16 shards at 100 damage. Carapace Cyclone: Throw an explosive shell for 875 collision damage, 30 pierce per leg, a 625-damage burst and 16 shards at 150 damage each. Submerge for 1 second to regrow the shell. Base wait: 48 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Sunken Treasure
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Treasure Diver | 80 | Adds Submerged to the targeting menu. While selected, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
+| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. |
+| 3 | Coral Cache | 400 | Submerged income rises to 1 gold per second. |
+| 4 | Sunken Vault | 1,000 | Submerged income rises to 2 gold per second. |
+| 5 | Deep-Sea Riches | 2,400 | Submerged income rises to 3 gold per second. |
+| 6 | Abyssal Treasury | 6,000 | Submerged income rises to 5 gold per second. Treasure Tide: Submerge and earn 2.25 times normal treasure income for 10 seconds. Attacking stays disabled while submerged. Base wait: 48 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
 ## 9. Enemy catalogue
 
 All skeleton enemies move 68% faster than their previous speeds, including the already-doubled Runner. Walking times are rounded to two decimal places and are for the whole path at normal game speed, without boosts, slows, stuns, or fear. Lower time means faster movement. Earliest wave is the earliest permitted appearance, not a guaranteed first appearance (except the fixed first wave and wave 100).
@@ -696,7 +750,7 @@ Current local address: **http://127.0.0.1:4173/**.
 | File | Purpose |
 |---|---|
 | index.html | Game screen and script/style loading |
-| data.js | All hero/enemy definitions, 192 upgrade names/descriptions/prices, path points, tree positions |
+| data.js | All hero/enemy definitions, 216 upgrade names/descriptions/prices, path points, tree positions |
 | engine.js | Combat, waves, damage, effects, abilities, economy, upgrade limits, serializable game state |
 | game.js | Menus, controls, rendering loop, saved preferences, guide, UI, game events |
 | drawing-art.js | Current art: map, enemies, heroes, and portraits based on Jack’s person drawing |
@@ -811,3 +865,6 @@ Moonlit Marsh life reward: completing rounds 30, 60, 90 and every further multip
 
 
 Third map — Volcanic Ruins: an independent saved adventure with an ash-brown curling road on grey rocky ground, following Jack’s drawing, a broad orange lava shoreline and southwest lava pool (not buildable), three blue fresh-water pools for Water Serpants and Pirates, no cleric graves, and a southern outpost. Uses the existing enemy waves, prices and starting resources. Road movement, water placement and trap placement use this map’s own geometry. One decorative burning trunk without branches or leaves. Smooth lava and water shorelines are shared by placement and drawing. Existing enemy progress is migrated to the reshaped route. No removable trees. The 50-life reward remains exclusive to Moonlit Marsh. Canvas scenery: volcano-art.js.
+
+
+Turtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps above the path, lands with capped area damage, rolls home and wears its shell again; Shellstorm packs eligible enemy groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or selecting Submerged releases passengers safely. Sunken Treasure unlocks Submerged in the targeting menu: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.
