@@ -42,7 +42,7 @@ window.ToolmakerArt=(()=>{
   else {
    c.beginPath();c.moveTo(hx-15,-53);c.bezierCurveTo(hx-18,-73,hx+17,-75,hx+16,-54);c.quadraticCurveTo(hx+7,-63,hx-2,-60);c.quadraticCurveTo(hx-9,-56,hx-15,-53);c.fillStyle='#79533d';c.fill();c.strokeStyle=ink;c.lineWidth=2;c.stroke();
    c.beginPath();c.moveTo(hx-12,-43);c.quadraticCurveTo(hx,-35,hx+12,-43);c.quadraticCurveTo(hx+10,-29,hx,-30);c.quadraticCurveTo(hx-11,-30,hx-12,-43);c.fillStyle='#946444';c.fill();c.stroke();
-   const eyes=profile?[side*7]:[-6+side*4,6+side*4];for(const ex of eyes){oval(c,hx+ex,-51,3.3,4,'#fff5e2');oval(c,hx+ex+side,-51,1.4,2,'#373437');line(c,[[hx+ex-3,-58],[hx+ex,-59],[hx+ex+3,-58]],'#79533d',1.5);}
+   const eyes=profile?[side*7]:[-6+side*4,6+side*4];for(const ex of eyes){oval(c,hx+ex,-51,3.3,4,'#fff5e2');c.beginPath();c.ellipse(hx+ex+side,-51,2,2.7,0,0,7);c.fillStyle='#439bd1';c.fill();c.beginPath();c.arc(hx+ex+side-.5,-52,.8,0,7);c.fillStyle='#ffffff';c.fill();line(c,[[hx+ex-3,-58],[hx+ex,-59],[hx+ex+3,-58]],'#79533d',1.5);}
    oval(c,hx+side*12,-46,3.5,3,'#e4ac83');
    c.beginPath();c.moveTo(hx-4+side*6,-40);c.quadraticCurveTo(hx+side*6,-35,hx+5+side*6,-40);c.strokeStyle='#4f372d';c.lineWidth=1.8;c.stroke();
   }
