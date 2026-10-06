@@ -14,36 +14,35 @@ window.AbominationArt=(()=>{
  function fireRope(c,pts,t,width=7){c.save();c.shadowColor='#ff7b19';c.shadowBlur=12;for(const [color,w]of [['#f04d18',width+4],['#ff9e25',width],['#ffe477',width*.5],['#fff5c5',width*.18]])line(c,pts,color,w);c.shadowBlur=0;for(let i=1;i<pts.length;i+=2){const [x,y]=pts[i];flame(c,x,y,4+width*.5+Math.sin(t*11+i)*2,t+i,'#ff7d20',false);}c.restore();}
  function curvePoints(a,b,d,e){const pts=[];for(let i=0;i<=24;i++){const t=i/24,u=1-t;pts.push([u*u*u*a.x+3*u*u*t*b.x+3*u*t*t*d.x+t*t*t*e.x,u*u*u*a.y+3*u*u*t*b.y+3*u*t*t*d.y+t*t*t*e.y]);}return pts;}
  function point(h,time){const a=h.flameTravel;if(a){const f=Math.max(0,Math.min(1,(time-a.start)/(a.end-a.start)));return{x:a.from.x+(a.to.x-a.from.x)*f,y:a.from.y+(a.to.y-a.from.y)*f};}return h.target==='flame'&&h.flameSpot?h.flameSpot:h;}
+ // A single moving fire volume: uneven edges and broad flowing currents, not flame badges.
+ function fireMass(c,points,t,bright=false){c.save();const ys=points.map(p=>p[1]),xs=points.map(p=>p[0]),top=Math.min(...ys),bottom=Math.max(...ys),left=Math.min(...xs),right=Math.max(...xs),w=right-left,h=bottom-top;
+  const edge=points.map(([x,y],i)=>[x+Math.sin(t*5+i*2.3)*1.8,y+Math.cos(t*6+i*1.7)*2]);const g=c.createLinearGradient(left,top,right,bottom);g.addColorStop(0,'#8e281c');g.addColorStop(.3,'#cf421c');g.addColorStop(.65,bright?'#ed862e':'#e66b23');g.addColorStop(1,'#a9311c');organic(c,edge,g);c.clip();
+  for(let i=0;i<3;i++){const x=left+w*(.18+i*.28),sway=Math.sin(t*4+i*2)*w*.09;c.beginPath();c.moveTo(x,bottom+5);c.bezierCurveTo(x-w*.24,bottom-h*.24,x+w*.3+sway,top+h*.35,x+sway,top-7);c.bezierCurveTo(x+w*.6,top+h*.36,x-w*.03,bottom-h*.15,x+w*.22,bottom+5);c.closePath();c.fillStyle=i===1?'#f2a44299':'#ee772e88';c.fill();}c.restore();
+ }
  function hero(c,h,{time=0,active=false,selected=false,ghost=false,facing=0}={}){c.save();const initialAlpha=c.globalAlpha;const at=point(h,time);c.translate(at.x,at.y);if(ghost)c.globalAlpha*=.55;c.fillStyle='#3c242538';c.beginPath();c.ellipse(0,8,28,9,0,0,7);c.fill();if(selected){c.strokeStyle='#f6c379';c.lineWidth=2;c.beginPath();c.ellipse(0,8,34,12,0,0,7);c.stroke();}
-  if(h.target==='flame'&&h.flameSpot&&!h.flameTravel&&!(h.fireWhip&&time<h.fireWhip.end)){const n=h.u[1],size=46+n*4;const glow=c.createRadialGradient(0,-30,4,0,-30,85);glow.addColorStop(0,'#ffb54466');glow.addColorStop(1,'#ff9c0000');c.fillStyle=glow;c.fillRect(-85,-115,170,170);flame(c,0,8,size,time);flame(c,-20,9,25,time+1);flame(c,20,9,27,time+2);c.restore();return;}
+  if(h.target==='flame'&&h.flameSpot&&!h.flameTravel&&!(h.fireWhip&&time<h.fireWhip.end)){fireMass(c,[[-30,9],[-38,-15],[-20,-39],[-26,-72],[-7,-51],[5,-92],[20,-67],[15,-40],[32,-57],[36,-18],[25,10]],time,true);c.restore();return;}
   const dir=Math.cos(facing)<0?-1:1,back=Math.sin(facing)<-.55;c.scale(dir,1);const pulse=Math.sin(time*3)*1.2,bt=h.fireBoulder?Math.max(0,Math.min(1,(time-h.fireBoulder.start)/1.2)):0,raising=h.fireBoulder?(bt<.65?Math.sin(bt/.65*Math.PI/2):Math.max(0,1-Math.pow((bt-.65)/.35,2))):0;c.translate(0,pulse);
   function strike(side){if(!active)return 0;const event=(h.firePunches||[]).filter(p=>p.side===side).at(-1);if(!event)return 0;const t=(time-event.start)/.34;if(t<0||t>1)return 0;return t<.22?-.18*Math.sin(t/.22*Math.PI):Math.pow(Math.sin((t-.22)/.78*Math.PI),.7);}
-  const aura=c.createRadialGradient(0,-30,8,0,-30,65);aura.addColorStop(0,'#ffad2930');aura.addColorStop(1,'#ffad2900');c.fillStyle=aura;c.fillRect(-65,-95,130,130);
-  for(let i=0;i<9;i++)flame(c,-24+i*6,-35-Math.sin(i/8*Math.PI)*21,9+(i%3)*3,time+i*.7,i%2?'#ff9f26':'#f65d1b',false);
-  // The hunched silhouette is solid flame, with no bones or exposed skeleton.
-  organic(c,[[-19,-17],[-7,-16],[-4,7],[-8,13],[-23,13],[-24,7]],'#ff8322');organic(c,[[4,-18],[17,-18],[22,7],[19,13],[5,13],[1,7]],'#ffad32');
-  organic(c,[[-27,-24],[-29,-45],[-21,-61],[-8,-70],[8,-68],[25,-57],[30,-36],[23,-17],[6,-9],[-13,-11]],'#ff7420');
-  flame(c,-5,-10,36,time,'#ffad28',false);flame(c,8,-15,26,time+1,'#ffd249',false);
-  for(let i=0;i<5;i++)flame(c,-20+i*10,9,13+(i%2)*8,time+i,'#ff9b25',false);
+  fireMass(c,[[-22,-19],[-6,-19],[-4,9],[-22,13],[-26,3]],time);
+  fireMass(c,[[2,-19],[18,-21],[25,7],[17,14],[2,10]],time+1);
+  // Swept crests belong to the torso outline and change shape as it burns.
+  fireMass(c,[[-26,-16],[-32,-39],[-24,-62],[-30,-79],[-13,-65],[-6,-91],[7,-74],[11,-82],[25,-58],[32,-35],[22,-11],[-6,-8]],time);
   const whip=h.fireWhip&&time<h.fireWhip.end?Math.sin((time-h.fireWhip.start)/.45*Math.PI):0;
   const frontPunch=strike(1),backPunch=strike(-1),twist=(frontPunch-backPunch)*.085;c.rotate(twist);c.translate((frontPunch-backPunch)*4,-Math.sin(bt*Math.PI)*3);
   const left={x:-34-backPunch*14+raising*19,y:8-pulse-Math.abs(backPunch)*36-raising*75},right={x:34+frontPunch*29-raising*17+whip*13,y:8-pulse-Math.abs(frontPunch)*35-raising*75-whip*28};
   if(h.u[2]&&(!h.fireBoulder)&&(!h.firePunches?.some(p=>time-p.start<.34))){const swing=whip*22;left.x=13+swing;left.y=-19-whip*32;right.x=25+swing;right.y=-15-whip*32;}
-  function arm(side,hand){const shoulder={x:side*22,y:-46},elbow={x:side*(32-raising*12),y:-17-raising*39},pts=[[shoulder.x,shoulder.y],[elbow.x,elbow.y],[hand.x,hand.y-8]];line(c,pts,'#f45e1b',25);line(c,pts,'#ffa52a',21);line(c,pts,'#ffd44e',12);organic(c,[[hand.x-11,hand.y-13],[hand.x-5,hand.y-18],[hand.x+9,hand.y-15],[hand.x+13,hand.y-6],[hand.x+10,hand.y+5],[hand.x-11,hand.y+5]],'#ffb534');flame(c,elbow.x,elbow.y+3,17,time+side,'#ff8a20',false);flame(c,hand.x,hand.y+4,18,time-side,'#ffcb46',false);}
+  function arm(side,hand){const sx=side*22,sy=-46,ex=side*(32-raising*12),ey=-17-raising*39;fireMass(c,[[sx-10,sy-8],[ex-11,ey-8],[hand.x-12,hand.y-13],[hand.x-14,hand.y+4],[hand.x+8,hand.y+7],[hand.x+15,hand.y-5],[hand.x+9,hand.y-18],[ex+10,ey+4],[sx+11,sy+7]],time+side,true);}
+
 
   if(h.fireBoulder){const gather=Math.min(1,bt/.65);for(let i=0;i<18;i++){const a=time*9+i*2.4,r=(1-gather)*35+8+(i%3)*4,x=8+Math.cos(a)*r,y=-45-gather*38+Math.sin(a)*r*.65;c.fillStyle=i%3?'#ffb23f':'#fff2ac';c.beginPath();c.arc(x,y,1.5+(i%2),0,7);c.fill();}c.strokeStyle='#ffb34999';c.lineWidth=1.5;for(let j=0;j<2;j++){c.beginPath();c.ellipse(10,-53-gather*24,31-j*7,10,Math.sin(time*4)*.4,0,Math.PI*1.6);c.stroke();}}
-  for(let i=0;i<6;i++)flame(c,-19+i*7,-21-(i%2)*7,9+(i%3)*2,time+i,'#ff9e25',false);
+
   arm(-1,left);
-  // A face formed in the flame: glowing eyes, no skull, nose bone or teeth.
-  organic(c,[[-3,-51],[9,-56],[23,-49],[27,-36],[22,-24],[4,-23],[-5,-34]],'#ffb832');
-  flame(c,7,-31,17,time+2,'#ffd458',false);
-  if(!back){line(c,[[2,-42],[9,-40]],'#d85b13',5);line(c,[[14,-41],[21,-43]],'#d85b13',5);line(c,[[3,-41],[8,-40]],'#fff9d6',2.5);line(c,[[15,-40],[20,-42]],'#fff9d6',2.5);}
+  fireMass(c,[[-5,-43],[-3,-56],[8,-59],[24,-49],[27,-34],[19,-21],[3,-25]],time+.5,true);
+  if(!back){line(c,[[2,-42],[9,-40]],'#ffcb69',2);line(c,[[15,-40],[21,-43]],'#ffcb69',2);}
   arm(1,right);
-  for(const hand of [left,right]){flame(c,hand.x-7,hand.y-4,7,time+hand.x,'#ffad29',false);flame(c,hand.x+6,hand.y-6,8,time-hand.x,'#ffad29',false);}
+
   if(h.u[2]&&!h.fireBoulder){fireRope(c,[[left.x,left.y-7],[right.x,right.y-7]],time,5);if(!whip){const pts=curvePoints({x:right.x,y:right.y-7},{x:62,y:-35},{x:60,y:15},{x:44,y:13});pts.push(...curvePoints({x:44,y:13},{x:32,y:8},{x:51,y:-1},{x:58,y:6}));fireRope(c,pts,time,4);}}
   for(let i=0;i<7;i++){const phase=(time*.6+i*.137)%1;c.globalAlpha=initialAlpha*(ghost?.55:1)*(1-phase);c.fillStyle=i%2?'#ffd672':'#f9792b';c.beginPath();c.ellipse(-26+i*9+Math.sin(time*2+i)*3,-35-phase*53,1.2,2.2,Math.sin(i),0,7);c.fill();}c.globalAlpha=initialAlpha*(ghost?.55:1);
-  // Fire tongues flow across the torso and limbs instead of tracing a skeleton.
-  flame(c,-14,-40,23,time+1,'#ff8b22',false);flame(c,5,-48,25,time+2,'#ffc43e',false);flame(c,right.x+1,right.y-5,5+frontPunch*14,time,'#ffb630',false);flame(c,left.x,left.y-5,5+backPunch*14,time+2,'#ffb630',false);
   if(h.fireBoulder&&bt<.65){const size=4+26*Math.pow(Math.min(1,bt/.5),.7);boulder(c,12,-48-39*raising,size,time*2);flame(c,10,-45-39*raising,size*.6,time*2,'#ff7020',false);}
   c.restore();
  }
