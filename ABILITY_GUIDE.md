@@ -342,7 +342,7 @@ Abilities unlock only at tier 6. There are no secondary abilities. Original tier
 |---|---|
 | 6 | Conjure and smash a boulder for 3750 fire damage within 100 units of a melee target, hitting up to 35 enemies. Base wait: 52 seconds. |
 
-## Water Abomination
+## Abomination
 
 ### Crashing Surge
 

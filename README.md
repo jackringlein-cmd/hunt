@@ -69,4 +69,4 @@ Turtle is a water-only melee hero with Blazing Jaws, Tidal Body Slam, Shellstorm
 
 Flaming Abomination: a land hero with Flurry of Blows, Living Inferno, Scorchlash, and Molten Cataclysm. Living Flame targeting locks it to a chosen path point; selecting another target mode returns it home. Whip upgrades show separate outer whip and inner melee range circles.
 
-Flaming Abomination changes permanently into Water Abomination when placed in natural water, with 24 alternate upgrades: Crashing Surge, Stormshake, Deepwater Ambush and Predator’s Glare. Lava placement keeps the fire form and grants 10% extra damage. The placement preview blends between land and water forms.
+Flaming Abomination changes permanently into Abomination when placed in natural water, with 24 alternate upgrades: Crashing Surge, Stormshake, Deepwater Ambush and Predator’s Glare. Lava placement keeps the fire form and grants 10% extra damage. The placement preview blends between land and water forms.
