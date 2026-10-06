@@ -11,7 +11,7 @@ function savedMap(id){return saveBook().maps[id]||null;}
 function saveGame(){try{const book=saveBook();book.maps[game.s.mapId]=game.save();book.lastMap=game.s.mapId;localStorage.setItem(MAPKEY,JSON.stringify(book));$('save-indicator').textContent='Progress saved ✓';return true;}catch{toast('Could not save. Your browser storage may be full.');return false;}}
 let menuScreen='main';
 const mapPreviews={};
-function mapPreview(id){if(mapPreviews[id])return mapPreviews[id];const c=document.createElement('canvas');c.width=550;c.height=360;const g=c.getContext('2d'),sample=new E.Game(undefined,id);g.scale(.5,.5);CartoonArt.map(g,sample);for(const t of sample.s.trees)CartoonArt.tree(g,t.x,t.y,1);if(id==='marsh')MarshArt.village(g);else CartoonArt.village(g);return mapPreviews[id]=c.toDataURL();}
+function mapPreview(id){if(mapPreviews[id])return mapPreviews[id];const c=document.createElement('canvas');c.width=550;c.height=360;const g=c.getContext('2d'),sample=new E.Game(undefined,id);g.scale(.5,.5);CartoonArt.map(g,sample);for(const t of sample.s.trees)CartoonArt.tree(g,t.x,t.y,1);if(id==='volcano')VolcanoArt.village(g);else if(id==='marsh')MarshArt.village(g);else CartoonArt.village(g);return mapPreviews[id]=c.toDataURL();}
 
 function toast(text){$('toast').textContent=text;$('toast').classList.add('visible');toastUntil=performance.now()+3500;}
 function modal(html,cls=''){const el=$('modal');el.classList.remove('hidden');el.innerHTML=`<div class="modal-card ${cls}" role="dialog" aria-modal="true" tabindex="-1">${html}</div>`;paused=true;el.querySelector('.modal-card').focus();}
@@ -131,7 +131,7 @@ const ground=document.createElement('canvas');ground.width=1100;ground.height=72
 let artSeed=41;function rand(){artSeed=(artSeed*1664525+1013904223)>>>0;return artSeed/4294967296;}
 function buildMap(){CartoonArt.map(gc,game);const name=game.map.name;document.querySelector('.location strong').textContent=name;document.querySelector('.map-label').innerHTML='<span class="live-dot"></span> '+name.toUpperCase()+' <span class="map-sub">Protect the last light.</span>';}
 buildMap();
-function village(c){if(game.s.mapId==='marsh'){MarshArt.village(c);return;}CartoonArt.village(c,sceneTime);}
+function village(c){if(game.s.mapId==='volcano'){VolcanoArt.village(c);return;}if(game.s.mapId==='marsh'){MarshArt.village(c);return;}CartoonArt.village(c,sceneTime);}
 // Facing is kept on each hero so save/continue preserves their last direction.
 function updateHeroFacing(dt){
  for(const h of game.s.heroes){

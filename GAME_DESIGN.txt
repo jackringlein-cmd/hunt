@@ -808,3 +808,6 @@ Pirate: eighth hero, 150 gold, water-only including flooded path sections. Base 
 
 
 Moonlit Marsh life reward: completing rounds 30, 60, 90 and every further multiple of 30 restores 50 villagers for free. This applies only to the second map (marsh), includes endless rounds, and can raise lives above 100. It is awarded once on successful round completion, before the round-end save; loading a completed round does not award it again. The forest map and lost games receive no reward.
+
+
+Third map — Volcanic Ruins: an independent saved adventure with a winding basalt road, lava beyond the buildable borders, three blue fresh-water springs for Water Serpants and Pirates, four cleric graves, and a fortified eastern outpost. Uses the existing enemy waves, prices and starting resources. Road movement, water placement and trap placement use this map’s own geometry. No removable trees. The 50-life reward remains exclusive to Moonlit Marsh. Canvas scenery: volcano-art.js.

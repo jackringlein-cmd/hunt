@@ -164,6 +164,8 @@ const maps={forest:{id:'forest',name:'The Whispering Woods',description:'Forest 
 
 
 
+// Third map: a long basalt causeway with three fresh-water springs.
+maps.volcano={id:'volcano',name:'Volcanic Ruins',description:'Defend an ancient outpost along a winding basalt road. Three springs support water heroes.',points:roundedRoute([[-40,170],[170,170],[230,250],[230,480],[380,550],[530,550],[595,460],[595,255],[720,175],[895,175],[935,300],[815,380],[795,515],[945,550],[1040,440],[1140,440]]),water:[[[295,285],[325,255],[382,270],[403,315],[385,363],[331,374],[294,338]],[[422,116],[469,95],[514,115],[531,155],[504,192],[448,194],[416,159]],[[661,411],[698,378],[742,397],[753,449],[729,483],[681,477],[655,445]]],trees:[],graves:Array.from({length:4},(_,i)=>({id:i+1,x:796+i*39,y:91}))};
 const river=[[-30,642],[130,665],[275,681],[460,640],[630,665],[780,650],[930,695],[1150,670]];
 maps.forest.water=river.slice(1).map((b,i)=>{const a=river[i],dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy),ox=-dy/l*16,oy=dx/l*16;return [[a[0]+ox,a[1]+oy],[b[0]+ox,b[1]+oy],[b[0]-ox,b[1]-oy],[a[0]-ox,a[1]-oy]];});
 const data={heroes,enemies,points,trees,graves,maps,villagerPrices:[{max:65,cost:10},{max:85,cost:20},{max:100,cost:100},{max:110,cost:500},{max:Number.MAX_SAFE_INTEGER,cost:1000}],treeHitboxScale:1.75,heroDamageScale:1.25,leaderBoostScale:1.25,width:1100,height:720};

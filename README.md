@@ -25,7 +25,7 @@ Sound begins after your first click. The volume slider controls music and sound 
 
 ## Included
 
-- Illustrated forest and marsh maps, land and water heroes, removable forest trees, and a village to defend.
+- Illustrated forest, marsh, and volcanic ruins maps, land and water heroes, removable forest trees, and a village to defend.
 - Eight heroes, thirty-two upgrade paths, and 192 upgrades.
 - One six-upgrade path and one two-upgrade path per hero.
 - Nine enemy types, armor, shields, harmful-effect blocks, and fear resistance.
