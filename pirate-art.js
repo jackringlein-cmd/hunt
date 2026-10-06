@@ -34,12 +34,8 @@ window.PirateArt=(()=>{
   c.save();let x=h.x,y=h.y;const ram=h.pirateRam;if(ram){const t=Math.max(0,Math.min(1,(time-ram.start)/(ram.end-ram.start))),f=t<.5?Math.sin(t*Math.PI):Math.sin((1-t)*Math.PI);x+=(ram.to.x-h.x)*f;y+=(ram.to.y-h.y)*f;}
   c.translate(x,y);if(ghost)c.globalAlpha=.55;const u=h.u,face=h.face&&h.face.x>h.x?-1:1;c.scale(face,1);const bob=active?Math.sin(time*2.5+h.id)*1.2:0;c.translate(0,bob);
   oval(c,0,12,44,8,'#83c5d54a');line(c,[[-47,10],[-29,15],[5,17],[38,10]],'#c1e7e4',2);if(selected)oval(c,0,12,49,12,'#edda7c25');
-  // Boots rest on the deck; the hull is painted afterward in front of the feet.
-  shape(c,[[-11,-15],[-2,-14],[-3,-3],[-5,1],[-13,0]],'#514951');
-  shape(c,[[1,-14],[10,-15],[13,-1],[5,1],[3,-3]],'#514951');
-  shape(c,[[-13,-4],[-4,-4],[-3,3],[-17,3],[-17,0]],'#382d29');
-  shape(c,[[4,-4],[12,-4],[17,0],[17,3],[4,3]],'#382d29');
-  line(c,[[-12,-3],[-5,-3]],'#b58b56',1.3);line(c,[[5,-3],[11,-3]],'#b58b56',1.3);
+  // Lower the whole sailor into the hull, keeping his original proportions.
+  c.save();c.translate(0,9);
   // Standing sailor: red bandanna, eyepatch, coat, belt, forward rock-throwing arm.
   shape(c,[[-8,-36],[8,-35],[15,-10],[-13,-9]],'#792d36');shape(c,[[-4,-34],[5,-34],[7,-12],[-6,-12]],'#e8d9b0');line(c,[[-11,-16],[11,-16]],'#332d2e',4);shape(c,[[-2,-18],[3,-18],[3,-14],[-2,-14]],'#d5ac59');
   oval(c,0,-45,12,14,'#d2a37b');shape(c,[[-10,-40],[-4,-37],[5,-39],[9,-42],[6,-31],[-2,-29],[-9,-33]],'#544135');
@@ -47,6 +43,7 @@ window.PirateArt=(()=>{
   const swing=active?Math.sin(attack*Math.PI):0;line(c,[[-8,-32],[-18,-29],[-27-swing*7,-35+swing*6]],ink,9);line(c,[[-8,-32],[-18,-29],[-27-swing*7,-35+swing*6]],'#c49370',5);oval(c,-28-swing*7,-35+swing*6,5,4,'#d2a37b');
   line(c,[[10,-31],[18,-20],[12,-15]],'#c49370',6);if(!h.pirateHat)hat(c,0,-60,0,u[3]);
   if(!h.pirateRock||time>h.pirateRock.end)rock(c,u[1],-28-swing*7,-39+swing*6,.8);
+  c.restore();
   // Reference-shaped wide wooden hull, plank seams, pointed forward bow.
   shape(c,[[-48,-10],[-23,-4],[39,-6],[45,-11],[42,6],[29,18],[-21,18],[-36,8]],u[0]>=4?'#635346':'#956a46');line(c,[[-43,-6],[-24,0],[35,-1],[43,-7]],'#d3a86c',4);line(c,[[-31,6],[32,6]],'#574337');line(c,[[-22,13],[23,13]],'#574337');
   for(const x of [-24,24])line(c,[[x,-1],[x+2,13]],u[0]>=2?'#a8b4b8':'#624a36',3);
