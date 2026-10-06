@@ -1,8 +1,9 @@
-/* Extinguished Abomination: the fire ape silhouette, cooled and waterlogged. */
+/* Wooden Abomination: hunched fire-form proportions, rough bark and splinter spikes. */
 window.WaterBeastArt=(()=>{
  const ink='#2d271e';
  function shape(c,p,color){c.beginPath();p.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.closePath();c.fillStyle=color;c.fill();c.strokeStyle=ink;c.lineWidth=2;c.lineJoin='round';c.stroke();}
- function cooled(c,points,bright=false){c.save();c.beginPath();const last=points.at(-1);c.moveTo((last[0]+points[0][0])/2,(last[1]+points[0][1])/2);points.forEach(([x,y],i)=>{const n=points[(i+1)%points.length];c.quadraticCurveTo(x,y,(x+n[0])/2,(y+n[1])/2);});c.closePath();const g=c.createLinearGradient(-30,-75,32,15);g.addColorStop(0,'#25383c');g.addColorStop(.45,bright?'#698d90':'#46686c');g.addColorStop(.75,'#3b6068');g.addColorStop(1,'#233b45');c.fillStyle=g;c.fill();c.strokeStyle='#242b29';c.lineWidth=2;c.stroke();c.clip();for(let i=0;i<3;i++){c.beginPath();c.moveTo(-26+i*18,20);c.bezierCurveTo(-44+i*18,-5,-2+i*12,-30,-18+i*16,-86);c.strokeStyle=i===1?'#a2bbb142':'#8d826b38';c.lineWidth=5-i;c.stroke();}c.restore();}
+ function cooled(c,points,bright=false){c.save();c.beginPath();const last=points.at(-1);c.moveTo((last[0]+points[0][0])/2,(last[1]+points[0][1])/2);points.forEach(([x,y],i)=>{const n=points[(i+1)%points.length];c.quadraticCurveTo(x,y,(x+n[0])/2,(y+n[1])/2);});c.closePath();const g=c.createLinearGradient(-30,-75,32,15);g.addColorStop(0,'#42281a');g.addColorStop(.45,bright?'#a77947':'#80552f');g.addColorStop(.75,'#704623');g.addColorStop(1,'#39251a');c.fillStyle=g;c.fill();c.strokeStyle='#332115';c.lineWidth=2;c.stroke();c.clip();for(let i=0;i<3;i++){c.beginPath();c.moveTo(-26+i*18,20);c.bezierCurveTo(-44+i*18,-5,-2+i*12,-30,-18+i*16,-86);c.strokeStyle=i===1?'#e0b37d80':'#321a1277';c.lineWidth=2-i*.35;c.stroke();}for(let i=0;i<4;i++){const x=-17+i*12,y=-50+i%2*22;c.beginPath();c.ellipse(x,y,2.5,5.5,-.2,0,7);c.strokeStyle='#3c241a88';c.lineWidth=1;c.stroke();}c.restore();}
+ function spike(c,x,y,dx,dy,size=8){const len=Math.hypot(dx,dy)||1,nx=-dy/len*size*.4,ny=dx/len*size*.4;shape(c,[[x+nx,y+ny],[x+dx,y+dy],[x-nx,y-ny]],'#a47542');shape(c,[[x,y],[x+dx,y+dy],[x-nx,y-ny]],'#63401f');}
  function hero(c,h,{time=0,active=false,selected=false,ghost=false,facing=0}={}){
  const a=h.waterAction,age=a?time-a.start:0;let x=h.x,y=h.y,lift=0,submerged=false;
  if(a&&a.path===0){const f=Math.max(0,Math.min(1,age<.7?age/.7:2-age/.7));x+=(a.to.x-h.x)*f;y+=(a.to.y-h.y)*f;}
@@ -21,20 +22,30 @@ window.WaterBeastArt=(()=>{
  [[-30,-33],[-43,-47],[-29,-43]],[[-29,-48],[-37,-68],[-20,-57]],
  [[-20,-61],[-26,-83],[-10,-66]],[[-9,-68],[-6,-96],[4,-72]],
  [[6,-67],[15,-87],[20,-58]],[[21,-51],[35,-67],[30,-39]],[[27,-33],[41,-42],[29,-22]]
- ])shape(c,points,'#454437');
+ ])shape(c,points,'#81552f');
  cooled(c,[[-27,-24],[-29,-45],[-21,-61],[-8,-70],[8,-68],[25,-57],[30,-36],[23,-17],[6,-9],[-13,-11]]);
  cooled(c,[[-23,-48],[-16,-59],[-4,-63],[12,-60],[22,-49],[15,-34],[-5,-31]],true);
+ for(const [x,y,dx,dy]of [[-17,-51,-7,-17],[-5,-56,0,-16],[12,-51,8,-17],[-15,-30,-8,-13],[0,-25,3,-15],[19,-24,10,-13],[-12,-13,-5,-12]])spike(c,x,y,dx,dy);
+ for(const side of [-1,1]){spike(c,side*17,4,side*9,-9,6);spike(c,side*14,-7,side*6,-13,7);}
  const liftArm=leaping?Math.max(0,Math.sin((age-2)/1.6*Math.PI))*32:0;
- function arm(side){const sx=side*22,ex=side*32,hy=8+side*step-liftArm,hx=side*(34+(running?5:0));for(let i=0;i<3;i++){const sy=-38+i*14,base=side*(31+i*2);shape(c,[[base,sy-7],[base+side*(15-i*2),sy-13],[base+side*3,sy+5]],'#46483b');}c.lineCap='round';c.lineJoin='round';c.beginPath();c.moveTo(sx,-46);c.lineTo(ex,-17-liftArm*.5);c.lineTo(hx,hy-8);c.strokeStyle=ink;c.lineWidth=23;c.stroke();c.strokeStyle=side<0?'#37585f':'#547e86';c.lineWidth=18;c.stroke();cooled(c,[[hx-11,hy-13],[hx-5,hy-18],[hx+9,hy-15],[hx+13,hy-6],[hx+10,hy+5],[hx-11,hy+5]],true);c.strokeStyle='#a9c8bd88';c.lineWidth=1.2;for(let i=0;i<3;i++){c.beginPath();c.moveTo(hx-6+i*5,hy-4);c.lineTo(hx-5+i*5,hy+1);c.stroke();}}
+ function arm(side){const sx=side*22,ex=side*32,hy=8+side*step-liftArm,hx=side*(34+(running?5:0));for(let i=0;i<3;i++){const sy=-38+i*14,base=side*(31+i*2);shape(c,[[base,sy-7],[base+side*(15-i*2),sy-13],[base+side*3,sy+5]],'#916339');}c.lineCap='round';c.lineJoin='round';c.beginPath();c.moveTo(sx,-46);c.lineTo(ex,-17-liftArm*.5);c.lineTo(hx,hy-8);c.strokeStyle=ink;c.lineWidth=23;c.stroke();c.strokeStyle=side<0?'#634020':'#966438';c.lineWidth=18;c.stroke();cooled(c,[[hx-11,hy-13],[hx-5,hy-18],[hx+9,hy-15],[hx+13,hy-6],[hx+10,hy+5],[hx-11,hy+5]],true);c.strokeStyle='#d6ae7488';c.lineWidth=1.2;for(let i=0;i<3;i++){c.beginPath();c.moveTo(hx-6+i*5,hy-4);c.lineTo(hx-5+i*5,hy+1);c.stroke();}for(let i=0;i<3;i++)spike(c,hx-7+i*7,hy-8,(i-1)*5,-12-i%2*5,6);spike(c,ex,-20-liftArm*.5,side*11,-15,8);}
  arm(-1);
  const biteAge=time-(h.waterBiteAt??-10),jaw=active&&biteAge>=0&&biteAge<.3?Math.sin(biteAge/.3*Math.PI)*9:0;
- c.save();c.translate(jaw*.45,jaw*.12);cooled(c,[[-3,-51],[9,-56],[23,-49],[27,-36],[22,-24],[4,-23],[-5,-34]],true);
+ arm(1);
+ c.save();c.translate(jaw*.45,jaw*.12);
+ // Pointed wooden ears and a canine muzzle echo the original creature.
+ shape(c,[[-4,-46],[-12,-73],[5,-57]],'#896039');shape(c,[[13,-53],[27,-73],[27,-44]],'#9d7042');shape(c,[[-4,-55],[-8,-66],[0,-58]],'#48301e');shape(c,[[20,-56],[25,-65],[24,-53]],'#48301e');
+ cooled(c,[[-3,-51],[9,-56],[23,-49],[27,-36],[22,-24],[4,-23],[-5,-34]],true);
  if(Math.sin(facing)>=-.55){cooled(c,[[2,-44],[11,-47],[22,-42],[22,-33],[15,-29],[3,-32]]);}
  c.strokeStyle=a?.path===3?'#daeaa0':'#a6c8ba';c.lineWidth=2;c.beginPath();c.moveTo(2,-42);c.lineTo(9,-40);c.moveTo(15,-40);c.lineTo(21,-43);c.stroke();
- // A short ape jaw opens for the existing bite animation.
- cooled(c,[[7,-33],[20,-33],[25,-27+jaw],[21,-20+jaw],[5,-21+jaw],[2,-27+jaw]],true);if(jaw>1)shape(c,[[5,-30],[20,-30],[21,-25+jaw],[6,-25+jaw]],'#202b29');
- if(jaw>1){for(let i=0;i<3;i++)shape(c,[[7+i*5,-30],[9+i*5,-26],[11+i*5,-30]],'#bac5af');}
- c.strokeStyle='#827c68';c.lineWidth=2;c.beginPath();c.moveTo(7,-23+jaw);c.quadraticCurveTo(14,-20+jaw,21,-25+jaw);c.stroke();c.restore();arm(1);
+ for(const [x,y,dx,dy]of [[-1,-48,-9,-13],[9,-54,1,-15],[23,-46,10,-11]])spike(c,x,y,dx,dy,6);
+ // A long snout, dark nose, lower jaw and two fangs give a clear dog profile.
+ cooled(c,[[12,-39],[25,-39],[38,-35],[43,-30],[39,-25],[24,-23],[14,-27]],true);
+ shape(c,[[35,-35],[43,-34],[45,-30],[40,-27],[35,-29]],'#2b211a');
+ cooled(c,[[17,-26],[39,-27],[38,-19+jaw],[29,-16+jaw],[15,-21+jaw]],true);
+ c.strokeStyle='#342419';c.lineWidth=2;c.beginPath();c.moveTo(18,-25);c.quadraticCurveTo(29,-21+jaw,40,-26);c.stroke();
+ for(const x of [23,34])shape(c,[[x,-25],[x+3,-19+jaw*.35],[x+5,-26]],'#dac39a');
+ c.strokeStyle='#c29b64';c.lineWidth=1.2;c.beginPath();c.moveTo(24,-34);c.lineTo(32,-32);c.stroke();c.restore();
  // Water beads descend; faint steam replaces the fire form's rising embers.
  c.save();const opacity=c.globalAlpha;for(let i=0;i<6;i++){const f=(time*.45+i*.17)%1;c.globalAlpha=opacity*(1-f)*.38;c.strokeStyle='#d0ded2';c.lineWidth=1.2;c.beginPath();const sx=-22+i*9;c.moveTo(sx,-56-f*23);c.bezierCurveTo(sx-5,-64-f*23,sx+6,-68-f*23,sx+2,-76-f*23);c.stroke();}c.globalAlpha=opacity*.65;c.fillStyle='#a0c9c5';for(let i=0;i<5;i++){const f=(time*.6+i*.21)%1;c.beginPath();c.ellipse(-30+i*15+Math.sin(i)*3,-30+f*42,1,2,0,0,7);c.fill();}c.restore();
  c.restore();
