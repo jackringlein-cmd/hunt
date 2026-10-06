@@ -307,3 +307,37 @@ Abilities unlock only at tier 6. There are no secondary abilities. Original tier
 | Tier | Effect |
 |---|---|
 | 6 | Submerge and earn 2.25 times normal treasure income for 10 seconds. Attacking stays disabled while submerged. Base wait: 48 seconds. |
+
+## Flaming Abomination
+
+### Flurry of Blows
+
+**Primary: Overheated Onslaught**
+
+| Tier | Effect |
+|---|---|
+| 6 | For 8 seconds, punch 2.25 times as fast. Base wait: 40 seconds. |
+
+### Living Inferno
+
+**Primary: Solar Pillar**
+
+| Tier | Effect |
+|---|---|
+| 6 | Become a flame at your locked spot, or the nearest path point in reach. For 8 seconds, contact damage and burn are 2.25 times as strong. Base wait: 48 seconds. |
+
+### Scorchlash
+
+**Primary: Worldfire Lash**
+
+| Tier | Effect |
+|---|---|
+| 6 | Whip up to 12 enemies for 1250 fire damage each, with 130 knockback. Normal displacement limits apply. Base wait: 44 seconds. |
+
+### Molten Cataclysm
+
+**Primary: Falling Sun**
+
+| Tier | Effect |
+|---|---|
+| 6 | Conjure and smash a boulder for 3750 fire damage within 100 units of a melee target, hitting up to 35 enemies. Base wait: 52 seconds. |

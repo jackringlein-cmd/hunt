@@ -131,7 +131,7 @@ Attacking heroes can aim at: **closest to the village**, **farthest from the vil
 
 ## 8. Complete hero upgrade catalogue
 
-All **216 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
+All **240 upgrades** and their prices follow. Names reflect Jack's changes, especially **A Thousand Cuts**, **VALLEY OF ARROWS** (keep this exact name), and **Explosion Time**.
 
 ### Knight
 
@@ -619,6 +619,60 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
 
+### Flaming Abomination
+
+#### Flurry of Blows
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Hot Hands | 55 | 30 fire damage per punch every 0.9 seconds. |
+| 2 | Rapid Embers | 110 | 38 fire damage every 0.65 seconds. |
+| 3 | Blistering Combo | 275 | 48 fire damage every 0.45 seconds. |
+| 4 | Furnace Fists | 700 | 65 fire damage every 0.3 seconds. |
+| 5 | Blazing Barrage | 1,750 | 85 fire damage every 0.2 seconds. |
+| 6 | Endless Flurry | 4,900 | 115 fire damage every 0.13 seconds. Overheated Onslaught: For 8 seconds, punch 2.25 times as fast. Base wait: 40 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Living Inferno
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Become the Flame | 70 | Unlocks Living Flame targeting. Choose a path point in reach; moves there, becomes a tall flame and stays until targeting changes. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
+| 2 | Hungry Fire | 140 | 28 contact damage; burn 10 per second. |
+| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. |
+| 4 | Inferno Heart | 875 | 70 contact damage within 48 units; burn 25 per second. |
+| 5 | Towering Pyre | 2,200 | 110 contact damage within 54 units; burn 40 per second. |
+| 6 | Everlasting Inferno | 6,000 | 170 contact damage within 60 units; burn 60 per second. Solar Pillar: Become a flame at your locked spot, or the nearest path point in reach. For 8 seconds, contact damage and burn are 2.25 times as strong. Base wait: 48 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Scorchlash
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Conjured Lash | 65 | Two-handed fire whip replaces other attacks: 75 damage every 3 seconds, 220 reach, 35 knockback. With tier 3+ in another path, performs two attacks from that path then one whip strike. Melee reach stays 95. |
+| 2 | Long Ember | 130 | 120 fire damage within 240 reach; 45 knockback. |
+| 3 | Searing Crack | 325 | 190 fire damage, strikes up to 2 enemies; 60 knockback. |
+| 4 | Backdraft Whip | 800 | 300 fire damage within 270 reach, up to 3 enemies; 75 knockback. |
+| 5 | Wildfire Chain | 1,950 | 460 fire damage, up to 4 enemies; 90 knockback, every 2.5 seconds. |
+| 6 | Horizon Scourge | 5,500 | 700 fire damage within 300 reach, up to 6 enemies; 110 knockback. Existing three-displacement and immunity limits apply. Worldfire Lash: Whip up to 12 enemies for 1250 fire damage each, with 130 knockback. Normal displacement limits apply. Base wait: 44 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Molten Cataclysm
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Conjure Boulder | 80 | Conjures a large fire boulder, raises it and smashes it onto enemies within 95 melee reach. 220 fire damage within 45 units, up to 4 targets; boulder shatters, then needs 10 seconds to recharge. |
+| 2 | Magma Mass | 160 | 360 damage within 50 units, up to 6 targets. |
+| 3 | Crushing Sun | 400 | 580 damage within 55 units, up to 8 targets. |
+| 4 | Volcanic Hammer | 1,000 | 900 damage within 60 units, up to 12 targets. |
+| 5 | Caldera Breaker | 2,500 | 1400 damage within 65 units, up to 16 targets; recharge falls to 9 seconds. |
+| 6 | Molten Cataclysm | 6,800 | 2200 damage within 75 units, up to 24 targets. Falling Sun: Conjure and smash a boulder for 3750 fire damage within 100 units of a melee target, hitting up to 35 enemies. Base wait: 52 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
 ## 9. Enemy catalogue
 
 All skeleton enemies move 68% faster than their previous speeds, including the already-doubled Runner. Walking times are rounded to two decimal places and are for the whole path at normal game speed, without boosts, slows, stuns, or fear. Lower time means faster movement. Earliest wave is the earliest permitted appearance, not a guaranteed first appearance (except the fixed first wave and wave 100).
@@ -750,7 +804,7 @@ Current local address: **http://127.0.0.1:4173/**.
 | File | Purpose |
 |---|---|
 | index.html | Game screen and script/style loading |
-| data.js | All hero/enemy definitions, 216 upgrade names/descriptions/prices, path points, tree positions |
+| data.js | All hero/enemy definitions, 240 upgrade names/descriptions/prices, path points, tree positions |
 | engine.js | Combat, waves, damage, effects, abilities, economy, upgrade limits, serializable game state |
 | game.js | Menus, controls, rendering loop, saved preferences, guide, UI, game events |
 | drawing-art.js | Current art: map, enemies, heroes, and portraits based on Jack’s person drawing |
@@ -868,3 +922,6 @@ Third map — Volcanic Ruins: an independent saved adventure with an ash-brown c
 
 
 Turtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps high with one full flip above the path, lands with capped area damage, rolls back to its shell with tucked head and flippers and wears its shell again; Shellstorm quickly scoops eligible enemies into its shell, with 1–6 spaces across upgrades (tiny 0.1 per member, ordinary 1, brute/fusion/werewolf 2, giant 3; swarms stay together), then packs these groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or selecting Submerged releases passengers safely. Sunken Treasure unlocks Submerged in the targeting menu: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.
+
+
+Flaming Abomination: tenth hero, land-only, 160 gold. Red fire ape with a broad hunched back, lowered ape face, long heavy arms, and both fists planted on the ground while idle. Curved silhouettes, layered animated flame tongues, rising embers and yellow-white molten fissures follow the supplied red upper creature; arms lift for punches, whips and overhead boulders. Base melee attack: 24 fire damage every 1.25 seconds within 95 reach, plus a 2-second burn at 4 damage per second. Four paths: Flurry of Blows (faster punches), Living Inferno (Living Flame targeting: choose and lock a legal path point inside anchor range; travel there and become a tall flame until another targeting mode is chosen), Scorchlash (two-handed fire whip replacing other attacks until another path reaches tier 3; then repeats two attacks from that path followed by one whip attack, with knockback, outer reach 220/240/240/270/270/300 and unchanged inner melee reach), Molten Cataclysm (conjured fire boulder, 1.2-second windup, capped area impact on a melee target, visible shattering, 10-second recharge or 9 at tier 5+). Flame damage is throttled per enemy every 0.5 seconds, applies burn and detects path crossings. Form disables other attacks; stun suspends all attacks. Flame position persists between rounds and saves; another target mode returns to the original placement. Fire immunity, hidden Shadow immunity, and the three-displacement limit apply. All 24 upgrade descriptions and tier-six primary abilities are included. Files: abomination-mechanics.js, abomination-art.js, tests/abomination.test.js.

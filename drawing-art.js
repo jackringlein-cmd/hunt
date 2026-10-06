@@ -123,6 +123,7 @@
   c.restore();
  }
  function hero(c,h,{time=0,selected=false,ghost=false,attack=0,windup=0,active=false,facing=0,shouting=false}={}){
+  if(h.type==='abomination'){AbominationArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
   if(h.type==='turtle'){TurtleArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
   if(h.type==='pirate'){PirateArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}
   if(h.type==='toolmaker'){ToolmakerArt.hero(c,h,{time,active,selected,ghost,attack,facing});return;}

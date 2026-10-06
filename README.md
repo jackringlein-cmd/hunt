@@ -1,6 +1,6 @@
 # The Hunt for the Necromancer
 
-A browser tower-defense game with nine heroes, four upgrade paths each, and 216 upgrades.
+A browser tower-defense game with ten heroes, four upgrade paths each, and 240 upgrades.
 
 ## Play
 
@@ -26,7 +26,7 @@ Sound begins after your first click. The volume slider controls music and sound 
 ## Included
 
 - Illustrated forest, marsh, and volcanic ruins maps, land and water heroes, removable forest trees, and a village to defend.
-- Nine heroes, thirty-six upgrade paths, and 192 upgrades.
+- Ten heroes, forty upgrade paths, and 192 upgrades.
 - One six-upgrade path and one two-upgrade path per hero.
 - Nine enemy types, armor, shields, harmful-effect blocks, and fear resistance.
 - Random waves with agreed first appearances. Wave 100 is exactly one Bone Dragon followed by ten Bone Captains.
@@ -61,8 +61,10 @@ Everything runs locally. Only the optional display fonts load from the internet;
 
 Repository: https://github.com/jackringlein-cmd/hunt (main). Completed changes are committed and synced here. Generated screenshots and the separate Sites publishing checkout are ignored. GitHub updates do not automatically republish the separate Sites website.
 
-Run all gameplay checks with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js`.
+Run all gameplay checks with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js`.
 
 Pirate costs 150 gold and is placed in water or a flooded path. Its base attack throws rocks. Its paths are Ironclad Charge (boat rams), Razor Reef (piercing rocks), Broadside Inferno (fire cannons with increasing reload time), and Captain’s Comeback (returning hats that stun increasingly large enemies).
 
 Turtle is a water-only melee hero with Blazing Jaws, Tidal Body Slam, Shellstorm, and Sunken Treasure paths. Sunken Treasure unlocks a Submerged targeting choice that trades attacking for steady gold during the round.
+
+Flaming Abomination: a land hero with Flurry of Blows, Living Inferno, Scorchlash, and Molten Cataclysm. Living Flame targeting locks it to a chosen path point; selecting another target mode returns it home. Whip upgrades show separate outer whip and inner melee range circles.

@@ -1,6 +1,7 @@
 /* Paused, read-only upgrade catalogue. Uses the live hero data and descriptions. */
 let upgradeViewer=null;
 const upgradeThemes={
+ abomination:[['✹','Rapid flaming punches','#ffad50'],['♨','Locked path flame','#ffe78a'],['↝','Long-range whip & knockback','#ff8765'],['◆','Heavy boulder slams','#e6ae77']],
  turtle:[['♨','Fast bites & fire','#ffad62'],['⇣','Leaping area attacks','#8fd9ca'],['↶','Capture, throw & shrapnel','#dfc990'],['◈','Submerge & earn gold','#e7d273']],
  pirate:[['↠','Ramming & armored prow','#b4c9cf'],['◆','Sharp piercing rocks','#8eacb9'],['✹','Fire & explosive cannons','#ff9b4b'],['↶','Returning hat & heavy stuns','#c7a1df']],
  toolmaker:[['⚒','Many melee weapons','#e5ad73'],['↔','Returning blades','#8fcbd5'],['⚙','Traps & rolling boulders','#b7c07d'],['➶','Automated crossbows','#b6a2db']],
