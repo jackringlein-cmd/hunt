@@ -17,14 +17,14 @@ window.TurtleArt=(()=>{
   line(c,[[2,-2],[7,3],[15,9]],'#bad09c',1.5);for(let i=0;i<3;i++)line(c,[[12+i*3,8],[12+i*3,11]],'#3e634b',1);
   for(const [x,y]of [[0,0],[4,3],[8,6]])ellipse(c,x,y,1.6,1.2,'#456e53',null);c.restore();
  }
- function body(c,x,y,{time=0,withShell=true,angle=0,dir=1,bite=0,fire=false,level=0,raised=false,pose='swim'}={}){c.save();c.translate(x,y);c.rotate(angle);c.scale(dir,1);
+ function body(c,x,y,{time=0,withShell=true,angle=0,dir=1,bite=0,fire=false,level=0,raised=false,grab=0,pose='swim'}={}){c.save();c.translate(x,y);c.rotate(angle);c.scale(dir,1);
   const paddle=Math.sin(time*(pose==='return'?13:3))*.22,tuck=pose==='rise',spread=pose==='fall',brace=pose==='land';
   // Curved tail, separate shoulder joints and bending flippers replace plain ovals.
   c.beginPath();c.moveTo(-18,-4);c.bezierCurveTo(-28,-5,-32,5+paddle*9,-39,1);c.quadraticCurveTo(-29,14,-19,5);c.fillStyle='#7a9f6e';c.fill();c.strokeStyle=ink;c.lineWidth=2;c.stroke();
-  flipper(c,-17,-10,tuck?-.9:spread?-1.9:-1.4+paddle,false);flipper(c,15,-11,raised?-2:spread?-1.2:tuck?.3:-.55-paddle,false);
+  flipper(c,-17,-10,tuck?-.9:spread?-1.9:-1.4+paddle,false);flipper(c,15,-11,raised?-2+grab*1.8:spread?-1.2:tuck?.3:-.55-paddle,false);
   c.beginPath();c.moveTo(-23,-7);c.bezierCurveTo(-25,-19,10,-22,23,-9);c.quadraticCurveTo(28,6,10,11);c.quadraticCurveTo(-14,16,-23,-7);c.fillStyle='#a7bd82';c.fill();c.stroke();
   if(withShell)shell(c,-3,-9,0,level);else{ellipse(c,-1,-5,20,14,'#ddc68e');for(let i=0;i<3;i++){const y=-13+i*8;line(c,[[-15,y],[-5,y+2],[5,y],[14,y+2]],'#a79265',1.4);}line(c,[[-2,-17],[0,-8],[-2,0],[0,8]],'#a79265',1.5);}
-  flipper(c,-16,7,tuck?-2.4:spread?.4:brace?.15:1.1-paddle,true);flipper(c,17,6,raised?-1.8:tuck?2.4:spread?-.5:brace?.05:.35+paddle,true);
+  flipper(c,-16,7,tuck?-2.4:spread?.4:brace?.15:1.1-paddle,true);flipper(c,17,6,raised?-1.8+grab*2.5:tuck?2.4:spread?-.5:brace?.05:.35+paddle,true);
   const head=29+bite*10,hy=brace?-5:tuck?-15:-10;
   // The neck stretches separately from the broad cheek and hooked beak.
   c.beginPath();c.moveTo(15,-13);c.quadraticCurveTo(24,-18,head+1,hy-5);c.lineTo(head+3,hy+7);c.quadraticCurveTo(21,hy+13,16,1);c.fillStyle='#719b69';c.fill();c.stroke();
@@ -70,11 +70,19 @@ window.TurtleArt=(()=>{
  function hero(c,h,{time=0,active=false,selected=false,ghost=false,attack=0}={}){c.save();if(ghost)c.globalAlpha=.55;const recovering=(h.turtleRecoverUntil||0)>time,submerged=h.u[3]>0&&h.target==='submerged';ripple(c,h.x,h.y+8,time);if(selected){c.strokeStyle='#f0d98b';c.lineWidth=2;c.beginPath();c.ellipse(h.x,h.y+7,44,17,0,0,7);c.stroke();}
   if(!ghost&&(recovering||submerged)){ellipse(c,h.x,h.y+4,22,7,'#244f5940',null);for(let i=0;i<3;i++)ellipse(c,h.x-12+i*11,h.y-3-((time*12+i*7)%22),2,2,'#b9e4de',null);if(submerged&&active&&time-(h.turtleLastGold??-10)<.7){ellipse(c,h.x,h.y-30,6,7,'#e7c263','#745730');line(c,[[h.x,h.y-34],[h.x,h.y-26]],'#795d35',1.5);}c.restore();return;}
   const a=h.turtleAction,dir=h.face&&h.face.x<h.x?-1:1,common={time,dir,fire:h.u[0]>=3,level:h.u[2],bite:active?Math.max(0,1-(time-(h.turtleBiteAt??-10))/.22):0};
-  if(a&&active){const age=time-a.start;if(a.kind==='slam'){shell(c,h.x,h.y-9,0,h.u[2]);let x=h.x,y=h.y,pose='rise',rollTime=null;if(age<.35){x+=dir*28*age/.35;}else if(age<1){const t=(age-.35)/.65;x+=dir*28+(a.to.x-h.x-dir*28)*t;y+=(a.to.y-h.y)*t-Math.sin(t*Math.PI)*175;pose=t<.55?'rise':'fall';rollTime=t;}else{const t=Math.min(1,(age-1)/1.1);x=a.to.x+(h.x-a.to.x)*t;y=a.to.y+(h.y-a.to.y)*t;pose=t<.16?'land':'return';}landing(c,a,age);if(rollTime!==null)roll(c,x,y-7,common,rollTime);else body(c,x,y-7,{...common,pose,withShell:false});}
-   else{body(c,h.x-18*dir,h.y-4,{...common,withShell:false,raised:age<.8});if(age<.8){const f=Math.min(1,age/.55);shell(c,h.x+dir*12,h.y-12-f*36,Math.sin(f*Math.PI)*.3,h.u[2],a.loaded||0);}}
+  if(a&&active){const age=time-a.start;if(a.kind==='slam'){shell(c,h.x,h.y-9,0,h.u[2]);let x=h.x,y=h.y,pose='rise',rollTime=null;if(age<.35){x+=dir*28*age/.35;}else if(age<1){const t=(age-.35)/.65;x+=dir*28+(a.to.x-h.x-dir*28)*t;y+=(a.to.y-h.y)*t-Math.sin(t*Math.PI)*175;pose=t<.55?'rise':'fall';rollTime=t;}else{const t=Math.min(1,(age-1)/1.1);x=a.to.x+(h.x-a.to.x)*t;y=a.to.y+(h.y-a.to.y)*t;pose=t<.16?'land':'return';}landing(c,a,age);if(rollTime!==null)roll(c,x,y-7,common,rollTime);else if(pose==='return')roll(c,x,y-7,common,Math.max(0,Math.min(1,(age-1.176)/.924)));else body(c,x,y-7,{...common,pose,withShell:false});}
+   else{body(c,h.x-18*dir,h.y-4,{...common,withShell:false,raised:age<.8,grab:age<.8?Math.sin(Math.max(0,age-.18)/.62*Math.PI*3):0});if(age<.8){const f=Math.min(1,age/.55);shell(c,h.x+dir*12,h.y-12-f*36,Math.sin(f*Math.PI)*.3,h.u[2],a.loaded||0);}}
   }else body(c,h.x,h.y-4,common);c.restore();
  }
- function projectiles(c,game){for(const h of game.s.heroes){if(h.type!=='turtle')continue;const a=h.turtleAction,now=game.s.time;if(a?.kind==='shell'&&now-a.start>=.8){const t=Math.min(1,(now-a.start-.8)/1.6);shell(c,a.x,a.y-Math.sin(t*Math.PI)*20,(now-a.start)*12,h.u[2],a.loaded||0);}
+ function packing(c,h,a,now){if(!a.grabs?.length||now-a.start>=.8)return;const dir=h.face&&h.face.x<h.x?-1:1,span=Math.max(.01,a.start+.8-a.packStart),raw=(now-a.packStart)/span;
+  for(let i=0;i<a.grabs.length;i++){const e=a.grabs[i],delay=Math.min(.25,i*.025),t=Math.max(0,Math.min(1,(raw-delay)/(1-delay)));if(t>=1)continue;
+   const ease=1-(1-t)**3,tx=h.x+dir*12,ty=h.y-43,x=e.x+(tx-e.x)*ease,y=e.y+(ty-e.y)*ease-Math.sin(t*Math.PI)*22;
+   // Two bent forelimbs scoop the actual captured enemy toward the shell opening.
+   c.save();for(const side of [-1,1]){c.beginPath();c.moveTo(h.x-dir*4,h.y-14+side*5);c.quadraticCurveTo(h.x+(x-h.x)*.65,h.y-24+side*13,x+side*5,y-7);c.strokeStyle=ink;c.lineWidth=7;c.lineCap='round';c.stroke();c.strokeStyle='#81a977';c.lineWidth=4;c.stroke();ellipse(c,x+side*5,y-7,4,3,'#a2bc89');}
+   c.translate(x,y);const scale=1-Math.max(0,t-.6)/.4*.8;c.scale(scale,scale);if(window.CartoonArt)CartoonArt.enemy(c,{...e,x:0,y:0,hp:e.maxHp,shield:0,blocks:0,effects:[]},now);c.restore();
+  }
+ }
+ function projectiles(c,game){for(const h of game.s.heroes){if(h.type!=='turtle')continue;const a=h.turtleAction,now=game.s.time;if(a?.kind==='shell')packing(c,h,a,now);if(a?.kind==='shell'&&now-a.start>=.8){const t=Math.min(1,(now-a.start-.8)/1.6);shell(c,a.x,a.y-Math.sin(t*Math.PI)*20,(now-a.start)*12,h.u[2],a.loaded||0);}
   const b=h.turtleBurst;if(b&&now<b.end){const t=(now-b.start)/.7;c.save();c.globalAlpha=1-t;ellipse(c,b.x,b.y,b.radius*t,b.radius*t*.65,'#e1d5a66a',null);for(let i=0;i<b.shards;i++){const angle=i*Math.PI*2/b.shards,r=15+t*b.radius*1.5,x=b.x+Math.cos(angle)*r,y=b.y+Math.sin(angle)*r;c.save();c.translate(x,y);c.rotate(angle+t*8);shape(c,[[-5,-4],[7,-1],[1,7]],i%2?'#afbe88':'#53744a');c.restore();}c.restore();}
  }}
  return {hero,projectiles};
