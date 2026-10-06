@@ -41,5 +41,7 @@
   "assets/audio/CREDITS.md",
   "assets/enemies/werewolf-poses-marked.png",
   "assets/enemies/werewolf-walk-marked.png",
-  "assets/enemies/werewolf-follow-through.png"
+  "assets/enemies/werewolf-follow-through.png",
+  "water-beast-art.js",
+  "water-beast-mechanics.js"
 ]

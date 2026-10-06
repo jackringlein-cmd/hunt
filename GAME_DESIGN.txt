@@ -673,6 +673,60 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
 
+### Water Abomination
+
+#### Crashing Surge
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Surging Charge | 65 | Dash out and back, dealing 70 water damage per pass to up to 12 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 2 | Cutting Wake | 140 | Dash out and back, dealing 105 water damage per pass to up to 16 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 3 | Tidal Sprint | 350 | Dash out and back, dealing 140 water damage per pass to up to 20 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 4 | Razor Current | 900 | Dash out and back, dealing 175 water damage per pass to up to 24 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 5 | Maelstrom Run | 2,300 | Dash out and back, dealing 210 water damage per pass to up to 28 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 6 | Unstoppable Undertow | 6,200 | Dash out and back, dealing 245 water damage per pass to up to 32 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. Tier-6 ability: Tidal Overdrive. Immediately begins this path attack at 125% damage or slow duration. Base wait: 36 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Stormshake
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Wet Fur | 65 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 25% for 2.5 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 2 | Heavy Spray | 140 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 30% for 3 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 3 | Chilling Shower | 350 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 35% for 3.5 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 4 | Saturating Storm | 900 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 40% for 4 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 5 | Cloudburst Coat | 2,300 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 45% for 4.5 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 6 | Walking Monsoon | 6,200 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 50% for 5 seconds. Cannot attack during shaking; 9-second cooldown. Tier-6 ability: Monsoon Burst. Immediately begins this path attack at 125% damage or slow duration. Base wait: 40 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Deepwater Ambush
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Silent Dive | 65 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 400 water damage in a 40 radius. Leap back into the water; 16-second cooldown. |
+| 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. |
+| 3 | Abyss Hunter | 350 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 800 water damage in a 50 radius. Leap back into the water; 16-second cooldown. |
+| 4 | Crushing Breach | 900 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1000 water damage in a 55 radius. Leap back into the water; 16-second cooldown. |
+| 5 | Leviathan Leap | 2,300 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1200 water damage in a 60 radius. Leap back into the water; 16-second cooldown. |
+| 6 | Depths Unleashed | 6,200 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1400 water damage in a 65 radius. Leap back into the water; 16-second cooldown. Tier-6 ability: Abyssal Cataclysm. Immediately begins this path attack at 125% damage or slow duration. Base wait: 48 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
+#### Predator’s Glare
+
+| Level | Upgrade | Cost | Effect |
+|---|---|---:|---|
+| 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 3 | Paralyzing Presence | 350 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 4 | Ancient Terror | 900 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 5 | Apex Stare | 2,300 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 6 | Absolute Dread | 6,200 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. Tier-6 ability: Sovereign Stare. Immediately begins a glare with 25% longer stop duration; all immunity, stacking and lifetime rules remain. Base wait: 52 seconds. |
+
+Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
+
 ## 9. Enemy catalogue
 
 All skeleton enemies move 68% faster than their previous speeds, including the already-doubled Runner. Walking times are rounded to two decimal places and are for the whole path at normal game speed, without boosts, slows, stuns, or fear. Lower time means faster movement. Earliest wave is the earliest permitted appearance, not a guaranteed first appearance (except the fixed first wave and wave 100).
@@ -924,4 +978,7 @@ Third map — Volcanic Ruins: an independent saved adventure with an ash-brown c
 Turtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps high with one full flip above the path, lands with capped area damage, rolls back to its shell with tucked head and flippers and wears its shell again; Shellstorm quickly scoops eligible enemies into its shell, with 1–6 spaces across upgrades (tiny 0.1 per member, ordinary 1, brute/fusion/werewolf 2, giant 3; swarms stay together), then packs these groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or selecting Submerged releases passengers safely. Sunken Treasure unlocks Submerged in the targeting menu: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.
 
 
-Flaming Abomination: tenth hero, land-only, 160 gold. Red fire ape with a broad hunched back, lowered ape face, long heavy arms, and both fists planted on the ground while idle. Curved silhouettes, layered animated flame tongues, rising embers and yellow-white molten fissures follow the supplied red upper creature; arms lift for punches, whips and overhead boulders. Base melee attack: 24 fire damage every 1.25 seconds within 95 reach, plus a 2-second burn at 4 damage per second. Four paths: Flurry of Blows (faster punches), Living Inferno (Living Flame targeting: choose and lock a legal path point inside anchor range; travel there and become a tall flame until another targeting mode is chosen), Scorchlash (two-handed fire whip replacing other attacks until another path reaches tier 3; then repeats two attacks from that path followed by one whip attack, with knockback, outer reach 220/240/240/270/270/300 and unchanged inner melee reach), Molten Cataclysm (conjured fire boulder, 1.2-second windup, capped area impact on a melee target, visible shattering, 10-second recharge or 9 at tier 5+). Flame damage is throttled per enemy every 0.5 seconds, applies burn and detects path crossings. Form disables other attacks; stun suspends all attacks. Flame position persists between rounds and saves; another target mode returns to the original placement. Fire immunity, hidden Shadow immunity, and the three-displacement limit apply. All 24 upgrade descriptions and tier-six primary abilities are included. Files: abomination-mechanics.js, abomination-art.js, tests/abomination.test.js.
+Flaming Abomination: tenth hero, 160 gold; land/lava fire form or natural-water beast form. Red fire ape with a broad hunched back, lowered ape face, long heavy arms, and both fists planted on the ground while idle. Curved silhouettes, layered animated flame tongues, rising embers and yellow-white molten fissures follow the supplied red upper creature; arms lift for punches, whips and overhead boulders. Base melee attack: 24 fire damage every 1.25 seconds within 95 reach, plus a 2-second burn at 4 damage per second. Four paths: Flurry of Blows (faster punches), Living Inferno (Living Flame targeting: choose and lock a legal path point inside anchor range; travel there and become a tall flame until another targeting mode is chosen), Scorchlash (two-handed fire whip replacing other attacks until another path reaches tier 3; then repeats two attacks from that path followed by one whip attack, with knockback, outer reach 220/240/240/270/270/300 and unchanged inner melee reach), Molten Cataclysm (conjured fire boulder, 1.2-second windup, capped area impact on a melee target, visible shattering, 10-second recharge or 9 at tier 5+). Flame damage is throttled per enemy every 0.5 seconds, applies burn and detects path crossings. Form disables other attacks; stun suspends all attacks. Flame position persists between rounds and saves; another target mode returns to the original placement. Fire immunity, hidden Shadow immunity, and the three-displacement limit apply. All 24 upgrade descriptions and tier-six primary abilities are included. Files: abomination-mechanics.js, abomination-art.js, tests/abomination.test.js.
+
+
+Abomination placement forms: land keeps Flaming Abomination; lava keeps the fire form and multiplies all its fire damage, burn and ability damage by 1.10. Natural water creates the permanent Water Abomination variant at the same 160-gold price, with its own 24 upgrades and saved form. Hovering across the water boundary crossfades artwork over 0.22 seconds. The brown aquatic creature has four spiny legs, a curled tail, a long toothed muzzle, and bite/dash/shake/dive/leap/glare animations. Base bite: 28 physical damage, 1.4-second interval, 95 melee reach; special attacks use 230 reach. Paths: Crashing Surge, Stormshake, Deepwater Ambush, Predator’s Glare. Exclusive actions; bite and other actions stop during specials. Dash hits each enemy once per pass and enforces 3 seconds of recovery. Glare takes 2 seconds, deals no damage and ignores status immunities, boss blocks and the ordinary slow cap. It cannot stack, shares a 2-stop lifetime cap across towers, and allows another stop only 3 seconds after the preceding stop expires. Swarms share the stop and limits. Stunned casters pause their actions and suppress their existing debuffs. Saves preserve action progress and shared glare counters; round end returns the beast home.

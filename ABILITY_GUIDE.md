@@ -341,3 +341,37 @@ Abilities unlock only at tier 6. There are no secondary abilities. Original tier
 | Tier | Effect |
 |---|---|
 | 6 | Conjure and smash a boulder for 3750 fire damage within 100 units of a melee target, hitting up to 35 enemies. Base wait: 52 seconds. |
+
+## Water Abomination
+
+### Crashing Surge
+
+**Primary: Tidal Overdrive**
+
+| Tier | Effect |
+|---|---|
+| 6 | Immediately begins this path attack at 125% damage or slow duration. Base wait: 36 seconds. |
+
+### Stormshake
+
+**Primary: Monsoon Burst**
+
+| Tier | Effect |
+|---|---|
+| 6 | Immediately begins this path attack at 125% damage or slow duration. Base wait: 40 seconds. |
+
+### Deepwater Ambush
+
+**Primary: Abyssal Cataclysm**
+
+| Tier | Effect |
+|---|---|
+| 6 | Immediately begins this path attack at 125% damage or slow duration. Base wait: 48 seconds. |
+
+### Predator’s Glare
+
+**Primary: Sovereign Stare**
+
+| Tier | Effect |
+|---|---|
+| 6 | Immediately begins a glare with 25% longer stop duration; all immunity, stacking and lifetime rules remain. Base wait: 52 seconds. |
