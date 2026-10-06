@@ -10,4 +10,4 @@ for(const hero of [...Object.values(D.heroes),D.heroes.waterbeast]){
  }
 }
 fs.writeFileSync(path.join(__dirname,'..','ABILITY_GUIDE.md'),text,'utf8');
-console.log('Updated ABILITY_GUIDE.md for all 44 paths (including the water form).');
+console.log('Updated ABILITY_GUIDE.md for all 44 paths (including the extinguished form).');

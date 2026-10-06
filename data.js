@@ -206,7 +206,7 @@ const waterPaths=[
  }),{name:['Tidal Overdrive','Monsoon Burst','Abyssal Cataclysm','Sovereign Stare'][i],mode:'self',cooldown:[45,50,60,65][i],tierDescriptions:['','',i===3?'Immediately begins a glare with 25% longer stop duration; all immunity, stacking and lifetime rules remain.':'Immediately begins this path attack at 125% damage or slow duration.']}));
 for(const p of waterPaths){p.ability.tierDescriptions[2]+=' Base wait: '+p.ability.cooldown*.8+' seconds.';p.descriptions[5]+=' Tier-6 ability: '+p.ability.name+'. '+p.ability.tierDescriptions[2];
 }
-Object.defineProperty(heroes,'waterbeast',{value:{name:'Abomination',cost:160,damage:28,interval:1.4,range:230,color:'#997344',waterOnly:true,role:'Water form • melee bite & ambushes',paths:waterPaths},enumerable:false});
+Object.defineProperty(heroes,'waterbeast',{value:{name:'Abomination',cost:160,damage:28,interval:1.4,range:230,color:'#997344',waterOnly:true,role:'Extinguished form • melee bite & ambushes',paths:waterPaths},enumerable:false});
 
 const data={heroes,enemies,points,trees,graves,maps,villagerPrices:[{max:65,cost:10},{max:85,cost:20},{max:100,cost:100},{max:110,cost:500},{max:Number.MAX_SAFE_INTEGER,cost:1000}],treeHitboxScale:1.75,heroDamageScale:1.25,leaderBoostScale:1.25,width:1100,height:720};
 
