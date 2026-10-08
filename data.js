@@ -150,7 +150,7 @@ const enemies={
 
  giant:{name:'Weaker Cyclops',hp:13500,loss:20,reward:100,time:60/1.68,wave:75,blocks:7,fearReduction:.3,color:'#d1c0a5',hint:'Blocks its first 7 harmful effects. Fear lasts 30% less time.'},
 
- dragon:{name:'Plague Wyvern',immuneDamage:['poison'],boss:true,hp:130500,loss:50,reward:500,time:50/1.68,wave:100,blocks:15,fearReduction:.65,color:'#d9c9d9',hint:'POISON IMMUNE: poison and Withering Poison cannot affect this plague boss. Weapons, fire and other magic still work. The final boss! Blocks 15 harmful effects. Fear lasts 65% less time.'}
+ dragon:{name:'Plague Wyvern',immuneDamage:['poison'],boss:true,hp:84825,loss:50,reward:500,time:50/1.68,wave:100,blocks:15,fearReduction:.65,color:'#d9c9d9',hint:'POISON IMMUNE: poison and Withering Poison cannot affect this plague boss. Weapons, fire and other magic still work. The final boss! Blocks 15 harmful effects. Fear lasts 65% less time.'}
 
 };
 

@@ -748,7 +748,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Vampire Lord | 1,012.5 | 30 | 10 | 17.86 seconds | 25 |
 | Wraith | 675 | 25 | 10 | 21.43 seconds | 35 |
 | Weaker Cyclops | 13,500 | 100 | 20 | 35.71 seconds | 75 |
-| Plague Wyvern | 130,500 | 500 | 50 | 29.76 seconds | 100 |
+| Plague Wyvern | 84,825 | 500 | 50 | 29.76 seconds | 100 |
 
 ### Enemy rules and naming
 
@@ -985,3 +985,6 @@ Abomination placement forms: land keeps Flaming Abomination; lava keeps the fire
 
 
 Volcanic Ruins placement: the entire large upper lava pool is forbidden for all towers, including Flaming Abomination. The smaller lower lava pool still accepts Flaming Abomination and grants its 10% lava damage bonus. Existing placed heroes are not removed.
+
+
+Plague Wyvern balance: base health reduced 35%, from 130,500 to 84,825. Speed, poison immunity, 15 effect blocks, fear resistance, reward and village damage are unchanged. Endless scaling uses the new base health. Existing saved Wyverns receive the reduction once, preserving their remaining health percentage.
