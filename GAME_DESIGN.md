@@ -1027,3 +1027,5 @@ Fusion Skeleton lore: Just when I thought... just when i thought they couldn't g
 Vampire Lord lore: At the very least they are not strong. But SOMEHOW they are such good leaders they make the other demonic presenses way faster. I might as well call IT a Vampire Lord.
 
 Headless Zombie lore: ANOTHER zombie, it... it's it's cry is SO loud, it is so loud it can temporarily imobilize a hero. Some of them have been... been getting through our defenses and slaughtering our people. Thankfully some traders wish to support us every time we defeat a new one of these amalgamations. So I don't think we'll die out for at least another week.
+
+Wraith lore: If you didn't already know, these dam wraiths won't take damage from anything but fire. We... we have lost so many good people to those wraiths. I am starting to think why I write in this diary, is so somebody in the future can know the pain we went through, if we aren't there to tell them.
