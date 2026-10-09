@@ -180,7 +180,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
 | 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
-| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
 | 5 | Spreading Light | 1,000 | Defeated burning enemies spread their fire to nearby enemies. |
 | 6 | Dawnbringer | 2,700 | Dawnbringer: Deal 375 damage in reach and burn for 31.25 damage per second for 8 seconds. Base wait: 36 seconds. |
@@ -233,7 +233,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Keen Sight | 35 | Reach increases 25%. |
-| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 3 | Hunter’s Mark | 225 | Marks the strongest enemy in reach. All heroes deal 20% more damage to it. |
 | 4 | Watchtower | 550 | Can shoot and mark anywhere on the map. |
 | 5 | Find the Weak Spot | 1,200 | Each hit on the marked enemy adds 4 damage, up to 40. Resets when the target changes. |
@@ -248,7 +248,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Sharp Daggers | 40 | Dagger damage becomes 18. |
-| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 3 | Vital Strike | 160 | Every third attack deals double damage. Vital Strike critical hits can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 4 | Marked for Death | 450 | Hits on a marked target add 3 damage, up to 30. Its mark and damage bonus move to a new enemy when it falls. |
 | 5 | Hidden Weakness | 1,100 | Every third hit on the marked enemy makes it take 25% more damage from all heroes for 3 seconds. |
@@ -394,7 +394,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Arcane Echo | 450 | Each beam repeats after 0.3 seconds. |
@@ -611,7 +611,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Treasure Diver | 80 | Adds a Submerge button beside targeting. Press to earn gold underwater; press Return to normal to surface. While submerged, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
-| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 3 | Coral Cache | 400 | Submerged income rises to 1 gold per second. |
 | 4 | Sunken Vault | 1,000 | Submerged income rises to 2 gold per second. |
 | 5 | Deep-Sea Riches | 2,400 | Submerged income rises to 3 gold per second. |
@@ -640,7 +640,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Become the Flame | 70 | Unlocks a Living Flame button beside targeting. Press it and choose a path point in reach; moves there, becomes a tall flame and stays until you press Return to normal. Aim priority stays separate. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
 | 2 | Hungry Fire | 140 | 28 contact damage; burn 10 per second. |
-| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 4 | Inferno Heart | 875 | 70 contact damage within 48 units; burn 25 per second. |
 | 5 | Towering Pyre | 2,200 | 110 contact damage within 54 units; burn 40 per second. |
 | 6 | Everlasting Inferno | 6,000 | 170 contact damage within 60 units; burn 60 per second. Solar Pillar: Become a flame at your locked spot, or the nearest path point in reach. For 8 seconds, contact damage and burn are 2.25 times as strong. Base wait: 48 seconds. |
@@ -719,7 +719,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. |
 | 3 | Paralyzing Presence | 350 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 4 | Ancient Terror | 900 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 5 | Apex Stare | 2,300 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
@@ -740,6 +740,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 30 |
 | Camoflauger | 148.5 | 12 | 2 | 6.12 seconds | 53 |
+| Hidden Mummy | 405 | 22 | 5 | 11.16 seconds | 65 |
 | Pursuit Rock | 225 | 22 | 5 | 11.16 seconds | 73 |
 | Ironling | 180 | 15 | 3 | 26.79 seconds | 47 |
 | Fusion Skeleton | 270 | 20 | 5 | 26.79 seconds | 20 |
@@ -1002,3 +1003,5 @@ Camoflauger: introduced on round 53 with one guaranteed spawn; eligible in later
 Attack rotation: heroes with multiple unlocked attacks have a button beside aim priority. The paused editor lets players choose an ordered repeating list, with 0–99 successful uses per step (0 disables that entry), duplicate steps, reordering, removal, and restoration of automatic attacks. An empty list disables automatic attacks. Cooldowns, range, targets, stun and exclusive actions still apply; failed attempts never advance the sequence. Launched projectiles and attacks complete normally; abilities remain manual. A stream, volley, trap placement or turret volley counts as one use, not one use per damage tick or target. New attacks remain excluded from an existing custom list until added. Order and partial counts save with the hero. Flame and submerged modes override attacks while active, preserve rotation progress and aim priority, and use separate themed toggle icons which change to a return symbol when active. Old saves with modes stored in targeting migrate automatically. Sources: attack-rotation.js and hero-controls.js; tests/attack-rotation.test.js.
 
 Pursuit Rock: first appears on round 73 (one guaranteed), then eligible in random waves. Base HP 225 and speed match Demonic Nightmare; remains grounded. Reward 22 gold, loss 5 villagers, budget cost 16. Combines Iron Hardness (formerly Iron Shell) and Camouflage: detection is required for all hero interactions, plus an eligible specific attack for damage and damaging effects. Non-damaging effects work once detected. Uses individually drawn leafy rock skipping/turning poses.
+
+Hidden Mummy: first appears on round 65 (one guaranteed), then eligible in random waves. Base HP 405 matches Werewolf; speed matches Pursuit Rock. Reward 22 gold, loss 5 villagers, budget cost 14. Camouflage requires the same detection upgrades as Camoflauger for all hero attacks, effects and traps. No Iron Hardness or additional immunity. Uses 12 individually drawn bandaged mummy poses with a leafy border, skipping and turning.
