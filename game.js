@@ -99,7 +99,7 @@ function renderGuide(){
 }
 function toWorld(event){const rect=canvas.getBoundingClientRect(),scale=Math.min(rect.width/1100,rect.height/720),w=1100*scale,h=720*scale;return{x:(event.clientX-rect.left-(rect.width-w)/2)/scale,y:(event.clientY-rect.top-(rect.height-h)/2)/scale};}
 function abilityEnemyAt(point){
- const sizes={camoflauger:[42,64],ironling:[43,67],werewolf:[65,130],tiny:[28,38],giant:[70,150],dragon:[130,210],brute:[48,95],fusion:[80,125],screecher:[28,52],hellhound:[66,68],shadow:[44,85],headless:[48,65]};
+ const sizes={pursuit:[48,74],camoflauger:[42,64],ironling:[43,67],werewolf:[65,130],tiny:[28,38],giant:[70,150],dragon:[130,210],brute:[48,95],fusion:[80,125],screecher:[28,52],hellhound:[66,68],shadow:[44,85],headless:[48,65]};
  return game.s.enemies.filter(e=>!e.dead).map(e=>{const [width,height]=sizes[e.type]||[38,70],dx=point.x-e.x,dy=point.y-(e.y-height*.45),score=(dx/width)**2+(dy/(height*.65))**2;return{e,score,hit:score<=1||E.dist(e,point)<28};}).filter(o=>o.hit).sort((a,b)=>a.score-b.score||b.e.y-a.e.y)[0]?.e;
 }
 function abilityTargetError(h,a,target,slot){if(!h||!a)return 'That ability is no longer available.';if(!game.s.active)return 'Start a wave to use this ability.';if((h.stunnedUntil||0)>game.s.time)return 'This hero is stunned.';if((h[game.cooldownKey(slot)]||0)>0)return 'This ability is still recharging.';if(a.mode.startsWith('enemy')){if(!target||target.dead)return a.mode==='enemy-any'?'Click an enemy anywhere on the map.':'Click an enemy to target it.';return a.mode==='enemy-any'?'That target is no longer available. Choose another enemy.':'Choose an enemy within the hero’s reach.';}return a.mode==='point-any'?'Choose a spot on the path.':'Choose a spot on the path within reach.';}

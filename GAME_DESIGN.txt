@@ -142,7 +142,7 @@ All **240 upgrades** and their prices follow. Names reflect Jack's changes, espe
 | 1 | Sharp Edge | 40 | Sword damage becomes 15. |
 | 2 | Longer Sword | 60 | Reach increases by 25%. |
 | 3 | Wide Swing | 150 | Each swing hits up to 6 enemies. |
-| 4 | Heavy Steel | 350 | Sword damage becomes 35. Sword attacks can now damage Ironlings. |
+| 4 | Heavy Steel | 350 | Sword damage becomes 35. Sword attacks can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 5 | Ground Slam | 900 | Every fourth swing also slams all enemies in reach for 60 damage. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 6 | Earthshaker | 2,500 | Sword: 60 damage. Slam: 150. A wave travels toward the entrance for twice your reach, dealing 100 damage. Seismic Slam: Slam every enemy in reach for 250 damage; push back 53.125 and stun 0.625 seconds. Base wait: 32 seconds. |
 
@@ -165,7 +165,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. Shield bashes can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. Shield bashes can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Strong Shove | 75 | Bashes also push enemies back half your starting reach. |
 | 3 | Wide Shield | 175 | Bashes hit up to 5 enemies. |
 | 4 | Crushing Bash | 350 | Bashes deal 40 damage and stun for 0.5 seconds. |
@@ -179,8 +179,8 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
-| 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings. |
-| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
+| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
 | 5 | Spreading Light | 1,000 | Defeated burning enemies spread their fire to nearby enemies. |
 | 6 | Dawnbringer | 2,700 | Dawnbringer: Deal 375 damage in reach and burn for 31.25 damage per second for 8 seconds. Base wait: 36 seconds. |
@@ -208,7 +208,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Draw | 40 | Shoots every 0.8 seconds. |
 | 2 | Double Nock | 90 | Fires 2 arrows per attack. |
-| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Explosive Rhythm | 425 | Every fifth attack has firecracker arrows: explosions deal 20 damage. |
 | 5 | Perfect Rhythm | 1,050 | Every third attack has firecrackers, including its falling arrows. |
 | 6 | Explosion Time | 2,800 | Explosion Time: For 5 seconds, arrows add explosions dealing 75 damage in radius 85. Base wait: 48 seconds. |
@@ -219,7 +219,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings. |
+| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 2 | Frostbite | 85 | Arrows slow by 25% for 2 seconds. |
 | 3 | Lightning Leap | 200 | Every third arrow jumps lightning through 3 other enemies for 15 damage each. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Cold Snap | 450 | Every third hit on the same enemy freezes it for 1 second. |
@@ -233,7 +233,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Keen Sight | 35 | Reach increases 25%. |
-| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
+| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
 | 3 | Hunter’s Mark | 225 | Marks the strongest enemy in reach. All heroes deal 20% more damage to it. |
 | 4 | Watchtower | 550 | Can shoot and mark anywhere on the map. |
 | 5 | Find the Weak Spot | 1,200 | Each hit on the marked enemy adds 4 damage, up to 40. Resets when the target changes. |
@@ -248,8 +248,8 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Sharp Daggers | 40 | Dagger damage becomes 18. |
-| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
-| 3 | Vital Strike | 160 | Every third attack deals double damage. Vital Strike critical hits can damage Ironlings. |
+| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 3 | Vital Strike | 160 | Every third attack deals double damage. Vital Strike critical hits can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 4 | Marked for Death | 450 | Hits on a marked target add 3 damage, up to 30. Its mark and damage bonus move to a new enemy when it falls. |
 | 5 | Hidden Weakness | 1,100 | Every third hit on the marked enemy makes it take 25% more damage from all heroes for 3 seconds. |
 | 6 | Death Strike | 2,600 | Death Strike: Deal 1250 damage plus 25 per 1% of target health lost. Base wait: 36 seconds. |
@@ -355,7 +355,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Fireball | 55 | Fireballs explode for 15 damage in a small area. Fireballs and their later fire effects can damage Ironlings. |
+| 1 | Fireball | 55 | Fireballs explode for 15 damage in a small area. Fireballs and their later fire effects can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 2 | Lasting Flames | 75 | Burns for 4 per second for 3 seconds. |
 | 3 | Bigger Blast | 175 | Explosions grow to one knight’s starting reach. |
 | 4 | Burning Ground | 425 | Leaves fire for 4 seconds, dealing 10 damage per second. |
@@ -394,8 +394,8 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
-| 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings. |
+| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
+| 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Arcane Echo | 450 | Each beam repeats after 0.3 seconds. |
 | 5 | Unstable Magic | 1,100 | Beam hits mark enemies for 5 seconds. Defeated marked enemies explode for 50 damage nearby. |
@@ -449,7 +449,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Water Jet | 55 | Replaces water bolts with one uninterrupted one-second water stream through up to 3 enemies, dealing 110 water damage over the full stream to each. Follows new targets while enemies remain in reach, then rests for 3 seconds. Speed buffs shorten the rest. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Pressurized Stream | 100 | Stream hits up to 5 enemies for 160 damage each over one second. Water streams can now damage Ironlings. |
+| 2 | Pressurized Stream | 100 | Stream hits up to 5 enemies for 160 damage each over one second. Water streams can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Sweeping Torrent | 250 | Stream hits up to 8 enemies for 250 damage each over one second and pushes them 30 path units backward. |
 | 4 | Raging Rapids | 600 | Wider stream deals 400 damage over one second, ignores 3 armor, and pushes 50 units. |
 | 5 | Tidal Cannon | 1,500 | Stream hits up to 12 enemies for 650 damage each over one second and pushes 80 units. Stream recovery drops to 2 seconds. Each stream pushes each enemy once; knockback has its normal 3-use limit. |
@@ -506,7 +506,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | 2 | Twin-Feed Loader | 125 | Maintains 2 turrets. Each fires 2 bolts at up to 2 targets for 24 damage each. |
 | 3 | Steel Piercers | 300 | Maintains 3 turrets. Piercing bolts hit up to 3 enemies for 36 damage each. |
 | 4 | Workshop Row | 750 | Maintains 4 turrets. Bolts deal 48 damage each. |
-| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. Turret bolts and their explosions can now damage Ironlings. |
+| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. Turret bolts and their explosions can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 6 | Siege Engineers | 5,200 | Maintains 8 siege turrets with 255 reach. Fires every 0.875 seconds; bolts deal 90 damage, pierce 6 enemies and keep explosive impacts. Overclock Workshop: For 8 seconds, turrets fire 2.25 times as fast. Base wait: 48 seconds. |
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
@@ -520,7 +520,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | 1 | Bow Bash | 55 | Every 5 seconds, lunges its boat at enemies in reach and returns. Deals 45 damage to up to 3 enemies along the charge. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Iron Prow | 100 | Metal prow deals 80 damage and ignores 3 armor. |
 | 3 | Razor Bow | 250 | Sharpened prow deals 140 damage through up to 5 enemies. |
-| 4 | Boarding Breaker | 600 | Deals 240 damage through up to 8 enemies. Charges every 4 seconds. Boat charges can now damage Ironlings. |
+| 4 | Boarding Breaker | 600 | Deals 240 damage through up to 8 enemies. Charges every 4 seconds. Boat charges can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 5 | Dreadnought | 1,500 | Deals 400 damage through up to 12 enemies. |
 | 6 | Unstoppable Keel | 4,400 | Deals 650 damage through up to 16 enemies. Dreadnought Rush: Ram through up to 24 enemies for 1500 damage, ignoring armor. Base wait: 40 seconds. |
 
@@ -543,7 +543,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Hot Shot | 130 | Explosions deal 140 fire damage within 55 units. Cannon reload takes 5.5 seconds. |
 | 3 | Twin Broadside | 325 | Adds a second cannon. Each shot deals 200 fire damage within 60 units; reload takes 6 seconds. |
 | 4 | Powder Kegs | 800 | Each cannon deals 320 fire damage within 70 units; reload takes 6.5 seconds. |
@@ -573,7 +573,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Snap | 45 | Bites every 1.05 seconds for 24 damage. |
 | 2 | Double-Time Jaws | 95 | Bites every 0.8 seconds for 30 damage. |
-| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. Flaming bites and their burns can damage Ironlings. |
+| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. Flaming bites and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 4 | Furnace Fangs | 600 | 60 fire damage every 0.5 seconds; burn rises to 10 per second. |
 | 5 | Inferno Snapper | 1,500 | 85 fire damage every 0.4 seconds; burn rises to 16 per second. |
 | 6 | Volcanic Maw | 4,300 | 120 fire damage every 0.3 seconds; burn rises to 24 per second. Feeding Frenzy: For 8 seconds, bite 2.25 times as fast. Cannot attack while submerged. Base wait: 40 seconds. |
@@ -585,7 +585,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Belly Flop | 60 | Leaves its shell, leaps high with one full flip onto the path, slams up to 4 enemies for 60 damage within 45 units, rolls back to its shell with tucked head and flippers and puts its shell on. Starts every 6 seconds within 230 reach. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. Body slams can now damage Ironlings. |
+| 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. Body slams can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Crashing Tides | 300 | 170 damage, 65 radius, up to 9 enemies. Starts every 5 seconds. |
 | 4 | Breaker Belly | 750 | 280 damage, 75 radius, up to 12 enemies. |
 | 5 | Tidal Colossus | 1,800 | 450 damage, 85 radius, up to 18 enemies. Starts every 4 seconds. |
@@ -611,7 +611,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Treasure Diver | 80 | Adds a Submerge button beside targeting. Press to earn gold underwater; press Return to normal to surface. While submerged, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
-| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
+| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
 | 3 | Coral Cache | 400 | Submerged income rises to 1 gold per second. |
 | 4 | Sunken Vault | 1,000 | Submerged income rises to 2 gold per second. |
 | 5 | Deep-Sea Riches | 2,400 | Submerged income rises to 3 gold per second. |
@@ -640,7 +640,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Become the Flame | 70 | Unlocks a Living Flame button beside targeting. Press it and choose a path point in reach; moves there, becomes a tall flame and stays until you press Return to normal. Aim priority stays separate. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
 | 2 | Hungry Fire | 140 | 28 contact damage; burn 10 per second. |
-| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
+| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
 | 4 | Inferno Heart | 875 | 70 contact damage within 48 units; burn 25 per second. |
 | 5 | Towering Pyre | 2,200 | 110 contact damage within 54 units; burn 40 per second. |
 | 6 | Everlasting Inferno | 6,000 | 170 contact damage within 60 units; burn 60 per second. Solar Pillar: Become a flame at your locked spot, or the nearest path point in reach. For 8 seconds, contact damage and burn are 2.25 times as strong. Base wait: 48 seconds. |
@@ -706,7 +706,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Silent Dive | 65 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 400 water damage in a 40 radius. Leap back into the water; 16-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. Leap landings can now damage Ironlings. |
+| 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. Leap landings can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Abyss Hunter | 350 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 800 water damage in a 50 radius. Leap back into the water; 16-second cooldown. |
 | 4 | Crushing Breach | 900 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1000 water damage in a 55 radius. Leap back into the water; 16-second cooldown. |
 | 5 | Leviathan Leap | 2,300 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1200 water damage in a 60 radius. Leap back into the water; 16-second cooldown. |
@@ -719,7 +719,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
+| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers and Pursuit Rocks with all attacks, effects and traps, including crosspaths. |
 | 3 | Paralyzing Presence | 350 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 4 | Ancient Terror | 900 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 5 | Apex Stare | 2,300 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
@@ -740,6 +740,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 30 |
 | Camoflauger | 148.5 | 12 | 2 | 6.12 seconds | 53 |
+| Pursuit Rock | 225 | 22 | 5 | 11.16 seconds | 73 |
 | Ironling | 180 | 15 | 3 | 26.79 seconds | 47 |
 | Fusion Skeleton | 270 | 20 | 5 | 26.79 seconds | 20 |
 | Skeleton | 63 | 5 | 1 | 17.86 seconds | 1 |
@@ -999,3 +1000,5 @@ Camoflauger: introduced on round 53 with one guaranteed spawn; eligible in later
 
 
 Attack rotation: heroes with multiple unlocked attacks have a button beside aim priority. The paused editor lets players choose an ordered repeating list, with 0–99 successful uses per step (0 disables that entry), duplicate steps, reordering, removal, and restoration of automatic attacks. An empty list disables automatic attacks. Cooldowns, range, targets, stun and exclusive actions still apply; failed attempts never advance the sequence. Launched projectiles and attacks complete normally; abilities remain manual. A stream, volley, trap placement or turret volley counts as one use, not one use per damage tick or target. New attacks remain excluded from an existing custom list until added. Order and partial counts save with the hero. Flame and submerged modes override attacks while active, preserve rotation progress and aim priority, and use separate themed toggle icons which change to a return symbol when active. Old saves with modes stored in targeting migrate automatically. Sources: attack-rotation.js and hero-controls.js; tests/attack-rotation.test.js.
+
+Pursuit Rock: first appears on round 73 (one guaranteed), then eligible in random waves. Base HP 225 and speed match Demonic Nightmare; remains grounded. Reward 22 gold, loss 5 villagers, budget cost 16. Combines Iron Hardness (formerly Iron Shell) and Camouflage: detection is required for all hero interactions, plus an eligible specific attack for damage and damaging effects. Non-damaging effects work once detected. Uses individually drawn leafy rock skipping/turning poses.
