@@ -142,7 +142,7 @@ All **240 upgrades** and their prices follow. Names reflect Jack's changes, espe
 | 1 | Sharp Edge | 40 | Sword damage becomes 15. |
 | 2 | Longer Sword | 60 | Reach increases by 25%. |
 | 3 | Wide Swing | 150 | Each swing hits up to 6 enemies. |
-| 4 | Heavy Steel | 350 | Sword damage becomes 35. |
+| 4 | Heavy Steel | 350 | Sword damage becomes 35. Sword attacks can now damage Ironlings. |
 | 5 | Ground Slam | 900 | Every fourth swing also slams all enemies in reach for 60 damage. |
 | 6 | Earthshaker | 2,500 | Sword: 60 damage. Slam: 150. A wave travels toward the entrance for twice your reach, dealing 100 damage. Seismic Slam: Slam every enemy in reach for 250 damage; push back 53.125 and stun 0.625 seconds. Base wait: 32 seconds. |
 
@@ -165,7 +165,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. |
+| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. Shield bashes can damage Ironlings. |
 | 2 | Strong Shove | 75 | Bashes also push enemies back half your starting reach. |
 | 3 | Wide Shield | 175 | Bashes hit up to 5 enemies. |
 | 4 | Crushing Bash | 350 | Bashes deal 40 damage and stun for 0.5 seconds. |
@@ -179,7 +179,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
-| 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. |
+| 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings. |
 | 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
 | 5 | Spreading Light | 1,000 | Defeated burning enemies spread their fire to nearby enemies. |
@@ -208,7 +208,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Draw | 40 | Shoots every 0.8 seconds. |
 | 2 | Double Nock | 90 | Fires 2 arrows per attack. |
-| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. |
+| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings. |
 | 4 | Explosive Rhythm | 425 | Every fifth attack has firecracker arrows: explosions deal 20 damage. |
 | 5 | Perfect Rhythm | 1,050 | Every third attack has firecrackers, including its falling arrows. |
 | 6 | Explosion Time | 2,800 | Explosion Time: For 5 seconds, arrows add explosions dealing 75 damage in radius 85. Base wait: 48 seconds. |
@@ -219,7 +219,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. |
+| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings. |
 | 2 | Frostbite | 85 | Arrows slow by 25% for 2 seconds. |
 | 3 | Lightning Leap | 200 | Every third arrow jumps lightning through 3 other enemies for 15 damage each. |
 | 4 | Cold Snap | 450 | Every third hit on the same enemy freezes it for 1 second. |
@@ -249,7 +249,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Sharp Daggers | 40 | Dagger damage becomes 18. |
 | 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. |
-| 3 | Vital Strike | 160 | Every third attack deals double damage. |
+| 3 | Vital Strike | 160 | Every third attack deals double damage. Vital Strike critical hits can damage Ironlings. |
 | 4 | Marked for Death | 450 | Hits on a marked target add 3 damage, up to 30. Its mark and damage bonus move to a new enemy when it falls. |
 | 5 | Hidden Weakness | 1,100 | Every third hit on the marked enemy makes it take 25% more damage from all heroes for 3 seconds. |
 | 6 | Death Strike | 2,600 | Death Strike: Deal 1250 damage plus 25 per 1% of target health lost. Base wait: 36 seconds. |
@@ -355,7 +355,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Fireball | 55 | Fireballs explode for 15 damage in a small area. |
+| 1 | Fireball | 55 | Fireballs explode for 15 damage in a small area. Fireballs and their later fire effects can damage Ironlings. |
 | 2 | Lasting Flames | 75 | Burns for 4 per second for 3 seconds. |
 | 3 | Bigger Blast | 175 | Explosions grow to one knight’s starting reach. |
 | 4 | Burning Ground | 425 | Leaves fire for 4 seconds, dealing 10 damage per second. |
@@ -395,7 +395,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. |
-| 2 | Armor Breaker | 80 | Ignores 3 armor. |
+| 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings. |
 | 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. |
 | 4 | Arcane Echo | 450 | Each beam repeats after 0.3 seconds. |
 | 5 | Unstable Magic | 1,100 | Beam hits mark enemies for 5 seconds. Defeated marked enemies explode for 50 damage nearby. |
@@ -449,7 +449,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Water Jet | 55 | Replaces water bolts with one uninterrupted one-second water stream through up to 3 enemies, dealing 110 water damage over the full stream to each. Follows new targets while enemies remain in reach, then rests for 3 seconds. Speed buffs shorten the rest. |
-| 2 | Pressurized Stream | 100 | Stream hits up to 5 enemies for 160 damage each over one second. |
+| 2 | Pressurized Stream | 100 | Stream hits up to 5 enemies for 160 damage each over one second. Water streams can now damage Ironlings. |
 | 3 | Sweeping Torrent | 250 | Stream hits up to 8 enemies for 250 damage each over one second and pushes them 30 path units backward. |
 | 4 | Raging Rapids | 600 | Wider stream deals 400 damage over one second, ignores 3 armor, and pushes 50 units. |
 | 5 | Tidal Cannon | 1,500 | Stream hits up to 12 enemies for 650 damage each over one second and pushes 80 units. Stream recovery drops to 2 seconds. Each stream pushes each enemy once; knockback has its normal 3-use limit. |
@@ -506,7 +506,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | 2 | Twin-Feed Loader | 125 | Maintains 2 turrets. Each fires 2 bolts at up to 2 targets for 24 damage each. |
 | 3 | Steel Piercers | 300 | Maintains 3 turrets. Piercing bolts hit up to 3 enemies for 36 damage each. |
 | 4 | Workshop Row | 750 | Maintains 4 turrets. Bolts deal 48 damage each. |
-| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. |
+| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. Turret bolts and their explosions can now damage Ironlings. |
 | 6 | Siege Engineers | 5,200 | Maintains 8 siege turrets with 255 reach. Fires every 0.875 seconds; bolts deal 90 damage, pierce 6 enemies and keep explosive impacts. Overclock Workshop: For 8 seconds, turrets fire 2.25 times as fast. Base wait: 48 seconds. |
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
@@ -520,7 +520,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | 1 | Bow Bash | 55 | Every 5 seconds, lunges its boat at enemies in reach and returns. Deals 45 damage to up to 3 enemies along the charge. |
 | 2 | Iron Prow | 100 | Metal prow deals 80 damage and ignores 3 armor. |
 | 3 | Razor Bow | 250 | Sharpened prow deals 140 damage through up to 5 enemies. |
-| 4 | Boarding Breaker | 600 | Deals 240 damage through up to 8 enemies. Charges every 4 seconds. |
+| 4 | Boarding Breaker | 600 | Deals 240 damage through up to 8 enemies. Charges every 4 seconds. Boat charges can now damage Ironlings. |
 | 5 | Dreadnought | 1,500 | Deals 400 damage through up to 12 enemies. |
 | 6 | Unstoppable Keel | 4,400 | Deals 650 damage through up to 16 enemies. Dreadnought Rush: Ram through up to 24 enemies for 1500 damage, ignoring armor. Base wait: 40 seconds. |
 
@@ -543,7 +543,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. |
+| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings. |
 | 2 | Hot Shot | 130 | Explosions deal 140 fire damage within 55 units. Cannon reload takes 5.5 seconds. |
 | 3 | Twin Broadside | 325 | Adds a second cannon. Each shot deals 200 fire damage within 60 units; reload takes 6 seconds. |
 | 4 | Powder Kegs | 800 | Each cannon deals 320 fire damage within 70 units; reload takes 6.5 seconds. |
@@ -573,7 +573,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Snap | 45 | Bites every 1.05 seconds for 24 damage. |
 | 2 | Double-Time Jaws | 95 | Bites every 0.8 seconds for 30 damage. |
-| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. |
+| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. Flaming bites and their burns can damage Ironlings. |
 | 4 | Furnace Fangs | 600 | 60 fire damage every 0.5 seconds; burn rises to 10 per second. |
 | 5 | Inferno Snapper | 1,500 | 85 fire damage every 0.4 seconds; burn rises to 16 per second. |
 | 6 | Volcanic Maw | 4,300 | 120 fire damage every 0.3 seconds; burn rises to 24 per second. Feeding Frenzy: For 8 seconds, bite 2.25 times as fast. Cannot attack while submerged. Base wait: 40 seconds. |
@@ -585,7 +585,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Belly Flop | 60 | Leaves its shell, leaps high with one full flip onto the path, slams up to 4 enemies for 60 damage within 45 units, rolls back to its shell with tucked head and flippers and puts its shell on. Starts every 6 seconds within 230 reach. |
-| 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. |
+| 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. Body slams can now damage Ironlings. |
 | 3 | Crashing Tides | 300 | 170 damage, 65 radius, up to 9 enemies. Starts every 5 seconds. |
 | 4 | Breaker Belly | 750 | 280 damage, 75 radius, up to 12 enemies. |
 | 5 | Tidal Colossus | 1,800 | 450 damage, 85 radius, up to 18 enemies. Starts every 4 seconds. |
@@ -706,7 +706,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Silent Dive | 65 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 400 water damage in a 40 radius. Leap back into the water; 16-second cooldown. |
-| 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. |
+| 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. Leap landings can now damage Ironlings. |
 | 3 | Abyss Hunter | 350 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 800 water damage in a 50 radius. Leap back into the water; 16-second cooldown. |
 | 4 | Crushing Breach | 900 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1000 water damage in a 55 radius. Leap back into the water; 16-second cooldown. |
 | 5 | Leviathan Leap | 2,300 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1200 water damage in a 60 radius. Leap back into the water; 16-second cooldown. |

@@ -209,6 +209,25 @@ for(const p of waterPaths){p.ability.tierDescriptions[2]+=' Base wait: '+p.abili
 }
 Object.defineProperty(heroes,'waterbeast',{value:{name:'Abomination',cost:160,damage:28,interval:1.4,range:230,color:'#997344',waterOnly:true,role:'Extinguished form • melee bite & ambushes',paths:waterPaths},enumerable:false});
 
+// Explain Ironling eligibility on the upgrades that unlock it.
+for(const [hero,pathIndex,tier,note] of [
+ ['knight',0,4,'Sword attacks can now damage Ironlings.'],
+ ['knight',2,1,'Shield bashes can damage Ironlings.'],
+ ['knight',3,2,'Holy burns and later light attacks can damage Ironlings.'],
+ ['archer',1,3,'The extra falling arrows can damage Ironlings.'],
+ ['archer',2,1,'Arrows and their burns can damage Ironlings.'],
+ ['rogue',0,3,'Vital Strike critical hits can damage Ironlings.'],
+ ['mage',3,2,'Main magic attacks and later arcane attacks can damage Ironlings.'],
+ ['mage',0,1,'Fireballs and their later fire effects can damage Ironlings.'],
+ ['serpent',3,2,'Water streams can now damage Ironlings.'],
+ ['toolmaker',3,5,'Turret bolts and their explosions can now damage Ironlings.'],
+ ['pirate',2,1,'Cannon shots can damage Ironlings.'],
+ ['pirate',0,4,'Boat charges can now damage Ironlings.'],
+ ['turtle',1,2,'Body slams can now damage Ironlings.'],
+ ['waterbeast',2,2,'Leap landings can now damage Ironlings.'],
+ ['turtle',0,3,'Flaming bites and their burns can damage Ironlings.']
+]) heroes[hero].paths[pathIndex].descriptions[tier-1]+=' '+note;
+
 const data={heroes,enemies,points,trees,graves,maps,villagerPrices:[{max:65,cost:10},{max:85,cost:20},{max:100,cost:100},{max:110,cost:500},{max:Number.MAX_SAFE_INTEGER,cost:1000}],treeHitboxScale:1.75,heroDamageScale:1.25,leaderBoostScale:1.25,width:1100,height:720};
 
 if(typeof module!=='undefined')module.exports=data;else root.GameData=data;
