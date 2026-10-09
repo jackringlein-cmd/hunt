@@ -740,6 +740,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 30 |
 | Camoflauger | 148.5 | 12 | 2 | 6.12 seconds | 53 |
+| Iron Ball | 13,500 | 100 | 20 | 10.63 seconds | 95 |
 | Hidden Mummy | 405 | 22 | 5 | 11.16 seconds | 65 |
 | Pursuit Rock | 225 | 22 | 5 | 11.16 seconds | 73 |
 | Ironling | 180 | 15 | 3 | 26.79 seconds | 47 |
@@ -1005,3 +1006,5 @@ Attack rotation: heroes with multiple unlocked attacks have a button beside aim 
 Pursuit Rock: first appears on round 73 (one guaranteed), then eligible in random waves. Base HP 225 and speed match Demonic Nightmare; remains grounded. Reward 22 gold, loss 5 villagers, budget cost 16. Combines Iron Hardness (formerly Iron Shell) and Camouflage: detection is required for all hero interactions, plus an eligible specific attack for damage and damaging effects. Non-damaging effects work once detected. Uses individually drawn leafy rock skipping/turning poses.
 
 Hidden Mummy: first appears on round 65 (one guaranteed), then eligible in random waves. Base HP 405 matches Werewolf; speed matches Pursuit Rock. Reward 22 gold, loss 5 villagers, budget cost 14. Camouflage requires the same detection upgrades as Camoflauger for all hero attacks, effects and traps. No Iron Hardness or additional immunity. Uses 12 individually drawn bandaged mummy poses with a leafy border, skipping and turning.
+
+Iron Ball: first appears on round 95 with one guaranteed spawn; eligible in later random waves. Base HP 13,500 matches Weaker Cyclops; speed is 1.05 times Pursuit Rock. Iron Hardness restricts damage and damaging effects to qualified attacks, while non-damaging effects work normally. No Camouflage. Reward 100 gold, loss 20 villagers, budget cost 90. Large angular boulder with silver iron deposits; rotation follows distance traveled, so it stops rolling when movement stops.
