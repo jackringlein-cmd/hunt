@@ -18,7 +18,7 @@
   for(const h of this.s.heroes){if(h.type!=='turtle')continue;const submerged=this.turtleSubmerged(h),stunned=(h.stunnedUntil||0)>now;
    if(stunned||submerged){if(h.turtleAction){this.releaseTurtle(h);delete h.turtleAction;}if(submerged&&!stunned){const rate=[0,1/3,.5,1,2,3,5][h.u[3]],boost=(h.turtleTreasureUntil||0)>now?h.turtleTreasureBoost:1;h.turtleCoins=(h.turtleCoins||0)+dt*rate*boost;const coins=Math.floor(h.turtleCoins+1e-9);if(coins){h.turtleCoins=Math.max(0,h.turtleCoins-coins);this.s.money+=coins;h.turtleLastGold=now;}}continue;}
    if(this.s.enemies.some(e=>e.turtleHeld?.owner===h.id&&this.shadowImmune(e))){this.releaseTurtle(h);delete h.turtleAction;}const a=h.turtleAction;if(a){const age=now-a.start;
-    if(a.kind==='slam'){if(!a.hit&&age>=1){a.hit=true;for(const e of this.turtleTargets(h,2000).filter(e=>dist(e,a.to)<=a.radius).slice(0,a.limit))this.hit(e,a.damage,h);this.fx('ring',a.to,a.to,'#d6bd8a',a.radius);}
+    if(a.kind==='slam'){if(!a.hit&&age>=1){a.hit=true;for(const e of this.turtleTargets(h,2000).filter(e=>dist(e,a.to)<=a.radius).slice(0,a.limit))this.hit(e,a.damage,h,0,false,'physical','slam');this.fx('ring',a.to,a.to,'#d6bd8a',a.radius);}
      if(now>=a.end)delete h.turtleAction;
     }else{
      if(!a.packed&&age>=.18)this.packTurtle(h,a);

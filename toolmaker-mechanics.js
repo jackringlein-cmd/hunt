@@ -67,7 +67,7 @@
    for(const e of targets){if(b.budget<=0)break;b.hit.push(e.id);const before=Math.max(0,e.hp)+(e.shield||0);const multiplier=this.buffs(h).damage*this.multiplier(e,h)*(D.enemies[e.type].damageTaken?.physical??1);this.hit(e,Math.min(b.damage,b.budget/Math.max(.001,multiplier)),h,999);const spent=Math.max(0,before-Math.max(0,e.hp)-(e.shield||0));b.budget=Math.max(0,b.budget-spent);}return b.p>0&&b.budget>0;
   });
   w.turrets=w.turrets.filter(t=>{const h=owner(t.owner);if(!h)return false;if(!active(h)||t.next>now)return true;const level=h.u[3],range=level>=6?255:170,targets=this.sorted(h,this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&distance(e,t)<=range));if(!targets.length)return true;
-   const shots=level>=2?2:1;for(let i=0;i<shots;i++){const target=targets[i%targets.length],proxy={...h,toolRanged:true},damage=[0,18,24,36,48,65,90][level];t.face={x:target.x,y:target.y};this.fx('arrow',t,target,'#e8c185');for(const e of this.lineTargets(t,target,range,14,level>=6?6:level>=3?3:1))this.hit(e,damage,proxy,level>=3?3:0);if(level>=5)this.area(target,45,50,proxy);}
+   const shots=level>=2?2:1;for(let i=0;i<shots;i++){const target=targets[i%targets.length],proxy={...h,toolRanged:true},damage=[0,18,24,36,48,65,90][level];t.face={x:target.x,y:target.y};this.fx('arrow',t,target,'#e8c185');for(const e of this.lineTargets(t,target,range,14,level>=6?6:level>=3?3:1))this.hit(e,damage,proxy,level>=3?3:0,false,'physical','turret');if(level>=5)this.area(target,45,50,proxy,0,'physical','turret');}
    t.fired=now;t.next=now+(level>=6?.875:1.25)/this.buffs(h).speed/((h.toolOverclockUntil||0)>now?h.toolOverclock:1);return true;
   });
  };

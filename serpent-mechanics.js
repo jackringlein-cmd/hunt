@@ -60,7 +60,7 @@ function install(Game,D){
  };
  Game.prototype.serpentBeam=function(h,damage,max,width,push,ignore=0,streamHits=null){
   const target=this.sorted(h)[0];if(!target)return false;
-  const pushed=new Set();for(const e of this.lineTargets(h,target,this.range(h),width,max)){if(e.serpentDive||e.serpentFlight)continue;this.hit(e,damage,h,ignore,false,'water');if(push&&(!streamHits||!streamHits.includes(e.swarmId||e.id))){this.push(e,push,h,pushed);if(streamHits)streamHits.push(e.swarmId||e.id);}}
+  const pushed=new Set();for(const e of this.lineTargets(h,target,this.range(h),width,max)){if(e.serpentDive||e.serpentFlight)continue;this.hit(e,damage,h,ignore,false,'water','stream');if(push&&(!streamHits||!streamHits.includes(e.swarmId||e.id))){this.push(e,push,h,pushed);if(streamHits)streamHits.push(e.swarmId||e.id);}}
   const d=distance(h,target)||1,end={x:h.x+(target.x-h.x)/d*this.range(h),y:h.y+(target.y-h.y)/d*this.range(h)};
   if(streamHits&&h.serpentStream)h.serpentStream.visual={x:h.x,y:h.y,tx:end.x,ty:end.y,width:width*1.6};else this.fx('waterBeam',h,end,'#9ce9f5',width*1.6);h.face={x:target.x,y:target.y};return true;
  };

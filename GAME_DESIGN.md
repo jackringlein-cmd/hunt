@@ -739,6 +739,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Hell Hound | 99 | 12 | 3 | 1.79 seconds | 55 |
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 35 |
+| Ironling | 180 | 15 | 3 | 26.79 seconds | 47 |
 | Fusion Skeleton | 270 | 20 | 5 | 26.79 seconds | 20 |
 | Skeleton | 63 | 5 | 1 | 17.86 seconds | 1 |
 | Tiny Skeleton | 22.5 | 2 | 1 | 14.29 seconds | 3 |
@@ -988,3 +989,6 @@ Volcanic Ruins placement: the entire large upper lava pool is forbidden for all 
 
 
 Plague Wyvern balance: base health reduced 35%, from 130,500 to 84,825. Speed, poison immunity, 15 effect blocks, fear resistance, reward and village damage are unchanged. Endless scaling uses the new base health. Existing saved Wyverns receive the reduction once, preserving their remaining health percentage.
+
+
+Ironling: first appears on round 47 (one guaranteed, then joins eligible random waves). Base health 180, two-thirds of Fusion Skeleton; movement time 45/1.68 seconds, identical to Fusion. Standard non-boss and endless health scaling applies. Reward 15 gold; village loss 3; wave budget cost 8. Animated grey hunched shell, short blunt head, black eye, two reaching arms and walking legs follow the supplied reference. Iron shell rejects unqualified tower damage and damaging statuses before shields or HP are touched. Slow, stun, freeze, fear, knockback and non-damaging debuffs still follow their normal rules. Crosspaths and later tiers retain eligibility, but do not unlock unrelated attacks. Counters: Knight Shield Bash and its upgrades; Lingering Light burns/holy attacks; Heavy Steel sword attacks; Archer Trick Shot bonus arrows; Flaming Tips arrows and burns; Rogue Vital Strike critical hits and Death Strike; Mage Armor Breaker projectiles/beams and arcane explosions; Fireball and its fire-path damage; Serpent Pressurized Stream beams; Tool Maker Blast Bolts turrets; Pirate Deck Cannon broadsides and Boarding Breaker rams; Turtle Heavy Landing slams and Ember Bite fire bites/burns; Extinguished Abomination Heavy Landing leaps. All fire-form Flaming Abomination damage works, even unupgraded. Poison, unrelated crosspath weapons, basic attacks without their qualifying upgrades, and unlisted abilities remain blocked. Enemy-caused Hell Hound explosions still work. Sources: ironling-art.js, engine.js; tests/ironling.test.js.

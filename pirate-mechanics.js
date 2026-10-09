@@ -10,7 +10,7 @@
   h.pirateRam={from:{x:h.x,y:h.y},to:{x:target.x,y:target.y},target:target.id,start:this.s.time,end:this.s.time+1,damage,limit,ignore,hit:false};h.face={x:target.x,y:target.y};return true;
  };
  Game.prototype.pirateBroadside=function(h,count,damage,radius){const targets=this.sorted(h);if(!targets.length)return false;h.pirateBalls=[];
-  for(let i=0;i<count;i++){const target=targets[i%targets.length];h.pirateBalls.push({from:{x:h.x,y:h.y-8},to:{x:target.x,y:target.y},start:this.s.time,end:this.s.time+.4});this.area(target,radius,damage,h,0,'fire');this.fx('ring',target,target,'#ff8a39',radius);}
+  for(let i=0;i<count;i++){const target=targets[i%targets.length];h.pirateBalls.push({from:{x:h.x,y:h.y-8},to:{x:target.x,y:target.y},start:this.s.time,end:this.s.time+.4});this.area(target,radius,damage,h,0,'fire','cannon');this.fx('ring',target,target,'#ff8a39',radius);}
   h.pirateFired=this.s.time;return true;
  };
  // Store the projectile on its owner so saves, selling and round cleanup are automatic.
@@ -26,7 +26,7 @@
  Game.prototype.updatePirates=function(dt){const now=this.s.time;for(const h of this.s.heroes){if(h.type!=='pirate')continue;
   if((h.stunnedUntil||0)>now){delete h.pirateRam;if(h.pirateHat){h.pirateHat.start+=dt;h.pirateHat.end+=dt;}continue;}
   const ram=h.pirateRam;if(ram){if(!ram.hit&&now>=ram.start+.5){ram.hit=true;const target=this.s.enemies.find(e=>e.id===ram.target&&!e.dead&&!e.serpentDive&&!e.serpentFlight);if(target){const dx=target.x-h.x,dy=target.y-h.y,len=Math.hypot(dx,dy)||1,f=Math.min(1,this.range(h)/len);ram.to={x:h.x+dx*f,y:h.y+dy*f};}
-    const targets=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&gap(e,ram.from,ram.to)<35).sort((a,b)=>distance(h,a)-distance(h,b)).slice(0,ram.limit);for(const e of targets)this.hit(e,ram.damage,h,ram.ignore);this.fx('ring',ram.to,ram.to,'#d9d9c8',40);}
+    const targets=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&gap(e,ram.from,ram.to)<35).sort((a,b)=>distance(h,a)-distance(h,b)).slice(0,ram.limit);for(const e of targets)this.hit(e,ram.damage,h,ram.ignore,false,'physical','ram');this.fx('ring',ram.to,ram.to,'#d9d9c8',40);}
    if(now>=ram.end)delete h.pirateRam;
   }
   const hat=h.pirateHat;if(hat){const age=Math.min(1.6,now-hat.start),prev=Math.max(0,age-dt),half=.8;

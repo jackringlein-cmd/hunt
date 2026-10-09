@@ -43,5 +43,6 @@
   "assets/enemies/werewolf-walk-marked.png",
   "assets/enemies/werewolf-follow-through.png",
   "water-beast-art.js",
-  "water-beast-mechanics.js"
+  "water-beast-mechanics.js",
+  "ironling-art.js"
 ]
