@@ -1019,3 +1019,5 @@ Village Diary: main-menu collection shared across maps and new games in this bro
 Ghoul lore: The first what appears to be a Ghoul, though others call it a zombie. It's way faster than the other two, but thankfully still easy to kill.
 
 Zombie Guard lore: Our latest narcotics don't seem to have any sort of affect, and most attacks don't make it bleed. It's similar to a Ghoul in most cultures, but in this area it seems to be completely different. We wonder... will there be more of it's kind? I hope not, for all of our sakes.
+
+Grave Troll lore: THEY ARE BIG! And also very hard skinned. Looks like more are coming. But I hope it will be over soon... children constantly live in fear and anguish, most of them have nightmares every night. Even grown men, fear for the women and children not being able to defend themselves if the monsters get through.
