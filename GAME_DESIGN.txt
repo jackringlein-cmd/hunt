@@ -1025,3 +1025,5 @@ Grave Troll lore: THEY ARE BIG! And also very hard skinned. Looks like more are 
 Fusion Skeleton lore: Just when I thought... just when i thought they couldn't get BIGGER! Now they carry more of themselves inside. The only thing we survive off is, the money we get from trading bones, which I guess we have MORE of to share. The money we get from trading is what FUNDS the heros we hire, or should a say our ONLY LINE of DEFENSE.
 
 Vampire Lord lore: At the very least they are not strong. But SOMEHOW they are such good leaders they make the other demonic presenses way faster. I might as well call IT a Vampire Lord.
+
+Headless Zombie lore: ANOTHER zombie, it... it's it's cry is SO loud, it is so loud it can temporarily imobilize a hero. Some of them have been... been getting through our defenses and slaughtering our people. Thankfully some traders wish to support us every time we defeat a new one of these amalgamations. So I don't think we'll die out for at least another week.
