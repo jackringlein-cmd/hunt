@@ -61,7 +61,7 @@ Everything runs locally. Only the optional display fonts load from the internet;
 
 Repository: https://github.com/jackringlein-cmd/hunt (main). Completed changes are committed and synced here. Generated screenshots and the separate Sites publishing checkout are ignored. GitHub updates do not automatically republish the separate Sites website.
 
-Run all gameplay checks with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js`.
+Run all gameplay checks with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js tests/imp.test.js tests/retry.test.js`.
 
 Pirate costs 150 gold and is placed in water or a flooded path. Its base attack throws rocks. Its paths are Ironclad Charge (boat rams), Razor Reef (piercing rocks), Broadside Inferno (fire cannons with increasing reload time), and Captain’s Comeback (returning hats that stun increasingly large enemies).
 

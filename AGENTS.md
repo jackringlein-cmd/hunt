@@ -3,7 +3,7 @@
 This game is backed up at https://github.com/jackringlein-cmd/hunt (main).
 
 The user has requested that completed game changes be added to GitHub. After editing:
-- Run the relevant checks and the full gameplay suite with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js`.
+- Run the relevant checks and the full gameplay suite with `node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js tests/imp.test.js tests/retry.test.js`.
 - Update design/ability documentation when mechanics change.
 - Commit and push completed source, runtime assets, tests and documentation to the existing repository. Preserve unrelated work and remote changes; never force-push.
 - Verify the remote commit before reporting that changes are on GitHub. Report any sync failure honestly.

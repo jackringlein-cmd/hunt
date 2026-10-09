@@ -25,7 +25,7 @@ function install(Game,D){
  const originalTick=Game.prototype.tick;Game.prototype.tick=function(dt){this.sellDryWaterHeroes();return originalTick.call(this,dt);};
  Game.prototype.serpentMainPath=function(h){return Number.isInteger(h.serpentMainPath)&&h.u[h.serpentMainPath]>0?h.serpentMainPath:h.u[1]?1:h.u[3]?3:h.u[0]?0:h.u[2]?2:-1;};
  Game.prototype.serpentLurkPoint=function(h){const p=h.serpentLurk;if(p&&distance(p,h)<=this.range(h))return p;return this.nearest(h.x,h.y);};
- const weight={tiny:1,skeleton:1,runner:1,shield:2,headless:2,brute:3,werewolf:3,captain:4,giant:5};
+ const weight={imp:3,tiny:1,skeleton:1,runner:1,shield:2,headless:2,brute:3,werewolf:3,captain:4,giant:5};
  Game.prototype.serpentThrow=function(h,power=1,ability=false){
   if((h.stunnedUntil||0)>this.s.time||h.serpentDive||h.serpentStream||this.s.serpentThrows?.some(t=>t.owner===h.id))return false;
   const level=h.u[0],list=this.sorted(h).filter(e=>!e.throwId&&!e.serpentFlight&&!e.serpentDive&&!this.shadowImmune(e)&&!this.nightmareFlight(e).airborne);
@@ -34,7 +34,7 @@ function install(Game,D){
    const target=list.filter(o=>o.id!==e.id&&(!e.swarmId||o.swarmId!==e.swarmId)&&o.p<e.p-30).sort((a,b)=>distance(e,a)-distance(e,b))[0];
    if(!target)continue;
    const members=this.swarm(e);if(members.some(m=>(m.displacementCount||0)>=3))continue;
-   const pushed=new Set();this.push(e,.001,h,pushed);if(!pushed.size&&!e.effects.some(f=>f.kind==='push'&&f.owner===h.id&&f.end>this.s.time))continue;
+   const pushed=new Set();this.push(e,.001,h,pushed,'throw');if(!pushed.size&&!e.effects.some(f=>f.kind==='push'&&f.owner===h.id&&f.end>this.s.time))continue;
    const id=this.s.nextId++,flight={id,owner:h.id,ids:members.map(m=>m.id),target:target.id,start:this.s.time,end:this.s.time+.9,from:{x:e.x,y:e.y},originP:e.p,goal:target.p,damage:ability?800*power:[0,35,60,110,200,400,400][level]};
    for(const m of members)m.serpentFlight=id;
    (this.s.serpentThrows??=[]).push(flight);h.serpentAction={kind:'throw',start:this.s.time,end:flight.end,x:e.x,y:e.y};return true;
@@ -53,7 +53,7 @@ function install(Game,D){
    if(taken>=count)break;
    if(e.throwId||e.serpentFlight||e.serpentDive||this.nightmareFlight(e).airborne||!this.canDamage(e,'water'))continue;
    // Individual grabs leave the rest of a swarm on the surface.
-   if(!this.apply(e,'stun',2,1,h.id,{},true))continue;
+   if(!this.apply(e,'stun',2,1,h.id,{damageSource:'drag'},true))continue;
    const level=h.u[1];e.serpentDive={owner:h.id,start:this.s.time,end:this.s.time+2,execute:!D.enemies[e.type].boss&&D.enemies[e.type].hp<=[0,80,200,500,1200,2000,2000][level],damage:ability?800*power:[0,45,80,150,250,400,400][level]};
    h.serpentLurk={x:e.x,y:e.y};h.serpentDive={start:this.s.time,end:this.s.time+2,x:e.x,y:e.y};recovery=Math.max(recovery,this.serpentDragRecovery(h,e));taken++;
   }if(taken)h.serpentDiveAt=this.s.time+2+recovery;return taken>0;
@@ -94,12 +94,12 @@ function install(Game,D){
  Game.prototype.updateSerpents=function(){
   const now=this.s.time;
   for(const e of this.s.enemies){const dive=e.serpentDive;if(!dive)continue;const h=this.s.heroes.find(h=>h.id===dive.owner),cancel=!h||(h.stunnedUntil||0)>now||this.shadowImmune(e);
-   if(cancel||now>=dive.end||e.dead){delete e.serpentDive;e.effects=e.effects.filter(f=>!(f.kind==='stun'&&f.owner===dive.owner));if(!cancel&&!e.dead)this.hit(e,dive.execute?(e.hp+e.shield+1)*10:dive.damage,h,999,false,'water');this.fx('ring',e,e,'#99edee',32);}
+   if(cancel||now>=dive.end||e.dead){delete e.serpentDive;e.effects=e.effects.filter(f=>!(f.kind==='stun'&&f.owner===dive.owner));if(!cancel&&!e.dead)this.hit(e,dive.execute?(e.hp+e.shield+1)*10:dive.damage,h,999,false,'water','drag');this.fx('ring',e,e,'#99edee',32);}
   }
   const flights=this.s.serpentThrows||[];this.s.serpentThrows=[];
   for(const t of flights){const h=this.s.heroes.find(h=>h.id===t.owner),members=this.s.enemies.filter(e=>t.ids.includes(e.id)&&!e.dead),cancel=!h||(h.stunnedUntil||0)>now;
    const movingTarget=this.s.enemies.find(e=>e.id===t.target&&!e.dead);if(movingTarget)t.goal=Math.min(t.originP??t.goal,movingTarget.p);const landing=this.position(t.goal),u=Math.min(1,(now-t.start)/(t.end-t.start));
-   if(cancel||u>=1){for(const e of members){delete e.serpentFlight;if(!cancel)e.p=t.goal;Object.assign(e,this.position(e.p));if(!cancel)this.hit(e,t.damage,h);}if(members[0]?.swarmId)this.arrangeSwarm(members);if(!cancel){const target=this.s.enemies.find(e=>e.id===t.target&&!e.dead);if(target&&distance(target,landing)<65)this.hit(target,t.damage,h);this.fx('ring',landing,landing,'#9edcdd',50);}}
+   if(cancel||u>=1){for(const e of members){delete e.serpentFlight;if(!cancel)e.p=t.goal;Object.assign(e,this.position(e.p));if(!cancel)this.hit(e,t.damage,h,0,false,'physical','throw');}if(members[0]?.swarmId)this.arrangeSwarm(members);if(!cancel){const target=this.s.enemies.find(e=>e.id===t.target&&!e.dead);if(target&&distance(target,landing)<65)this.hit(target,t.damage,h,0,false,'physical','throw');this.fx('ring',landing,landing,'#9edcdd',50);}}
    else {members.forEach((e,i)=>{e.x=t.from.x+(landing.x-t.from.x)*u+(members.length>1?Math.cos(i*6.28/members.length)*15:0);e.y=t.from.y+(landing.y-t.from.y)*u-Math.sin(u*Math.PI)*75;});this.s.serpentThrows.push(t);}
   }
   for(const h of this.s.heroes){if(h.type!=='serpent')continue;this.updateSerpentStream(h);if(h.serpentDive&&((h.stunnedUntil||0)>now||now>=h.serpentDive.end))delete h.serpentDive;if((h.stunnedUntil||0)>now)continue;

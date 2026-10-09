@@ -2,5 +2,5 @@
   "name": "the-hunt-for-the-necromancer",
   "version": "0.1.0",
   "private": true,
-  "scripts": { "start": "node server.js", "test": "node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js" }
+  "scripts": { "start": "node server.js", "test": "node --test tests/engine.test.js tests/serpent.test.js tests/toolmaker.test.js tests/pirate.test.js tests/turtle.test.js tests/abomination.test.js tests/water-beast.test.js tests/ironling.test.js tests/camoflauger.test.js tests/attack-rotation.test.js tests/pursuit.test.js tests/mummy.test.js tests/iron-ball.test.js tests/imp.test.js tests/retry.test.js" }
 }

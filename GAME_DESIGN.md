@@ -178,7 +178,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
+| 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. This entire hero can no longer affect enemies with Energy Shield. |
 | 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
 | 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers, Pursuit Rocks and Hidden Mummies with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
@@ -208,7 +208,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Draw | 40 | Shoots every 0.8 seconds. |
 | 2 | Double Nock | 90 | Fires 2 arrows per attack. |
-| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
+| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). This entire hero can no longer affect enemies with Energy Shield. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Explosive Rhythm | 425 | Every fifth attack has firecracker arrows: explosions deal 20 damage. |
 | 5 | Perfect Rhythm | 1,050 | Every third attack has firecrackers, including its falling arrows. |
 | 6 | Explosion Time | 2,800 | Explosion Time: For 5 seconds, arrows add explosions dealing 75 damage in radius 85. Base wait: 48 seconds. |
@@ -219,7 +219,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
+| 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). This entire hero can no longer affect enemies with Energy Shield. |
 | 2 | Frostbite | 85 | Arrows slow by 25% for 2 seconds. |
 | 3 | Lightning Leap | 200 | Every third arrow jumps lightning through 3 other enemies for 15 damage each. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Cold Snap | 450 | Every third hit on the same enemy freezes it for 1 second. |
@@ -506,7 +506,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | 2 | Twin-Feed Loader | 125 | Maintains 2 turrets. Each fires 2 bolts at up to 2 targets for 24 damage each. |
 | 3 | Steel Piercers | 300 | Maintains 3 turrets. Piercing bolts hit up to 3 enemies for 36 damage each. |
 | 4 | Workshop Row | 750 | Maintains 4 turrets. Bolts deal 48 damage each. |
-| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. Turret bolts and their explosions can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
+| 5 | Blast Bolts | 1,800 | Maintains 6 turrets. Explosive bolts deal 65 damage plus a 50-damage burst around the target. Turret bolts and their explosions can now damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). These turrets cannot affect enemies with Energy Shield. |
 | 6 | Siege Engineers | 5,200 | Maintains 8 siege turrets with 255 reach. Fires every 0.875 seconds; bolts deal 90 damage, pierce 6 enemies and keep explosive impacts. Overclock Workshop: For 8 seconds, turrets fire 2.25 times as fast. Base wait: 48 seconds. |
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
@@ -544,7 +544,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
-| 2 | Hot Shot | 130 | Explosions deal 140 fire damage within 55 units. Cannon reload takes 5.5 seconds. |
+| 2 | Hot Shot | 130 | Explosions deal 140 fire damage within 55 units. Cannon reload takes 5.5 seconds. Cannon damage cannot affect enemies with Energy Shield. |
 | 3 | Twin Broadside | 325 | Adds a second cannon. Each shot deals 200 fire damage within 60 units; reload takes 6 seconds. |
 | 4 | Powder Kegs | 800 | Each cannon deals 320 fire damage within 70 units; reload takes 6.5 seconds. |
 | 5 | Hellfire Battery | 1,900 | Adds a third cannon. Each shot deals 480 fire damage within 80 units; reload takes 7 seconds. |
@@ -573,7 +573,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Snap | 45 | Bites every 1.05 seconds for 24 damage. |
 | 2 | Double-Time Jaws | 95 | Bites every 0.8 seconds for 30 damage. |
-| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. Flaming bites and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). |
+| 3 | Ember Bite | 240 | Bites catch fire: 42 fire damage every 0.65 seconds, plus 6 burn damage per second for 3 seconds. Fire immunities apply. Flaming bites and their burns can damage Ironlings and other enemies with Iron Hardness (Pursuit Rocks also require camouflage detection). Bite damage and burns cannot affect enemies with Energy Shield. |
 | 4 | Furnace Fangs | 600 | 60 fire damage every 0.5 seconds; burn rises to 10 per second. |
 | 5 | Inferno Snapper | 1,500 | 85 fire damage every 0.4 seconds; burn rises to 16 per second. |
 | 6 | Volcanic Maw | 4,300 | 120 fire damage every 0.3 seconds; burn rises to 24 per second. Feeding Frenzy: For 8 seconds, bite 2.25 times as fast. Cannot attack while submerged. Base wait: 40 seconds. |
@@ -740,6 +740,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 30 |
 | Camoflauger | 148.5 | 12 | 2 | 6.12 seconds | 53 |
+| Greater Imp | 337.5 | 18 | 4 | 33.48 seconds | 50 |
 | Iron Ball | 13,500 | 100 | 20 | 10.63 seconds | 95 |
 | Hidden Mummy | 405 | 22 | 5 | 11.16 seconds | 65 |
 | Pursuit Rock | 225 | 22 | 5 | 11.16 seconds | 73 |
@@ -1008,3 +1009,7 @@ Pursuit Rock: first appears on round 73 (one guaranteed), then eligible in rando
 Hidden Mummy: first appears on round 65 (one guaranteed), then eligible in random waves. Base HP 405 matches Werewolf; speed matches Pursuit Rock. Reward 22 gold, loss 5 villagers, budget cost 14. Camouflage requires the same detection upgrades as Camoflauger for all hero attacks, effects and traps. No Iron Hardness or additional immunity. Uses 12 individually drawn bandaged mummy poses with a leafy border, skipping and turning.
 
 Iron Ball: first appears on round 95 with one guaranteed spawn; eligible in later random waves. Base HP 13,500 matches Weaker Cyclops; speed is 1.05 times Pursuit Rock. Iron Hardness restricts damage and damaging effects to qualified attacks, while non-damaging effects work normally. No Camouflage. Reward 100 gold, loss 20 villagers, budget cost 90. Large angular boulder with silver iron deposits; rotation follows distance traveled, so it stops rolling when movement stops.
+
+Greater Imp: round 50 guaranteed debut, HP 337.5 (5/6 Werewolf), speed 1/3 Hidden Mummy. Reward 18 gold, loss 4 villagers, wave budget 12. Energy Shield blocks all attacks/effects from Mages, fire Abominations, Blessed Blade Knights and Trick Shot or Flaming Tips Archers, including crosspaths/higher tiers. Water Serpant may affect it only with path-one throws and path-two drags. Blast Bolts turrets, Hot Shot cannons, Ember Bite damage/burns are blocked while other attacks from those heroes work. Eight drawn walking poses preserve the reference red imp with black horns and oversized claws.
+
+Retry Last Round: defeat screen restores and restarts the failed round from its pre-round checkpoint, including heroes/upgrades, gold, villagers, trees, cooldowns, seeded random state and the same wave lineup. Mid-round spending and rewards are rolled back. Checkpoint persists in saves and is replaced each round without nesting. Older saves without a checkpoint gain retry support on their next round start.
