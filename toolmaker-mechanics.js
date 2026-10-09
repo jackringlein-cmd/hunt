@@ -38,8 +38,8 @@
   if(!this.s.heroes.some(h=>h.type==='toolmaker')&&!this.s.workshop)return;
   const w=this.workshop(),now=this.s.time,owner=id=>this.s.heroes.find(h=>h.id===id),active=h=>h&&(h.stunnedUntil||0)<=now;
   for(const h of this.s.heroes){if(h.type!=='toolmaker'||!active(h))continue;this.toolTurrets(h);
-   if(h.u[2]&&(h.toolTrapAt||0)<=now){const kinds=['jaw','oil','anvil','saw','shrapnel'];h.toolTrapCount=(h.toolTrapCount||0)+1;this.toolTrap(h,kinds[(h.toolTrapCount-1)%Math.min(5,h.u[2])]);h.toolTrapAt=now+(h.u[2]>=5?5:7.5);}
-   if(h.u[2]>=6&&(h.toolBoulderAt||0)<=now){this.toolTrap(h,'boulder');h.toolBoulderAt=now+30;}
+   if(h.u[2]&&this.attackAllowed(h,'trap')&&(h.toolTrapAt||0)<=now){const kinds=['jaw','oil','anvil','saw','shrapnel'];h.toolTrapCount=(h.toolTrapCount||0)+1;this.toolTrap(h,kinds[(h.toolTrapCount-1)%Math.min(5,h.u[2])]);h.toolTrapAt=now+(h.u[2]>=5?5:7.5);}
+   if(h.u[2]>=6&&this.attackAllowed(h,'boulderTrap')&&(h.toolBoulderAt||0)<=now){this.toolTrap(h,'boulder');h.toolBoulderAt=now+30;}
   }
   w.rangs=w.rangs.filter(r=>{const h=owner(r.owner);if(!h)return false;if(!active(h)){r.start+=dt;return true;}
    const age=Math.min(r.duration,now-r.start),previous=Math.max(0,age-dt),half=r.duration/2;
@@ -66,9 +66,9 @@
    const targets=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!b.hit.includes(e.id)&&!e.serpentDive&&!e.throwId&&!e.serpentFlight&&!this.nightmareFlight(e).airborne&&e.p>=b.p-28&&e.p<=old+28).sort((a,c)=>c.p-a.p);
    for(const e of targets){if(b.budget<=0)break;b.hit.push(e.id);const before=Math.max(0,e.hp)+(e.shield||0);const multiplier=this.buffs(h).damage*this.multiplier(e,h)*(D.enemies[e.type].damageTaken?.physical??1);this.hit(e,Math.min(b.damage,b.budget/Math.max(.001,multiplier)),h,999);const spent=Math.max(0,before-Math.max(0,e.hp)-(e.shield||0));b.budget=Math.max(0,b.budget-spent);}return b.p>0&&b.budget>0;
   });
-  w.turrets=w.turrets.filter(t=>{const h=owner(t.owner);if(!h)return false;if(!active(h)||t.next>now)return true;const level=h.u[3],range=level>=6?255:170,targets=this.sorted(h,this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&distance(e,t)<=range));if(!targets.length)return true;
+  w.turrets=w.turrets.filter(t=>{const h=owner(t.owner);if(!h)return false;if(!active(h)||!this.attackAllowed(h,'turret')||t.next>now)return true;const level=h.u[3],range=level>=6?255:170,targets=this.sorted(h,this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&distance(e,t)<=range));if(!targets.length)return true;
    const shots=level>=2?2:1;for(let i=0;i<shots;i++){const target=targets[i%targets.length],proxy={...h,toolRanged:true},damage=[0,18,24,36,48,65,90][level];t.face={x:target.x,y:target.y};this.fx('arrow',t,target,'#e8c185');for(const e of this.lineTargets(t,target,range,14,level>=6?6:level>=3?3:1,h))this.hit(e,damage,proxy,level>=3?3:0,false,'physical','turret');if(level>=5)this.area(target,45,50,proxy,0,'physical','turret');}
-   t.fired=now;t.next=now+(level>=6?.875:1.25)/this.buffs(h).speed/((h.toolOverclockUntil||0)>now?h.toolOverclock:1);return true;
+   this.attackDone(h,'turret');t.fired=now;t.next=now+(level>=6?.875:1.25)/this.buffs(h).speed/((h.toolOverclockUntil||0)>now?h.toolOverclock:1);return true;
   });
  };
  const sell=Game.prototype.sell;Game.prototype.sell=function(id){const refund=sell.call(this,id);if(refund&&this.s.workshop)for(const key of ['rangs','traps','boulders','turrets'])this.s.workshop[key]=this.s.workshop[key].filter(x=>x.owner!==id);return refund;};

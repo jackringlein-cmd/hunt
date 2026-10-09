@@ -48,5 +48,7 @@
   "camoflauger-art.js",
   "enemy-preview.html",
   "assets/enemies/camoflauger-refined-green-border.png",
-  "assets/enemies/camoflauger-skip-turn-sheet.png"
+  "assets/enemies/camoflauger-skip-turn-sheet.png",
+  "attack-rotation.js",
+  "hero-controls.js"
 ]

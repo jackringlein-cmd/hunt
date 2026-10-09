@@ -107,12 +107,12 @@ function install(Game,D){
    const main=this.serpentMainPath(h),keys=['serpentThrowAt','serpentDiveAt','gooseAt','serpentBeamAt'];
    if(main<0)continue;
    // The preferred path wins when ready; the other purchased path fills its recovery time.
-   const path=(h[keys[main]]||0)<=now?main:h.u.findIndex((tier,p)=>tier>0&&p!==main&&(h[keys[p]]||0)<=now);
+   const requested=this.currentAttack(h),path=requested!==null?(requested.startsWith('serpent')&&this.attackAllowed(h,requested)&&h.u[+requested.slice(7)]&&(h[keys[+requested.slice(7)]]||0)<=now?+requested.slice(7):-1):(h[keys[main]]||0)<=now?main:h.u.findIndex((tier,p)=>tier>0&&p!==main&&(h[keys[p]]||0)<=now);
    if(path<0)continue;
    const interval=this.stats({...h,serpentMainPath:path}).interval;
    if(path===0&&this.inRange(h).length){this.serpentThrow(h);h.serpentThrowAt=now+interval;}
    if(path===1&&this.inRange(h).length){if(!this.serpentDrag(h))h.serpentDiveAt=now+interval;}
-   if(path===2){const spots=this.trapSpot(h);if(spots.length){h.serpentSurfaceUntil=now+.5;h.gooseCount=(h.gooseCount||0)+1;const point=spots[Math.floor(this.random()*spots.length)];(this.s.geese??=[]).push({owner:h.id,...point,end:now+12,fear:h.u[2]>=2&&h.gooseCount%2===0});h.gooseAt=now+interval;}}
+   if(path===2){const spots=this.trapSpot(h);if(spots.length){h.serpentSurfaceUntil=now+.5;h.gooseCount=(h.gooseCount||0)+1;const point=spots[Math.floor(this.random()*spots.length)];(this.s.geese??=[]).push({owner:h.id,...point,end:now+12,fear:h.u[2]>=2&&h.gooseCount%2===0});h.gooseAt=now+interval;this.attackDone(h,'serpent2');}}
    if(path===3&&this.serpentAttack(h,3)){h.clock=interval;}
 
   }

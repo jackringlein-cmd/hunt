@@ -143,7 +143,7 @@ All **240 upgrades** and their prices follow. Names reflect Jack's changes, espe
 | 2 | Longer Sword | 60 | Reach increases by 25%. |
 | 3 | Wide Swing | 150 | Each swing hits up to 6 enemies. |
 | 4 | Heavy Steel | 350 | Sword damage becomes 35. Sword attacks can now damage Ironlings. |
-| 5 | Ground Slam | 900 | Every fourth swing also slams all enemies in reach for 60 damage. |
+| 5 | Ground Slam | 900 | Every fourth swing also slams all enemies in reach for 60 damage. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 6 | Earthshaker | 2,500 | Sword: 60 damage. Slam: 150. A wave travels toward the entrance for twice your reach, dealing 100 damage. Seismic Slam: Slam every enemy in reach for 250 damage; push back 53.125 and stun 0.625 seconds. Base wait: 32 seconds. |
 
 Base-reference interaction notes (ability numbers superseded by the current table): A target can take damage from the sword, the ground slam, and the traveling wave. Earthshaker is a passive upgrade, not a button ability.
@@ -165,7 +165,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. Shield bashes can damage Ironlings. |
+| 1 | Shield Bash | 50 | Every third attack bashes one enemy for 15 damage and stuns for 0.25 seconds. Shield bashes can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Strong Shove | 75 | Bashes also push enemies back half your starting reach. |
 | 3 | Wide Shield | 175 | Bashes hit up to 5 enemies. |
 | 4 | Crushing Bash | 350 | Bashes deal 40 damage and stun for 0.5 seconds. |
@@ -180,7 +180,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
 | 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings. |
-| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
+| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
 | 5 | Spreading Light | 1,000 | Defeated burning enemies spread their fire to nearby enemies. |
 | 6 | Dawnbringer | 2,700 | Dawnbringer: Deal 375 damage in reach and burn for 31.25 damage per second for 8 seconds. Base wait: 36 seconds. |
@@ -208,7 +208,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Quick Draw | 40 | Shoots every 0.8 seconds. |
 | 2 | Double Nock | 90 | Fires 2 arrows per attack. |
-| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings. |
+| 3 | Trick Shot | 180 | Every third attack also drops 3 arrows for 18 damage each. The extra falling arrows can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Explosive Rhythm | 425 | Every fifth attack has firecracker arrows: explosions deal 20 damage. |
 | 5 | Perfect Rhythm | 1,050 | Every third attack has firecrackers, including its falling arrows. |
 | 6 | Explosion Time | 2,800 | Explosion Time: For 5 seconds, arrows add explosions dealing 75 damage in radius 85. Base wait: 48 seconds. |
@@ -221,7 +221,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Flaming Tips | 50 | Arrows burn for 3 damage per second for 3 seconds. Arrows and their burns can damage Ironlings. |
 | 2 | Frostbite | 85 | Arrows slow by 25% for 2 seconds. |
-| 3 | Lightning Leap | 200 | Every third arrow jumps lightning through 3 other enemies for 15 damage each. |
+| 3 | Lightning Leap | 200 | Every third arrow jumps lightning through 3 other enemies for 15 damage each. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Cold Snap | 450 | Every third hit on the same enemy freezes it for 1 second. |
 | 5 | Thunder and Flame | 1,100 | Lightning deals 30 damage and applies the burn. |
 | 6 | Wild Weather | 2,900 | Wild Weather: 8-second storm: 25 burn damage per second, 50% slow, and up to 5 lightning hits of 50 each second. Base wait: 36 seconds. |
@@ -273,7 +273,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Hidden Spikes | 50 | Places a trap every 5 seconds. It hits 3 enemies for 20 damage each and lasts 30 seconds. |
+| 1 | Hidden Spikes | 50 | Places a trap every 5 seconds. It hits 3 enemies for 20 damage each and lasts 30 seconds. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Sticky Trap | 70 | Traps slow by 30% for 3 seconds. |
 | 3 | Spring Trap | 180 | Every third trap pushes enemies back one starting reach. |
 | 4 | Packed with Trouble | 350 | Traps hit 8 enemies before breaking. |
@@ -288,7 +288,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Bone Collector | 80 | Your defeated enemies give 10% more money. |
 | 2 | Helping Hand | 100 | Other heroes in reach deal 10% more damage. |
-| 3 | Loaded Pockets | 200 | Every fifth attack also throws a 40-damage bomb. |
+| 3 | Loaded Pockets | 200 | Every fifth attack also throws a 40-damage bomb. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Finders Keepers | 650 | Enemies defeated by other heroes in reach give 5% more money. |
 | 5 | Bounty Hunter | 1,400 | Marks the strongest enemy for a 25% money bounty. |
 | 6 | Payday | 3,200 | Payday: For 10 seconds, rewards in reach gain 62.5% extra gold. Base wait: 48 seconds. |
@@ -381,10 +381,10 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Lightning Bolt | 60 | Lightning hits 2 enemies for 15 damage each. |
+| 1 | Lightning Bolt | 60 | Lightning hits 2 enemies for 15 damage each. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Longer Sparks | 70 | Lightning jumps twice as far. |
 | 3 | Chain Lightning | 200 | Lightning hits up to 6 enemies. |
-| 4 | Thunderclap | 450 | Every fifth attack deals 25 damage and stuns for 1 second throughout your reach. |
+| 4 | Thunderclap | 450 | Every fifth attack deals 25 damage and stuns for 1 second throughout your reach. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 5 | Building Charge | 1,150 | Each jump adds 5 damage: 15, 20, 25, 30, 35, 40. |
 | 6 | Eye of the Storm | 3,000 | Eye of the Storm: For 8 seconds, strike 4 times per second for 75 damage; every third strike stuns for 1.25 seconds. Base wait: 48 seconds. |
 
@@ -396,7 +396,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings. |
-| 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. |
+| 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 4 | Arcane Echo | 450 | Each beam repeats after 0.3 seconds. |
 | 5 | Unstable Magic | 1,100 | Beam hits mark enemies for 5 seconds. Defeated marked enemies explode for 50 damage nearby. |
 | 6 | Arcane Overload | 3,100 | Arcane Overload: For 8 seconds, every attack is a 125-damage armor-ignoring beam. Purchased echoes remain. Base wait: 48 seconds. |
@@ -409,7 +409,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Coiling Grip | 60 | Every 5 seconds, throw a small enemy at another enemy farther back on the path; deals 35 damage to both. Moves an entire Tiny Skeleton swarm together. Uses a knockback charge. |
+| 1 | Coiling Grip | 60 | Every 5 seconds, throw a small enemy at another enemy farther back on the path; deals 35 damage to both. Moves an entire Tiny Skeleton swarm together. Uses a knockback charge. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Strong Coils | 110 | Can also throw Zombie Guards and Headless Zombies. Collision damage rises to 60. |
 | 3 | Monster Wrestler | 260 | Can also throw Grave Trolls and Werewolves. Collision damage rises to 110. |
 | 4 | Crushing Landing | 650 | Can also throw Vampire Lords. Collision damage rises to 200; throws every 4 seconds. |
@@ -422,7 +422,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Flooded Trail | 65 | Floods around path corners. Water heroes can be placed here. If the flood disappears, they sell for the normal refund unless natural water or another flood supports them, or they have their own flood. Becomes the main attack, replacing water shots. Waits hidden beneath the flooded path and surfaces only to grab an enemy. Holds it under for 2 seconds, then rests by size: Tiny Skeleton 0.5s; Skeleton/Ghoul 1s; guard, headless, hound or shadow 2s; troll, fusion or werewolf 3s; vampire 4s; cyclops 6s; wyvern 8s. Attack-speed bonuses shorten the rest. Buying another path upgrade changes the main attack. The other purchased path can attack during its cooldown. Drowns enemies with base HP up to 80; stronger enemies resurface and take 45 water damage. Stun immunity, effect blocks and the 12-control limit apply. |
+| 1 | Flooded Trail | 65 | Floods around path corners. Water heroes can be placed here. If the flood disappears, they sell for the normal refund unless natural water or another flood supports them, or they have their own flood. Becomes the main attack, replacing water shots. Waits hidden beneath the flooded path and surfaces only to grab an enemy. Holds it under for 2 seconds, then rests by size: Tiny Skeleton 0.5s; Skeleton/Ghoul 1s; guard, headless, hound or shadow 2s; troll, fusion or werewolf 3s; vampire 4s; cyclops 6s; wyvern 8s. Attack-speed bonuses shorten the rest. Buying another path upgrade changes the main attack. The other purchased path can attack during its cooldown. Drowns enemies with base HP up to 80; stronger enemies resurface and take 45 water damage. Stun immunity, effect blocks and the 12-control limit apply. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Hidden Hunter | 120 | Drowns enemies with base HP up to 200; stronger enemies take 80 water damage. |
 | 3 | Deep Current | 275 | Drowns enemies with base HP up to 500; stronger enemies take 150 water damage. |
 | 4 | Hungry Depths | 700 | Drowns enemies with base HP up to 1200; stronger enemies take 250 water damage. Recovery after dragging is reduced by one-sixth. |
@@ -435,7 +435,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | False Goose | 50 | Places a fake goose on the path every 5 seconds. The first enemy near it stops for 0.5 seconds. Decoys last 12 seconds. |
+| 1 | False Goose | 50 | Places a fake goose on the path every 5 seconds. The first enemy near it stops for 0.5 seconds. Decoys last 12 seconds. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Startling Honk | 95 | Alternates stopping enemies and making them retreat for 1 second. |
 | 3 | Goose Patrol | 225 | Each goose affects up to 3 nearby enemies. |
 | 4 | Raucous Flock | 550 | Stops last 1 second; retreat lasts 1.5 seconds. |
@@ -448,7 +448,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Water Jet | 55 | Replaces water bolts with one uninterrupted one-second water stream through up to 3 enemies, dealing 110 water damage over the full stream to each. Follows new targets while enemies remain in reach, then rests for 3 seconds. Speed buffs shorten the rest. |
+| 1 | Water Jet | 55 | Replaces water bolts with one uninterrupted one-second water stream through up to 3 enemies, dealing 110 water damage over the full stream to each. Follows new targets while enemies remain in reach, then rests for 3 seconds. Speed buffs shorten the rest. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Pressurized Stream | 100 | Stream hits up to 5 enemies for 160 damage each over one second. Water streams can now damage Ironlings. |
 | 3 | Sweeping Torrent | 250 | Stream hits up to 8 enemies for 250 damage each over one second and pushes them 30 path units backward. |
 | 4 | Raging Rapids | 600 | Wider stream deals 400 damage over one second, ignores 3 armor, and pushes 50 units. |
@@ -463,7 +463,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Second Steel | 55 | Swings 2 melee weapons together, each hitting up to 3 enemies for 22 damage. |
+| 1 | Second Steel | 55 | Swings 2 melee weapons together, each hitting up to 3 enemies for 22 damage. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Fourfold Forge | 100 | Swings 4 weapons for 26 damage each. |
 | 3 | Six-Sided Swing | 240 | Swings 6 weapons for 32 damage each. |
 | 4 | Eightfold Arsenal | 600 | Swings 8 weapons for 40 damage each. |
@@ -476,7 +476,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Double-Rang | 60 | Replaces the hammer with a hooked double-rang that tracks its moving target on the outward flight, then returns. Range 240. Deals 24 damage, piercing up to 3 enemies outward and 3 on return. Waits for at least one double-rang to return before throwing another volley, including Rebound Storm. Purchased extra melee weapons still swing at nearby enemies. |
+| 1 | Double-Rang | 60 | Replaces the hammer with a hooked double-rang that tracks its moving target on the outward flight, then returns. Range 240. Deals 24 damage, piercing up to 3 enemies outward and 3 on return. Waits for at least one double-rang to return before throwing another volley, including Rebound Storm. Purchased extra melee weapons still swing at nearby enemies. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Twin Return | 110 | Throws 2 double-rangs together, each dealing 24 damage with 3 pierce per leg. |
 | 3 | Honed Hooks | 275 | Each double-rang deals 38 damage and pierces 5 enemies per leg. |
 | 4 | Crowd Carvers | 650 | Deals 60 damage and pierces 8 enemies per leg. |
@@ -489,12 +489,12 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Snapjaw Kit | 65 | Builds a snapjaw on the path in reach every 7.5 seconds. Deals 45 damage and stops one enemy for 0.5 seconds. Traps last 30 seconds. |
+| 1 | Snapjaw Kit | 65 | Builds a snapjaw on the path in reach every 7.5 seconds. Deals 45 damage and stops one enemy for 0.5 seconds. Traps last 30 seconds. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Oil Slick | 115 | Also builds oil traps: 20 damage and 40% slow for 3 seconds in a small area. Alternates trap types. |
 | 3 | Spring Anvil | 280 | Adds spring anvils: 100 damage and 50-unit knockback to nearby enemies. |
 | 4 | Buzzsaw Box | 700 | Adds buzzsaw boxes: hits up to 6 nearby enemies for 140 damage. |
 | 5 | Shrapnel Crate | 1,700 | Adds shrapnel crates: 220 damage in a larger area. Normal trap construction speeds up to every 5 seconds. |
-| 6 | Boulder Trap | 5,000 | Keeps previous traps and builds a large Boulder Trap every 30 seconds. When triggered, its boulder rolls toward the entrance for up to 8 seconds, dealing 1600 damage per enemy. Disappears after dealing 7500 total damage or reaching the entrance. Boulder Trap: Place a Boulder Trap in reach. Its boulder deals 2000 damage per enemy with a 9375 total damage budget and rolls for up to 8 seconds. Base wait: 64 seconds. |
+| 6 | Boulder Trap | 5,000 | Keeps previous traps and builds a large Boulder Trap every 30 seconds. When triggered, its boulder rolls toward the entrance for up to 8 seconds, dealing 1600 damage per enemy. Disappears after dealing 7500 total damage or reaching the entrance. Boulder Trap: Place a Boulder Trap in reach. Its boulder deals 2000 damage per enemy with a 9375 total damage budget and rolls for up to 8 seconds. Base wait: 64 seconds. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 
 Base-reference interaction notes (ability numbers superseded by the current table): Uses the existing two-path rules, tier limits, immunity checks and hero damage bonuses.
 
@@ -502,7 +502,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Pocket Crossbow | 70 | Builds one nearby crossbow turret. Shoots for 18 damage every 1.25 seconds within 170 reach. Turrets disappear when their Tool Maker is sold. |
+| 1 | Pocket Crossbow | 70 | Builds one nearby crossbow turret. Shoots for 18 damage every 1.25 seconds within 170 reach. Turrets disappear when their Tool Maker is sold. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Twin-Feed Loader | 125 | Maintains 2 turrets. Each fires 2 bolts at up to 2 targets for 24 damage each. |
 | 3 | Steel Piercers | 300 | Maintains 3 turrets. Piercing bolts hit up to 3 enemies for 36 damage each. |
 | 4 | Workshop Row | 750 | Maintains 4 turrets. Bolts deal 48 damage each. |
@@ -517,7 +517,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Bow Bash | 55 | Every 5 seconds, lunges its boat at enemies in reach and returns. Deals 45 damage to up to 3 enemies along the charge. |
+| 1 | Bow Bash | 55 | Every 5 seconds, lunges its boat at enemies in reach and returns. Deals 45 damage to up to 3 enemies along the charge. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Iron Prow | 100 | Metal prow deals 80 damage and ignores 3 armor. |
 | 3 | Razor Bow | 250 | Sharpened prow deals 140 damage through up to 5 enemies. |
 | 4 | Boarding Breaker | 600 | Deals 240 damage through up to 8 enemies. Charges every 4 seconds. Boat charges can now damage Ironlings. |
@@ -543,7 +543,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings. |
+| 1 | Deck Cannon | 70 | Adds a cannon firing every 5 seconds. Explodes for 80 fire damage within 45 units. Fire immunities apply. Rocks continue between cannon shots. Cannon shots can damage Ironlings. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Hot Shot | 130 | Explosions deal 140 fire damage within 55 units. Cannon reload takes 5.5 seconds. |
 | 3 | Twin Broadside | 325 | Adds a second cannon. Each shot deals 200 fire damage within 60 units; reload takes 6 seconds. |
 | 4 | Powder Kegs | 800 | Each cannon deals 320 fire damage within 70 units; reload takes 6.5 seconds. |
@@ -556,7 +556,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Flying Tricorn | 50 | Every 5 seconds, throws a returning hat. Deals 10 damage, piercing 2 enemies per leg. Stuns enemies with base HP up to 200 for 0.5 seconds. |
+| 1 | Flying Tricorn | 50 | Every 5 seconds, throws a returning hat. Deals 10 damage, piercing 2 enemies per leg. Stuns enemies with base HP up to 200 for 0.5 seconds. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Weighted Brim | 95 | Deals 18 damage with 3 pierce; stuns enemies up to 500 base HP for 0.75 seconds. |
 | 3 | Steel-Lined Hat | 240 | Deals 30 damage with 4 pierce; stuns enemies up to 1500 base HP for 1 second. |
 | 4 | Giant Stopper | 600 | Deals 45 damage with 5 pierce; stuns enemies up to 15000 base HP for 1.25 seconds, including Weaker Cyclops after their blocks are spent. |
@@ -584,7 +584,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Belly Flop | 60 | Leaves its shell, leaps high with one full flip onto the path, slams up to 4 enemies for 60 damage within 45 units, rolls back to its shell with tucked head and flippers and puts its shell on. Starts every 6 seconds within 230 reach. |
+| 1 | Belly Flop | 60 | Leaves its shell, leaps high with one full flip onto the path, slams up to 4 enemies for 60 damage within 45 units, rolls back to its shell with tucked head and flippers and puts its shell on. Starts every 6 seconds within 230 reach. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Heavy Landing | 120 | 100 damage, 55 impact radius, up to 6 enemies. Body slams can now damage Ironlings. |
 | 3 | Crashing Tides | 300 | 170 damage, 65 radius, up to 9 enemies. Starts every 5 seconds. |
 | 4 | Breaker Belly | 750 | 280 damage, 75 radius, up to 12 enemies. |
@@ -597,7 +597,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Shell Courier | 70 | Has 1 shell space; packs enemies of up to 200 base HP per member into its shell, then throws it out and back. 45 collision damage, 3 pierce per leg, 230 reach, 7-second wait. Captured enemies take 45 damage when released at their original path position. Tiny skeletons use 0.1 space each, ordinary enemies 1, Grave Trolls, Flesh Golems and Werewolves 2, and Weaker Cyclops 3. Tiny groups stay together. Control immunities and limits apply; can throw an empty shell if no enemy can be packed. |
+| 1 | Shell Courier | 70 | Has 1 shell space; packs enemies of up to 200 base HP per member into its shell, then throws it out and back. 45 collision damage, 3 pierce per leg, 230 reach, 7-second wait. Captured enemies take 45 damage when released at their original path position. Tiny skeletons use 0.1 space each, ordinary enemies 1, Grave Trolls, Flesh Golems and Werewolves 2, and Weaker Cyclops 3. Tiny groups stay together. Control immunities and limits apply; can throw an empty shell if no enemy can be packed. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Packed Shell | 135 | Has 2 shell spaces; packs enemies of up to 500 base HP. 80 damage, 5 pierce per leg. |
 | 3 | Ricochet Carapace | 340 | Has 3 shell spaces; packs enemies of up to 1500 base HP. 140 damage, 8 pierce. Throws every 6 seconds. |
 | 4 | Splinter Shell | 850 | Has 4 shell spaces; packs enemies of up to 2500 base HP. 220 damage, 12 pierce. Shell now explodes at the far end instead of returning, for 160 physical damage in 90 units, spraying 8 shards for 45 damage each. Turtle submerges for 1 second and resurfaces wearing a new shell. |
@@ -610,7 +610,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Treasure Diver | 80 | Adds Submerged to the targeting menu. While selected, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
+| 1 | Treasure Diver | 80 | Adds a Submerge button beside targeting. Press to earn gold underwater; press Return to normal to surface. While submerged, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
 | 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Coral Cache | 400 | Submerged income rises to 1 gold per second. |
 | 4 | Sunken Vault | 1,000 | Submerged income rises to 2 gold per second. |
@@ -638,7 +638,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Become the Flame | 70 | Unlocks Living Flame targeting. Choose a path point in reach; moves there, becomes a tall flame and stays until targeting changes. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
+| 1 | Become the Flame | 70 | Unlocks a Living Flame button beside targeting. Press it and choose a path point in reach; moves there, becomes a tall flame and stays until you press Return to normal. Aim priority stays separate. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
 | 2 | Hungry Fire | 140 | 28 contact damage; burn 10 per second. |
 | 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 4 | Inferno Heart | 875 | 70 contact damage within 48 units; burn 25 per second. |
@@ -651,7 +651,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Conjured Lash | 65 | Two-handed fire whip replaces other attacks: 75 damage every 3 seconds, 220 reach, 35 knockback. With tier 3+ in another path, performs two attacks from that path then one whip strike. Melee reach stays 95. |
+| 1 | Conjured Lash | 65 | Two-handed fire whip: 75 damage every 3 seconds, 220 reach, 35 knockback. Alternates with punches and other unlocked attacks at any tier. Use Attack rotation beside targeting to choose counts, order or disable attacks. Melee reach stays 95. |
 | 2 | Long Ember | 130 | 120 fire damage within 240 reach; 45 knockback. |
 | 3 | Searing Crack | 325 | 190 fire damage, strikes up to 2 enemies; 60 knockback. |
 | 4 | Backdraft Whip | 800 | 300 fire damage within 270 reach, up to 3 enemies; 75 knockback. |
@@ -664,7 +664,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Conjure Boulder | 80 | Conjures a large fire boulder, raises it and smashes it onto enemies within 95 melee reach. 220 fire damage within 45 units, up to 4 targets; boulder shatters, then needs 10 seconds to recharge. |
+| 1 | Conjure Boulder | 80 | Conjures a large fire boulder, raises it and smashes it onto enemies within 95 melee reach. 220 fire damage within 45 units, up to 4 targets; boulder shatters, then needs 10 seconds to recharge. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Magma Mass | 160 | 360 damage within 50 units, up to 6 targets. |
 | 3 | Crushing Sun | 400 | 580 damage within 55 units, up to 8 targets. |
 | 4 | Volcanic Hammer | 1,000 | 900 damage within 60 units, up to 12 targets. |
@@ -679,7 +679,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Surging Charge | 65 | Dash out and back, dealing 70 water damage per pass to up to 12 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
+| 1 | Surging Charge | 65 | Dash out and back, dealing 70 water damage per pass to up to 12 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Cutting Wake | 140 | Dash out and back, dealing 105 water damage per pass to up to 16 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
 | 3 | Tidal Sprint | 350 | Dash out and back, dealing 140 water damage per pass to up to 20 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
 | 4 | Razor Current | 900 | Dash out and back, dealing 175 water damage per pass to up to 24 enemies per pass. Recover without attacking for 3 seconds; 8-second cooldown. |
@@ -692,7 +692,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Wet Fur | 65 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 25% for 2.5 seconds. Cannot attack during shaking; 9-second cooldown. |
+| 1 | Wet Fur | 65 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 25% for 2.5 seconds. Cannot attack during shaking; 9-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Heavy Spray | 140 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 30% for 3 seconds. Cannot attack during shaking; 9-second cooldown. |
 | 3 | Chilling Shower | 350 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 35% for 3.5 seconds. Cannot attack during shaking; 9-second cooldown. |
 | 4 | Saturating Storm | 900 | Shake for 3 seconds, spraying enemies within 230 reach once per second. Slows by 40% for 4 seconds. Cannot attack during shaking; 9-second cooldown. |
@@ -705,7 +705,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Silent Dive | 65 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 400 water damage in a 40 radius. Leap back into the water; 16-second cooldown. |
+| 1 | Silent Dive | 65 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 400 water damage in a 40 radius. Leap back into the water; 16-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Heavy Landing | 140 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 600 water damage in a 45 radius. Leap back into the water; 16-second cooldown. Leap landings can now damage Ironlings. |
 | 3 | Abyss Hunter | 350 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 800 water damage in a 50 radius. Leap back into the water; 16-second cooldown. |
 | 4 | Crushing Breach | 900 | Dive for 2 seconds, then leap onto the strongest enemy in 230 reach for 1000 water damage in a 55 radius. Leap back into the water; 16-second cooldown. |
@@ -718,7 +718,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. Use Attack rotation beside targeting to choose its order and number of uses, or turn it off. Listed automatic attack counts apply until you save a custom rotation. |
 | 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Paralyzing Presence | 350 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 4 | Ancient Terror | 900 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
@@ -977,10 +977,10 @@ Moonlit Marsh life reward: completing rounds 30, 60, 90 and every further multip
 Third map — Volcanic Ruins: an independent saved adventure with an ash-brown curling road on grey rocky ground, following Jack’s drawing, a broad orange lava shoreline and southwest lava pool (not buildable), three blue fresh-water pools for Water Serpants and Pirates, no cleric graves, and a southern outpost. Uses the existing enemy waves, prices and starting resources. Road movement, water placement and trap placement use this map’s own geometry. One decorative burning trunk without branches or leaves. Smooth lava and water shorelines are shared by placement and drawing. Existing enemy progress is migrated to the reshaped route. No removable trees. All maps grant only the new-enemy introduction reward: up to 10 villagers, capped at 101, after clearing the introducing round. Canvas scenery: volcano-art.js.
 
 
-Turtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps high with one full flip above the path, lands with capped area damage, rolls back to its shell with tucked head and flippers and wears its shell again; Shellstorm quickly scoops eligible enemies into its shell, with 1–6 spaces across upgrades (tiny 0.1 per member, ordinary 1, brute/fusion/werewolf 2, giant 3; swarms stay together), then packs these groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or selecting Submerged releases passengers safely. Sunken Treasure unlocks Submerged in the targeting menu: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.
+Turtle: ninth hero, water-only including flooded paths, 130 gold. Base melee bite: 20 physical damage every 1.4 seconds within 110 reach. Four six-tier paths: Blazing Jaws speeds bites and switches them to fire at tier 3, with burns; Tidal Body Slam leaves its shell, leaps high with one full flip above the path, lands with capped area damage, rolls back to its shell with tucked head and flippers and wears its shell again; Shellstorm quickly scoops eligible enemies into its shell, with 1–6 spaces across upgrades (tiny 0.1 per member, ordinary 1, brute/fusion/werewolf 2, giant 3; swarms stay together), then packs these groups into a returning shell, damages collisions and releases surviving passengers at their original route position. Tier 4+ shells explode at the far end instead of returning, spray physical shrapnel and require 1 second underwater to regrow a shell. Special attacks reach 230 units; bites remain melee. Capture obeys enemy size, immunity, blocks and the 12-control cap; swarms travel together. Shellstorm cannot capture bosses. Selling, stun or switching on Submerged releases passengers safely. Sunken Treasure unlocks a Submerge toggle beside targeting, with a Return to normal action to surface: stops all attacks and earns 1/3, 1/2, 1, 2, 3 or 5 gold per active-round second across tiers 1-6. No income while stunned or between rounds. Fractional earnings persist through saves and mode changes. Crosspathed specials alternate when ready; abilities unlock only at tier 6. Sources: turtle-mechanics.js and turtle-art.js; tests/turtle.test.js.
 
 
-Flaming Abomination: tenth hero, 160 gold; land/lava fire form or water/flooded-path beast form. Red fire ape with a broad hunched back, lowered ape face, long heavy arms, and both fists planted on the ground while idle. Curved silhouettes, layered animated flame tongues, rising embers and yellow-white molten fissures follow the supplied red upper creature; arms lift for punches, whips and overhead boulders. Base melee attack: 24 fire damage every 1.25 seconds within 95 reach, plus a 2-second burn at 4 damage per second. Four paths: Flurry of Blows (faster punches), Living Inferno (Living Flame targeting: choose and lock a legal path point inside anchor range; travel there and become a tall flame until another targeting mode is chosen), Scorchlash (two-handed fire whip replacing other attacks until another path reaches tier 3; then repeats two attacks from that path followed by one whip attack, with knockback, outer reach 220/240/240/270/270/300 and unchanged inner melee reach), Molten Cataclysm (conjured fire boulder, 1.2-second windup, capped area impact on a melee target, visible shattering, 10-second recharge or 9 at tier 5+). Flame damage is throttled per enemy every 0.5 seconds, applies burn and detects path crossings. Form disables other attacks; stun suspends all attacks. Flame position persists between rounds and saves; another target mode returns to the original placement. Fire immunity, hidden Shadow immunity, and the three-displacement limit apply. All 24 upgrade descriptions and tier-six primary abilities are included. Files: abomination-mechanics.js, abomination-art.js, tests/abomination.test.js.
+Flaming Abomination: tenth hero, 160 gold; land/lava fire form or water/flooded-path beast form. Red fire ape with a broad hunched back, lowered ape face, long heavy arms, and both fists planted on the ground while idle. Curved silhouettes, layered animated flame tongues, rising embers and yellow-white molten fissures follow the supplied red upper creature; arms lift for punches, whips and overhead boulders. Base melee attack: 24 fire damage every 1.25 seconds within 95 reach, plus a 2-second burn at 4 damage per second. Four paths: Flurry of Blows (faster punches), Living Inferno (Living Flame toggle beside targeting: choose and lock a legal path point inside anchor range; travel there and become a tall flame until Return to normal is pressed), Scorchlash (two-handed fire whip alternating with punches and unlocked boulders at any tier; use Attack rotation to configure counts and order or disable attacks, with knockback, outer reach 220/240/240/270/270/300 and unchanged inner melee reach), Molten Cataclysm (conjured fire boulder, 1.2-second windup, capped area impact on a melee target, visible shattering, 10-second recharge or 9 at tier 5+). Flame damage is throttled per enemy every 0.5 seconds, applies burn and detects path crossings. Form disables other attacks; stun suspends all attacks. Flame position persists between rounds and saves; turning the flame toggle off returns to the original placement without changing aim priority. Fire immunity, hidden Shadow immunity, and the three-displacement limit apply. All 24 upgrade descriptions and tier-six primary abilities are included. Files: abomination-mechanics.js, abomination-art.js, tests/abomination.test.js.
 
 
 Abomination placement forms: land keeps Flaming Abomination; lava keeps the fire form and multiplies all its fire damage, burn and ability damage by 1.10. Natural water or a flooded path creates the permanent Abomination variant at the same 160-gold price, with its own 24 upgrades and saved form. Flood-dependent placement follows other water heroes: if its supporting flood disappears, the tower is sold with the normal refund. Hovering across the water boundary crossfades artwork over 0.22 seconds. The extinguished form is an extinguished version of the fire ape: the same hunched back, swept crest, lowered face and long grounded arms, with prominent charred spikes along its back, shoulders and forearms, cooled charcoal-brown surfaces, wet highlights, dripping water and faint steam. Its bite/dash/shake/dive/leap/glare animations remain. Base bite: 28 physical damage, 1.4-second interval, 95 melee reach; special attacks use 230 reach. Paths: Crashing Surge, Stormshake, Deepwater Ambush, Predator’s Glare. Exclusive actions; bite and other actions stop during specials. Dash hits each enemy once per pass and enforces 3 seconds of recovery. Glare takes 2 seconds, deals no damage and ignores status immunities, boss blocks and the ordinary slow cap. It cannot stack, shares a 2-stop lifetime cap across towers, and allows another stop only 3 seconds after the preceding stop expires. Swarms share the stop and limits. Stunned casters pause their actions and suppress their existing debuffs. Saves preserve action progress and shared glare counters; round end returns the beast home.
@@ -996,3 +996,6 @@ Ironling: first appears on round 47 (one guaranteed, then joins eligible random 
 
 
 Camoflauger: introduced on round 55 with one guaranteed spawn; eligible in later random waves. Base HP 148.5 (three regular Ghouls), speed 7/8 of a regular Ghoul, reward 12 gold, village loss 2, wave budget cost 7. Normal non-boss health scaling applies. Uses the approved black-outlined salamander image with varied hand-drawn leaves on a filled green border (assets/enemies/camoflauger-refined-green-border.png). Animation uses 12 individually drawn poses from assets/enemies/camoflauger-skip-turn-sheet.png, based on the approved artwork: raised knees, skipping leaps, landings, side views and a leafy back view. Frames retain their proportions with no mesh deformation, squash or flattened turns. Movement drives frame selection and stun/freeze stops it. Heroes ignore it unless they own Radiant Swing, Steady Aim, Pick a Target, Magic Missile, Roaring Column, Pearl Seeker or Dread Focus; crosspaths and higher tiers count. Detection applies to every attack and effect owned by that hero, including traps. Unqualified heroes cannot target, damage, debuff, knock back, capture or stop it. Their traps and decoys do not trigger, and piercing/chain attacks skip it without consuming hits. Enemy-caused Hell Hound explosions still work. Upgrade descriptions explain detection. Animated comparison: enemy-preview.html. Tests: tests/camoflauger.test.js.
+
+
+Attack rotation: heroes with multiple unlocked attacks have a button beside aim priority. The paused editor lets players choose an ordered repeating list, with 0–99 successful uses per step (0 disables that entry), duplicate steps, reordering, removal, and restoration of automatic attacks. An empty list disables automatic attacks. Cooldowns, range, targets, stun and exclusive actions still apply; failed attempts never advance the sequence. Launched projectiles and attacks complete normally; abilities remain manual. A stream, volley, trap placement or turret volley counts as one use, not one use per damage tick or target. New attacks remain excluded from an existing custom list until added. Order and partial counts save with the hero. Flame and submerged modes override attacks while active, preserve rotation progress and aim priority, and use separate themed toggle icons which change to a return symbol when active. Old saves with modes stored in targeting migrate automatically. Sources: attack-rotation.js and hero-controls.js; tests/attack-rotation.test.js.
