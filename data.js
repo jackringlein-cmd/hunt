@@ -132,6 +132,7 @@ const enemies={
 
  headless:{name:'Headless Zombie',immuneDamage:['poison'],hp:180,loss:3,reward:12,time:30/1.68/1.3,wave:35,color:'#9eaf78',hint:'POISON IMMUNE: poison damage and Withering Poison cannot affect it. Weapons, fire and other magic still work. At one-third health, bowls its matching head halfway toward a nearby hero. After screaming, the head vanishes and stuns the nearby unstunned hero with the most gold invested for 15 seconds. All hero stuns end when the round ends.'},
 
+ camoflauger:{name:'Camoflauger',hp:148.5,loss:2,reward:12,time:9/1.68/(7/8),wave:55,color:'#27843f',hint:'CAMOUFLAGE: heroes ignore it unless they have Radiant Swing, Steady Aim, Pick a Target, Magic Missile, Roaring Column, Pearl Seeker or Dread Focus. Crosspaths and higher tiers count. Detection allows ALL of that hero’s attacks, effects and traps to interact with it.'},
  ironling:{name:'Ironling',hp:180,loss:3,reward:15,time:45/1.68,wave:47,color:'#929896',hint:'IRON SHELL: only these upgraded attacks hurt it (crosspaths and higher tiers count): Shield Bash, Lingering Light burn, Heavy Steel swords, Trick Shot extra arrows, Flaming Tips arrows/burn, Vital Strike critical hits, Armor Breaker magic, Fireball, Pressurized Stream, Blast Bolts turrets, Deck Cannon, Boarding Breaker, both Heavy Landing slams, and Ember Bite. Every attack from the FIRE Flaming Abomination works, even unupgraded. Extinguished form needs Heavy Landing. Other attacks and damaging effects deal no damage; slow, stun, fear, knockback and other non-damaging effects still work.'},
  fusion:{name:'Fusion Skeleton',immuneEffects:['push'],hp:270,loss:5,reward:20,time:45/1.68,wave:20,color:'#b2a98a',hint:'KNOCKBACK IMMUNE: its heavy fused body cannot be pushed backward. Slow, stun and fear still work within their normal limits. Its chest bursts open when defeated, releasing five swarms of ten Tiny Skeletons.'},
 
@@ -227,6 +228,9 @@ for(const [hero,pathIndex,tier,note] of [
  ['waterbeast',2,2,'Leap landings can now damage Ironlings.'],
  ['turtle',0,3,'Flaming bites and their burns can damage Ironlings.']
 ]) heroes[hero].paths[pathIndex].descriptions[tier-1]+=' '+note;
+
+// Detection belongs to the whole hero, including crosspath attacks and traps.
+for(const [hero,p,tier] of [['knight',3,3],['archer',3,2],['rogue',0,2],['mage',3,1],['abomination',1,3],['turtle',3,2],['waterbeast',3,2]]) heroes[hero].paths[p].descriptions[tier-1]+=' This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths.';
 
 const data={heroes,enemies,points,trees,graves,maps,villagerPrices:[{max:65,cost:10},{max:85,cost:20},{max:100,cost:100},{max:110,cost:500},{max:Number.MAX_SAFE_INTEGER,cost:1000}],treeHitboxScale:1.75,heroDamageScale:1.25,leaderBoostScale:1.25,width:1100,height:720};
 

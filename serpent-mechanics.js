@@ -116,7 +116,7 @@ function install(Game,D){
    if(path===3&&this.serpentAttack(h,3)){h.clock=interval;}
 
   }
-  this.s.geese=(this.s.geese||[]).filter(goose=>{const h=this.s.heroes.find(h=>h.id===goose.owner);if(!h||goose.end<=now)return false;if((h.stunnedUntil||0)>now)return true;const list=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&distance(e,goose)<38).slice(0,h.u[2]>=5?6:h.u[2]>=3?3:1);if(!list.length)return true;for(const e of list)this.apply(e,goose.fear?'fear':'stun',goose.fear?(h.u[2]>=4?1.5:1):(h.u[2]>=4?1:.5),1,h.id);this.fx('ring',goose,goose,'#f5eacc',40);return false;});
+  this.s.geese=(this.s.geese||[]).filter(goose=>{const h=this.s.heroes.find(h=>h.id===goose.owner);if(!h||goose.end<=now)return false;if((h.stunnedUntil||0)>now)return true;const list=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&distance(e,goose)<38).slice(0,h.u[2]>=5?6:h.u[2]>=3?3:1);if(!list.length)return true;for(const e of list)this.apply(e,goose.fear?'fear':'stun',goose.fear?(h.u[2]>=4?1.5:1):(h.u[2]>=4?1:.5),1,h.id);this.fx('ring',goose,goose,'#f5eacc',40);return false;});
  };
 }
 if(typeof module!=='undefined')module.exports=install;else root.installSerpent=install;

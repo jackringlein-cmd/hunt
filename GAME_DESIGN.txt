@@ -180,7 +180,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Blessed Blade | 45 | Adds 5 holy damage per sword hit. |
 | 2 | Lingering Light | 70 | Burns enemies for 3 damage per second for 3 seconds. Holy burns and later light attacks can damage Ironlings. |
-| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. |
+| 3 | Radiant Swing | 170 | Every third swing sends light through up to 8 enemies for 25 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 4 | Sacred Fire | 400 | Burns deal 8 per second for 5 seconds. Light waves apply the burn too. |
 | 5 | Spreading Light | 1,000 | Defeated burning enemies spread their fire to nearby enemies. |
 | 6 | Dawnbringer | 2,700 | Dawnbringer: Deal 375 damage in reach and burn for 31.25 damage per second for 8 seconds. Base wait: 36 seconds. |
@@ -233,7 +233,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Keen Sight | 35 | Reach increases 25%. |
-| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. |
+| 2 | Steady Aim | 65 | Arrows deal double damage to full-health enemies. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Hunter’s Mark | 225 | Marks the strongest enemy in reach. All heroes deal 20% more damage to it. |
 | 4 | Watchtower | 550 | Can shoot and mark anywhere on the map. |
 | 5 | Find the Weak Spot | 1,200 | Each hit on the marked enemy adds 4 damage, up to 40. Resets when the target changes. |
@@ -248,7 +248,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Sharp Daggers | 40 | Dagger damage becomes 18. |
-| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. |
+| 2 | Pick a Target | 65 | Deals 10 extra damage to the strongest enemy in reach. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Vital Strike | 160 | Every third attack deals double damage. Vital Strike critical hits can damage Ironlings. |
 | 4 | Marked for Death | 450 | Hits on a marked target add 3 damage, up to 30. Its mark and damage bonus move to a new enemy when it falls. |
 | 5 | Hidden Weakness | 1,100 | Every third hit on the marked enemy makes it take 25% more damage from all heroes for 3 seconds. |
@@ -394,7 +394,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
-| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. |
+| 1 | Magic Missile | 35 | Magic follows its target and deals 15 damage. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 2 | Armor Breaker | 80 | Ignores 3 armor. Main magic attacks and later arcane attacks can damage Ironlings. |
 | 3 | Piercing Beam | 200 | Every third attack becomes a 30-damage beam through up to 8 enemies. |
 | 4 | Arcane Echo | 450 | Each beam repeats after 0.3 seconds. |
@@ -611,7 +611,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Treasure Diver | 80 | Adds Submerged to the targeting menu. While selected, cannot attack and earns 1 gold every 3 seconds of active round time. No income while stunned or between rounds. |
-| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. |
+| 2 | Pearl Seeker | 160 | Submerged income rises to 1 gold every 2 seconds. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Coral Cache | 400 | Submerged income rises to 1 gold per second. |
 | 4 | Sunken Vault | 1,000 | Submerged income rises to 2 gold per second. |
 | 5 | Deep-Sea Riches | 2,400 | Submerged income rises to 3 gold per second. |
@@ -640,7 +640,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 |---|---|---:|---|
 | 1 | Become the Flame | 70 | Unlocks Living Flame targeting. Choose a path point in reach; moves there, becomes a tall flame and stays until targeting changes. Replaces other attacks. Deals 18 fire damage every 0.5 seconds within 38 units and burns for 6 damage per second for 3 seconds. |
 | 2 | Hungry Fire | 140 | 28 contact damage; burn 10 per second. |
-| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. |
+| 3 | Roaring Column | 350 | 45 contact damage within 43 units; burn 16 per second. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 4 | Inferno Heart | 875 | 70 contact damage within 48 units; burn 25 per second. |
 | 5 | Towering Pyre | 2,200 | 110 contact damage within 54 units; burn 40 per second. |
 | 6 | Everlasting Inferno | 6,000 | 170 contact damage within 60 units; burn 60 per second. Solar Pillar: Become a flame at your locked spot, or the nearest path point in reach. For 8 seconds, contact damage and burn are 2.25 times as strong. Base wait: 48 seconds. |
@@ -719,7 +719,7 @@ Base-reference interaction notes (ability numbers superseded by the current tabl
 | Level | Upgrade | Cost | Effect |
 |---|---|---:|---|
 | 1 | Unblinking Eyes | 65 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 2.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
-| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
+| 2 | Dread Focus | 140 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. This hero can now detect Camoflaugers with all attacks, effects and traps, including crosspaths. |
 | 3 | Paralyzing Presence | 350 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 3.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 4 | Ancient Terror | 900 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
 | 5 | Apex Stare | 2,300 | Stare at the strongest eligible enemy for 2 seconds, then stop it for 4.5 seconds, ignoring all immunities. No damage or other attacks during the stare. Cannot stack; 3 seconds of protection after it ends; maximum 2 stops per enemy across all heroes. 10-second cooldown. |
@@ -739,6 +739,7 @@ All skeleton enemies move 68% faster than their previous speeds, including the a
 | Hell Hound | 99 | 12 | 3 | 1.79 seconds | 55 |
 | Shadow Goul | 337.5 | 16 | 4 | 29.76 seconds | 45 |
 | Headless Zombie | 180 | 12 | 3 | 13.74 seconds | 35 |
+| Camoflauger | 148.5 | 12 | 2 | 6.12 seconds | 55 |
 | Ironling | 180 | 15 | 3 | 26.79 seconds | 47 |
 | Fusion Skeleton | 270 | 20 | 5 | 26.79 seconds | 20 |
 | Skeleton | 63 | 5 | 1 | 17.86 seconds | 1 |
@@ -992,3 +993,6 @@ Plague Wyvern balance: base health reduced 35%, from 130,500 to 84,825. Speed, p
 
 
 Ironling: first appears on round 47 (one guaranteed, then joins eligible random waves). Base health 180, two-thirds of Fusion Skeleton; movement time 45/1.68 seconds, identical to Fusion. Standard non-boss and endless health scaling applies. Reward 15 gold; village loss 3; wave budget cost 8. Animated grey hunched shell, short blunt head, black eye, two reaching arms and walking legs follow the supplied reference. Iron shell rejects unqualified tower damage and damaging statuses before shields or HP are touched. Slow, stun, freeze, fear, knockback and non-damaging debuffs still follow their normal rules. Crosspaths and later tiers retain eligibility, but do not unlock unrelated attacks. Counters: Knight Shield Bash and its upgrades; Lingering Light burns/holy attacks; Heavy Steel sword attacks; Archer Trick Shot bonus arrows; Flaming Tips arrows and burns; Rogue Vital Strike critical hits and Death Strike; Mage Armor Breaker projectiles/beams and arcane explosions; Fireball and its fire-path damage; Serpent Pressurized Stream beams; Tool Maker Blast Bolts turrets; Pirate Deck Cannon broadsides and Boarding Breaker rams; Turtle Heavy Landing slams and Ember Bite fire bites/burns; Extinguished Abomination Heavy Landing leaps. All fire-form Flaming Abomination damage works, even unupgraded. Poison, unrelated crosspath weapons, basic attacks without their qualifying upgrades, and unlisted abilities remain blocked. Enemy-caused Hell Hound explosions still work. Sources: ironling-art.js, engine.js; tests/ironling.test.js.
+
+
+Camoflauger: introduced on round 55 with one guaranteed spawn; eligible in later random waves. Base HP 148.5 (three regular Ghouls), speed 7/8 of a regular Ghoul, reward 12 gold, village loss 2, wave budget cost 7. Normal non-boss health scaling applies. Orange-red body with mottled green camouflage follows the supplied reference. Heroes ignore it unless they own Radiant Swing, Steady Aim, Pick a Target, Magic Missile, Roaring Column, Pearl Seeker or Dread Focus; crosspaths and higher tiers count. Detection applies to every attack and effect owned by that hero, including traps. Unqualified heroes cannot target, damage, debuff, knock back, capture or stop it. Their traps and decoys do not trigger, and piercing/chain attacks skip it without consuming hits. Enemy-caused Hell Hound explosions still work. Upgrade descriptions explain detection. Animated comparison: enemy-preview.html. Tests: tests/camoflauger.test.js.

@@ -26,14 +26,14 @@
  Game.prototype.updatePirates=function(dt){const now=this.s.time;for(const h of this.s.heroes){if(h.type!=='pirate')continue;
   if((h.stunnedUntil||0)>now){delete h.pirateRam;if(h.pirateHat){h.pirateHat.start+=dt;h.pirateHat.end+=dt;}continue;}
   const ram=h.pirateRam;if(ram){if(!ram.hit&&now>=ram.start+.5){ram.hit=true;const target=this.s.enemies.find(e=>e.id===ram.target&&!e.dead&&!e.serpentDive&&!e.serpentFlight);if(target){const dx=target.x-h.x,dy=target.y-h.y,len=Math.hypot(dx,dy)||1,f=Math.min(1,this.range(h)/len);ram.to={x:h.x+dx*f,y:h.y+dy*f};}
-    const targets=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&gap(e,ram.from,ram.to)<35).sort((a,b)=>distance(h,a)-distance(h,b)).slice(0,ram.limit);for(const e of targets)this.hit(e,ram.damage,h,ram.ignore,false,'physical','ram');this.fx('ring',ram.to,ram.to,'#d9d9c8',40);}
+    const targets=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&!e.throwId&&!this.nightmareFlight(e).airborne&&gap(e,ram.from,ram.to)<35).sort((a,b)=>distance(h,a)-distance(h,b)).slice(0,ram.limit);for(const e of targets)this.hit(e,ram.damage,h,ram.ignore,false,'physical','ram');this.fx('ring',ram.to,ram.to,'#d9d9c8',40);}
    if(now>=ram.end)delete h.pirateRam;
   }
   const hat=h.pirateHat;if(hat){const age=Math.min(1.6,now-hat.start),prev=Math.max(0,age-dt),half=.8;
    if(prev<half){const target=this.s.enemies.find(e=>e.id===hat.target&&!e.dead&&!e.serpentDive&&!e.serpentFlight);if(target)hat.to={x:target.x,y:target.y};}
    const point=t=>{const f=t<=half?t/half:2-t/half;return{x:hat.from.x+(hat.to.x-hat.from.x)*f,y:hat.from.y+(hat.to.y-hat.from.y)*f};};
    const times=prev<half&&age>half?[prev,half,age]:[prev,age];for(let i=1;i<times.length;i++){const from=i===1?{x:hat.x,y:hat.y}:point(times[i-1]),to=point(times[i]),hits=times[i-1]>=half?hat.back:hat.out;
-    for(const e of this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&gap(e,from,to)<=20).sort((a,b)=>distance(from,a)-distance(from,b))){if(hits.length>=hat.pierce)break;if(hits.includes(e.id))continue;hits.push(e.id);this.hit(e,hat.damage,h);if(!hat.stunned.includes(e.swarmId??e.id)&&(hat.maxHp==null||D.enemies[e.type].hp<=hat.maxHp)){hat.stunned.push(e.swarmId??e.id);this.apply(e,'stun',hat.stun,1,h.id);}}}
+    for(const e of this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&gap(e,from,to)<=20).sort((a,b)=>distance(from,a)-distance(from,b))){if(hits.length>=hat.pierce)break;if(hits.includes(e.id))continue;hits.push(e.id);this.hit(e,hat.damage,h);if(!hat.stunned.includes(e.swarmId??e.id)&&(hat.maxHp==null||D.enemies[e.type].hp<=hat.maxHp)){hat.stunned.push(e.swarmId??e.id);this.apply(e,'stun',hat.stun,1,h.id);}}}
    Object.assign(hat,point(age));if(now>=hat.end)delete h.pirateHat;
   }
   if(h.pirateRam)continue;

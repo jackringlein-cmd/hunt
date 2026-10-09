@@ -52,22 +52,22 @@
    // Split long frames at the turn so neither the outward nor return sweep is skipped.
    const times=previous<half&&age>half?[previous,half,age]:[previous,age];
    for(let k=1;k<times.length;k++){const a=k===1?{x:r.x,y:r.y}:point(times[k-1]),b=point(times[k]),hits=times[k-1]>=half?r.back:r.out;
-    const targets=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&gap(e,a,b)<=18).sort((a1,b1)=>distance(a,a1)-distance(a,b1));
+    const targets=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&gap(e,a,b)<=18).sort((a1,b1)=>distance(a,a1)-distance(a,b1));
     for(const e of targets){if(hits.length>=r.pierce)break;if(hits.includes(e.id))continue;hits.push(e.id);this.hit(e,r.damage,{...h,toolRanged:true});}}
    Object.assign(r,point(age));return age<r.duration;
   });
   w.traps=w.traps.filter(t=>{const h=owner(t.owner);if(!h||t.end<=now)return false;if(!active(h))return true;
-   const nearby=this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.throwId&&!e.serpentFlight&&!this.nightmareFlight(e).airborne&&distance(e,t)<(t.kind==='boulder'?40:27));if(!nearby.length)return true;
+   const nearby=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.throwId&&!e.serpentFlight&&!this.nightmareFlight(e).airborne&&distance(e,t)<(t.kind==='boulder'?40:27));if(!nearby.length)return true;
    if(t.kind==='boulder'){w.boulders.push({id:this.s.nextId++,owner:h.id,p:t.p,...this.position(t.p),end:now+8,budget:7500*t.power,damage:1600*t.power,hit:[],rotation:0});return false;}
-   const radius=t.kind==='shrapnel'?85:48,targets=t.kind==='jaw'?nearby.slice(0,1):this.s.enemies.filter(e=>!e.dead&&!this.nightmareFlight(e).airborne&&!e.serpentDive&&distance(e,t)<=radius).slice(0,t.kind==='saw'?6:100),pushed=new Set();
+   const radius=t.kind==='shrapnel'?85:48,targets=t.kind==='jaw'?nearby.slice(0,1):this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!this.nightmareFlight(e).airborne&&!e.serpentDive&&distance(e,t)<=radius).slice(0,t.kind==='saw'?6:100),pushed=new Set();
    for(const e of targets){this.hit(e,({jaw:45,oil:20,anvil:100,saw:140,shrapnel:220})[t.kind],h);if(t.kind==='jaw')this.apply(e,'stun',.5,1,h.id);if(t.kind==='oil')this.apply(e,'slow',3,.4,h.id);if(t.kind==='anvil')this.push(e,50,h,pushed);}this.fx('ring',t,t,t.kind==='oil'?'#69577c':'#e4bb80',radius);return false;
   });
   w.boulders=w.boulders.filter(b=>{const h=owner(b.owner);if(!h)return false;if(!active(h)){b.end+=dt;return true;}if(b.end<=now||b.budget<=0)return false;const old=b.p;b.p=Math.max(0,b.p-65*dt);b.rotation+=dt*3;Object.assign(b,this.position(b.p));
-   const targets=this.s.enemies.filter(e=>!e.dead&&!b.hit.includes(e.id)&&!e.serpentDive&&!e.throwId&&!e.serpentFlight&&!this.nightmareFlight(e).airborne&&e.p>=b.p-28&&e.p<=old+28).sort((a,c)=>c.p-a.p);
+   const targets=this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!b.hit.includes(e.id)&&!e.serpentDive&&!e.throwId&&!e.serpentFlight&&!this.nightmareFlight(e).airborne&&e.p>=b.p-28&&e.p<=old+28).sort((a,c)=>c.p-a.p);
    for(const e of targets){if(b.budget<=0)break;b.hit.push(e.id);const before=Math.max(0,e.hp)+(e.shield||0);const multiplier=this.buffs(h).damage*this.multiplier(e,h)*(D.enemies[e.type].damageTaken?.physical??1);this.hit(e,Math.min(b.damage,b.budget/Math.max(.001,multiplier)),h,999);const spent=Math.max(0,before-Math.max(0,e.hp)-(e.shield||0));b.budget=Math.max(0,b.budget-spent);}return b.p>0&&b.budget>0;
   });
-  w.turrets=w.turrets.filter(t=>{const h=owner(t.owner);if(!h)return false;if(!active(h)||t.next>now)return true;const level=h.u[3],range=level>=6?255:170,targets=this.sorted(h,this.s.enemies.filter(e=>!e.dead&&!e.serpentDive&&!e.serpentFlight&&distance(e,t)<=range));if(!targets.length)return true;
-   const shots=level>=2?2:1;for(let i=0;i<shots;i++){const target=targets[i%targets.length],proxy={...h,toolRanged:true},damage=[0,18,24,36,48,65,90][level];t.face={x:target.x,y:target.y};this.fx('arrow',t,target,'#e8c185');for(const e of this.lineTargets(t,target,range,14,level>=6?6:level>=3?3:1))this.hit(e,damage,proxy,level>=3?3:0,false,'physical','turret');if(level>=5)this.area(target,45,50,proxy,0,'physical','turret');}
+  w.turrets=w.turrets.filter(t=>{const h=owner(t.owner);if(!h)return false;if(!active(h)||t.next>now)return true;const level=h.u[3],range=level>=6?255:170,targets=this.sorted(h,this.s.enemies.filter(e=>!e.dead&&this.canDetect(h,e)&&!e.serpentDive&&!e.serpentFlight&&distance(e,t)<=range));if(!targets.length)return true;
+   const shots=level>=2?2:1;for(let i=0;i<shots;i++){const target=targets[i%targets.length],proxy={...h,toolRanged:true},damage=[0,18,24,36,48,65,90][level];t.face={x:target.x,y:target.y};this.fx('arrow',t,target,'#e8c185');for(const e of this.lineTargets(t,target,range,14,level>=6?6:level>=3?3:1,h))this.hit(e,damage,proxy,level>=3?3:0,false,'physical','turret');if(level>=5)this.area(target,45,50,proxy,0,'physical','turret');}
    t.fired=now;t.next=now+(level>=6?.875:1.25)/this.buffs(h).speed/((h.toolOverclockUntil||0)>now?h.toolOverclock:1);return true;
   });
  };

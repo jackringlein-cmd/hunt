@@ -44,5 +44,7 @@
   "assets/enemies/werewolf-follow-through.png",
   "water-beast-art.js",
   "water-beast-mechanics.js",
-  "ironling-art.js"
+  "ironling-art.js",
+  "camoflauger-art.js",
+  "enemy-preview.html"
 ]

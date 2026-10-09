@@ -26,7 +26,7 @@
      const endpoint=a.blast?Math.min(flight,.5):flight,times=prev<.5&&endpoint>.5?[prev,.5,endpoint]:[Math.min(prev,endpoint),endpoint];
      for(let i=1;i<times.length;i++){const from=point(times[i-1]),to=point(times[i]),hits=times[i-1]>=.5?a.back:a.out;for(const e of this.turtleTargets(h,2000).filter(e=>segment(e,from,to)<=26).sort((x,y)=>dist(x,from)-dist(y,from))){if(age<.8||hits.length>=a.pierce)break;if(hits.includes(e.id))continue;hits.push(e.id);this.hit(e,a.damage,h);}}
      Object.assign(a,point(endpoint));
-     if(a.blast&&flight>=.5){this.releaseTurtle(h,a.damage);const targets=this.turtleTargets(h,2000).filter(e=>dist(e,a.to)<=a.radius);for(const e of targets)this.hit(e,a.blast,h);for(let i=0;i<a.shards;i++){const angle=i*Math.PI*2/a.shards,to={x:a.to.x+Math.cos(angle)*a.radius*1.5,y:a.to.y+Math.sin(angle)*a.radius*1.5};for(const e of this.lineTargets(a.to,to,a.radius*1.5,12,2))if(!e.serpentDive&&!e.serpentFlight)this.hit(e,a.shardDamage,h);}
+     if(a.blast&&flight>=.5){this.releaseTurtle(h,a.damage);const targets=this.turtleTargets(h,2000).filter(e=>dist(e,a.to)<=a.radius);for(const e of targets)this.hit(e,a.blast,h);for(let i=0;i<a.shards;i++){const angle=i*Math.PI*2/a.shards,to={x:a.to.x+Math.cos(angle)*a.radius*1.5,y:a.to.y+Math.sin(angle)*a.radius*1.5};for(const e of this.lineTargets(a.to,to,a.radius*1.5,12,2,h))if(!e.serpentDive&&!e.serpentFlight)this.hit(e,a.shardDamage,h);}
       h.turtleBurst={x:a.to.x,y:a.to.y,radius:a.radius,start:now,end:now+.7,shards:a.shards};h.turtleRecoverUntil=now+1;delete h.turtleAction;this.fx('explosion',a.to,a.to,'#e8cd88',a.radius);
      }else if(now>=a.end){this.releaseTurtle(h,a.damage);delete h.turtleAction;}
     }continue;
