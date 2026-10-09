@@ -1023,3 +1023,5 @@ Zombie Guard lore: Our latest narcotics don't seem to have any sort of affect, a
 Grave Troll lore: THEY ARE BIG! And also very hard skinned. Looks like more are coming. But I hope it will be over soon... children constantly live in fear and anguish, most of them have nightmares every night. Even grown men, fear for the women and children not being able to defend themselves if the monsters get through.
 
 Fusion Skeleton lore: Just when I thought... just when i thought they couldn't get BIGGER! Now they carry more of themselves inside. The only thing we survive off is, the money we get from trading bones, which I guess we have MORE of to share. The money we get from trading is what FUNDS the heros we hire, or should a say our ONLY LINE of DEFENSE.
+
+Vampire Lord lore: At the very least they are not strong. But SOMEHOW they are such good leaders they make the other demonic presenses way faster. I might as well call IT a Vampire Lord.
