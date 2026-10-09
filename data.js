@@ -120,7 +120,7 @@ for(const [type,hero] of Object.entries(heroes))hero.paths.forEach((p,i)=>{
 
 const enemies={
 
- nightmare:{name:'DEMONIC NIGHTMARE',hp:225,loss:5,reward:22,time:30/1.68/1.6,wave:90,color:'#71608e',hint:'Quick but fragile. First flies after 7 seconds, then every 7 seconds for 4 seconds. While airborne, melee cannot reach it and ranged attacks have a 40% hit chance. Immune to harmful effects except burning.'},
+ nightmare:{name:'DEMONIC NIGHTMARE',hp:225,loss:5,reward:22,time:30/1.68/1.6,wave:90,color:'#71608e',hint:'Quick but fragile. Always airborne. Melee attacks, including the Flaming Abomination’s fire whip, cannot reach it. Ranged attacks have a 40% hit chance. Immune to harmful effects except burning.'},
 
  screecher:{name:'Skull Screecher',hp:240000,loss:0,reward:120,time:45/1.68,wave:80,color:'#d4ccb0',hint:'Wanders slowly, then stuns heros.'},
 
