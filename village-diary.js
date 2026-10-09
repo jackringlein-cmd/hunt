@@ -4,7 +4,7 @@
  const lore={skeleton:'The first monsterous presence brought back using dark magic. Thankfully they are very easy to destroy.'};
  const key='necromancer-village-diary-v1';
  function count(book,type){const n=book?.[type];return Number.isSafeInteger(n)&&n>0?n:0;}
- function entry(book,type){const kills=count(book,type);return{kills,unlocked:kills>=1,description:kills>=40?descriptions[type]:null,stats:kills>=100,lore:kills>=200?(lore[type]||'lore discription'):null,next:kills<1?1:kills<40?40:kills<100?100:kills<200?200:null};}
+ function entry(book,type){const kills=Math.floor(count(book,type)/(type==='tiny'?10:1));return{kills,unlocked:kills>=1,description:kills>=40?descriptions[type]:null,stats:kills>=100,lore:kills>=200?(lore[type]||'lore discription'):null,next:kills<1?1:kills<40?40:kills<100?100:kills<200?200:null};}
  function record(book,type,enemies){if(!enemies[type])return false;book[type]=Math.min(Number.MAX_SAFE_INTEGER,count(book,type)+1);return true;}
  const api={key,entry,record,descriptions,lore};if(typeof module!=='undefined')module.exports=api;else root.VillageDiary=api;
 })(typeof window!=='undefined'?window:globalThis);
